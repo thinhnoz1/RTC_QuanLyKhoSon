@@ -42,7 +42,7 @@ namespace BMS
                     txtPartName.ReadOnly = false;
                     txtExQuantity.ReadOnly = false;
                     txtAsQuantity.ReadOnly = false;
-                    this.Text = "Thêm danh mục sản phẩm";
+                    this.Text = "Thêm danh mục linh kiện";
 
                     break;
                 case 2:
@@ -53,8 +53,7 @@ namespace BMS
 
                     break;
                 case 3:
-                    
-                    this.Text = "Chỉnh sửa thông tin sản phẩm";
+                    this.Text = "Chỉnh sửa thông tin linh kiện";
                     break;
                 case 4:
                     txtPartCode.ReadOnly = true;
@@ -86,12 +85,12 @@ namespace BMS
         private bool ValidateForm() {
             if (txtPartCode.Text.Trim() == "")
             {
-                MessageBox.Show("Xin hãy nhập mã sản phẩm.", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Xin hãy nhập mã linh kiện.", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return false;
             }
             if (txtPartName.Text.Trim() == "")
             {
-                MessageBox.Show("Xin hãy nhập mã sản phẩm.", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Xin hãy nhập mã linh kiện.", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return false;
             }
             return true;
@@ -110,10 +109,18 @@ namespace BMS
 
             try
             {
+                
                 switch (Type)
                 {
                     case 1:
-                        int test = (int)PartSonBO.Instance.Insert(partSonModel);
+                        if (!PartSonBO.Instance.CheckExist("PartCode", partSonModel.PartCode))
+                        {
+                            int test = (int)PartSonBO.Instance.Insert(partSonModel);
+                        }
+                        else {
+                            MessageBox.Show("Mã linh kiện đã tồn tại !!");
+                            return false;
+                        }
                         break;
                     case 2:
                         TextUtils.ExcuteProcedure("spImportPart",
@@ -175,7 +182,7 @@ namespace BMS
                 txtPartName.ReadOnly = false;
                 txtExQuantity.ReadOnly = false;
                 txtAsQuantity.ReadOnly = false;
-                this.Text = "Thêm danh mục sản phẩm";
+                this.Text = "Thêm danh mục linh kiện";
             }
         }
     }

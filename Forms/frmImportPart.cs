@@ -7,12 +7,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Timers;
+using System.Threading;
 namespace BMS
 {
     public partial class frmImportPart : _Forms
@@ -23,8 +25,7 @@ namespace BMS
             txbWorkerCode.Focus();
 
         }
-
-
+		System.Timers.Timer _timer;
         #region Method
         bool SaveData() {
             if (MessageBox.Show(String.Format("Bạn có chắc muốn lưu không?"), TextUtils.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -62,19 +63,13 @@ namespace BMS
 
 
 
-            DataTable dt = TextUtils.LoadDataFromSP("spGetSonParImportDataByDate","A", new string[] { "@numofdate" }, new object[] { 30 });
+            DataTable dt = TextUtils.LoadDataFromSP("spGetSonPartImportDataByDate","A", new string[] { "@numofdate" }, new object[] { 30 });
             DataTable table = new DataTable();
             DataRow row = null;
 
             table.Columns.Add("Day", typeof(string));
             table.Columns.Add("Quantity", typeof(int));
             int sumQuantity = 0;
-
-            //  Gian cach chart
-            row = table.NewRow();
-            row["Day"] = " ";
-            row["Quantity"] = 0;
-            table.Rows.Add(row);
 
             //  Lấy dữ liệu ta cần từ list data 
             //  Trong bang, cot thu [3] la DateImEx, [4] la Quantity
@@ -83,8 +78,8 @@ namespace BMS
                 DateTime past = DateTime.Now.AddDays(-i);
                 foreach (DataRow model in dt.Rows)
                 {
-                    DateTime day = (DateTime)model.ItemArray[3];
-                    int quantity = (int)model.ItemArray[4];
+                    DateTime day = (DateTime)model.ItemArray[4];
+                    int quantity = (int)model.ItemArray[5];
                     if (day.Day == past.Day && day.Month == past.Month)
                     {
                         sumQuantity = sumQuantity + quantity;
@@ -98,24 +93,26 @@ namespace BMS
                 sumQuantity = 0;
             }
 
-            // Them 1 dong de gian cach cot cuoi voi vien` chart
-            row = table.NewRow();
-            row["Day"] = "->";
-            row["Quantity"] = 0;
-            table.Rows.Add(row);
-
-            chartControl2.Series[0].DataSource = table;
-            chartControl2.Series[0].ArgumentScaleType = ScaleType.Auto;
-            chartControl2.Series[0].ArgumentDataMember = "Day";
-            chartControl2.Series[0].ValueScaleType = ScaleType.Numerical;
-            chartControl2.Series[0].ValueDataMembers.AddRange(new string[] { "Quantity" });
+            
+            //  Chong' timer khi refresh se chay tren 1 luong rieng biet nen se gay loi Index of out bound
+            chartControl2.Invoke((MethodInvoker)delegate
+			{
+				chartControl2.Series[0].DataSource = table;
+				chartControl2.Series[0].ArgumentScaleType = ScaleType.Auto;
+				chartControl2.Series[0].ArgumentDataMember = "Day" ;
+				chartControl2.Series[0].ValueScaleType = ScaleType.Numerical;
+				chartControl2.Series[0].ValueDataMembers.AddRange(new string[] { "Quantity" });
+			});
+			
         }
         #endregion
 
 
         #region Event
+
         private void btnSaveClose_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show("AAAA");
             if (SaveData())
             {
                 LoadDataToChart();
@@ -143,6 +140,7 @@ namespace BMS
         private void frmImportPart_Load(object sender, EventArgs e)
         {
             LoadDataToChart();
+            timer1.Enabled = true;
         }
         private void txbOrderCode_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -201,6 +199,26 @@ namespace BMS
                 }
             }
         }
-        #endregion
-    }
+
+		#endregion
+
+		private void cấtToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            btnSaveClose_Click(null, null);
+
+        }
+
+		private void timer1_Tick(object sender, EventArgs e)
+		{
+            timer1.Enabled = false;
+            LoadDataToChart();
+            //label1.Invoke((MethodInvoker)delegate {
+            //     var rnd = new Random();
+            //     label1.Text = rnd.Next().ToString();
+            //     timer1.Enabled = true;
+            // });
+
+            timer1.Enabled = true;
+        }
+	}
 }

@@ -17,7 +17,10 @@ namespace BMS
         public frmPartImExHistory()
         {
             InitializeComponent();
+            dtgvHistory.AllowRestoreSelectionAndFocusedRow = DevExpress.Utils.DefaultBoolean.False;
         }
+        int prevRow;
+
         void LoadData()
         {
             string keyword = txbSearchHistory.Text;
@@ -30,6 +33,8 @@ namespace BMS
 
         private void btnSearchHistory_Click(object sender, EventArgs e)
         {
+            dtpFrom.Value = DateTime.Today.AddHours(00).AddMinutes(00).AddSeconds(00);
+            dtpTo.Value = DateTime.Today.AddHours(23).AddMinutes(59).AddSeconds(59);
             LoadData();
         }
 
@@ -84,6 +89,8 @@ namespace BMS
             if (form.ShowDialog() == DialogResult.OK)
             {
                 LoadData();
+                //  Tu dong focus lai ve dong vua chon
+                gvHistory.FocusedRowHandle = prevRow;
             }
         }
 

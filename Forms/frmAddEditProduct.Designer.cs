@@ -103,7 +103,7 @@ namespace BMS
 			// 
 			this.txtAsQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtAsQuantity.Location = new System.Drawing.Point(341, 302);
-			this.txtAsQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtAsQuantity.Margin = new System.Windows.Forms.Padding(4);
 			this.txtAsQuantity.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -117,7 +117,7 @@ namespace BMS
 			// 
 			this.txtExQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtExQuantity.Location = new System.Drawing.Point(341, 250);
-			this.txtExQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtExQuantity.Margin = new System.Windows.Forms.Padding(4);
 			this.txtExQuantity.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -131,21 +131,21 @@ namespace BMS
 			// 
 			this.labelControl7.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelControl7.Location = new System.Drawing.Point(39, 255);
-			this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
 			this.labelControl7.Name = "labelControl7";
-			this.labelControl7.Size = new System.Drawing.Size(265, 36);
+			this.labelControl7.Size = new System.Drawing.Size(257, 36);
 			this.labelControl7.TabIndex = 187;
-			this.labelControl7.Text = "Số lượng xuất khẩu:";
+			this.labelControl7.Text = "Số lượng xuất khẩu";
 			// 
 			// labelControl6
 			// 
 			this.labelControl6.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelControl6.Location = new System.Drawing.Point(39, 306);
-			this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
 			this.labelControl6.Name = "labelControl6";
-			this.labelControl6.Size = new System.Drawing.Size(227, 36);
+			this.labelControl6.Size = new System.Drawing.Size(219, 36);
 			this.labelControl6.TabIndex = 186;
-			this.labelControl6.Text = "Số lượng lắp ráp:";
+			this.labelControl6.Text = "Số lượng lắp ráp";
 			// 
 			// txtPartName
 			// 
@@ -153,7 +153,7 @@ namespace BMS
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.txtPartName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtPartName.Location = new System.Drawing.Point(341, 69);
-			this.txtPartName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtPartName.Margin = new System.Windows.Forms.Padding(4);
 			this.txtPartName.Name = "txtPartName";
 			this.txtPartName.Size = new System.Drawing.Size(607, 41);
 			this.txtPartName.TabIndex = 180;
@@ -164,7 +164,7 @@ namespace BMS
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.txtPartCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtPartCode.Location = new System.Drawing.Point(341, 117);
-			this.txtPartCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtPartCode.Margin = new System.Windows.Forms.Padding(4);
 			this.txtPartCode.Name = "txtPartCode";
 			this.txtPartCode.Size = new System.Drawing.Size(607, 41);
 			this.txtPartCode.TabIndex = 181;
@@ -173,11 +173,11 @@ namespace BMS
 			// 
 			this.labelControl9.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelControl9.Location = new System.Drawing.Point(39, 122);
-			this.labelControl9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
 			this.labelControl9.Name = "labelControl9";
-			this.labelControl9.Size = new System.Drawing.Size(168, 36);
+			this.labelControl9.Size = new System.Drawing.Size(160, 36);
 			this.labelControl9.TabIndex = 185;
-			this.labelControl9.Text = "Mã linh kiện:";
+			this.labelControl9.Text = "Mã linh kiện";
 			// 
 			// txtPartDescription
 			// 
@@ -185,7 +185,7 @@ namespace BMS
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.txtPartDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtPartDescription.Location = new System.Drawing.Point(341, 162);
-			this.txtPartDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtPartDescription.Margin = new System.Windows.Forms.Padding(4);
 			this.txtPartDescription.Multiline = true;
 			this.txtPartDescription.Name = "txtPartDescription";
 			this.txtPartDescription.Size = new System.Drawing.Size(607, 75);
@@ -195,21 +195,21 @@ namespace BMS
 			// 
 			this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelControl4.Location = new System.Drawing.Point(39, 178);
-			this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
 			this.labelControl4.Name = "labelControl4";
-			this.labelControl4.Size = new System.Drawing.Size(82, 36);
+			this.labelControl4.Size = new System.Drawing.Size(74, 36);
 			this.labelControl4.TabIndex = 184;
-			this.labelControl4.Text = "Mô tả:";
+			this.labelControl4.Text = "Mô tả";
 			// 
 			// labelControl3
 			// 
 			this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelControl3.Location = new System.Drawing.Point(39, 75);
-			this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
 			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.Size = new System.Drawing.Size(186, 36);
+			this.labelControl3.Size = new System.Drawing.Size(170, 36);
 			this.labelControl3.TabIndex = 183;
-			this.labelControl3.Text = "Tên linh kiện: ";
+			this.labelControl3.Text = "Tên linh kiện";
 			// 
 			// frmAddEditProduct
 			// 
@@ -227,7 +227,7 @@ namespace BMS
 			this.Controls.Add(this.labelControl4);
 			this.Controls.Add(this.labelControl3);
 			this.Controls.Add(this.mnuMenu);
-			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.Margin = new System.Windows.Forms.Padding(5);
 			this.Name = "frmAddEditProduct";
 			this.Text = "frmAddEdit";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAddEditProduct_FormClosing);

@@ -18,8 +18,9 @@ namespace BMS
         {
             InitializeComponent();
             LoadListProducts();
+            dtgvProducts.AllowRestoreSelectionAndFocusedRow = DevExpress.Utils.DefaultBoolean.False;
         }
-
+        int prevRow; 
         #region Method
         void LoadListProducts() {
             // Neu skipnumber = 0 thi store se tra ve toan bo danh sach sp
@@ -73,6 +74,9 @@ namespace BMS
             frmAddEditProduct form = new frmAddEditProduct(1);
             if (form.ShowDialog() == DialogResult.OK) {
                 LoadListProducts();
+
+                // Tu dong focus ve dong vua tao
+                gvPart.FocusedRowHandle = gvPart.RowCount - 1;
             }
         }
 
@@ -80,6 +84,9 @@ namespace BMS
         private void btnEditPart_Click(object sender, EventArgs e)
         {
             int id = TextUtils.ToInt(gvPart.GetFocusedRowCellValue(colID));
+
+            //  Lay so dong da chon
+            prevRow = gvPart.GetSelectedRows()[0];
             if (id == 0) return;
             PartSonModel model = (PartSonModel)PartSonBO.Instance.FindByPK(id);
             frmAddEditProduct form  = new frmAddEditProduct(3); // Sua thong tin san pham
@@ -87,6 +94,8 @@ namespace BMS
             if (form.ShowDialog() == DialogResult.OK)
             {
                 LoadListProducts();
+                //  Tu dong focus lai ve dong vua chon
+                gvPart.FocusedRowHandle = prevRow;
             }
         }
 
@@ -94,6 +103,9 @@ namespace BMS
         {
             if (gvPart.RowCount > 0 && btnEditPart.Enabled == true) {
                 btnEditPart_Click(null, null);
+
+                //  Tu dong focus lai ve dong vua chon
+                gvPart.FocusedRowHandle = prevRow;
             }
         }
 
@@ -173,5 +185,11 @@ namespace BMS
             frmImportExcelPart frm = new frmImportExcelPart();
             frm.ShowDialog();
         }
-    }
+
+		private void btnSonPlan_Click(object sender, EventArgs e)
+		{
+            frmSonPlan frm = new frmSonPlan();
+            frm.ShowDialog();
+		}
+	}
 }

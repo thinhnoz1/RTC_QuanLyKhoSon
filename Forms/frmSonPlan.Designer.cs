@@ -29,6 +29,7 @@ namespace BMS
         /// </summary>
         private void InitializeComponent()
         {
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSonPlan));
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.btnCreatePlan = new System.Windows.Forms.ToolStripButton();
@@ -61,9 +62,18 @@ namespace BMS
 			this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colWorkerCode = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colPrintedDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+			this.txbSearch = new System.Windows.Forms.TextBox();
+			this.dtpFrom = new System.Windows.Forms.DateTimePicker();
+			this.dtpTo = new System.Windows.Forms.DateTimePicker();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
 			this.toolStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvSonPlan)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvSonPlan)).BeginInit();
+			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// toolStrip1
@@ -89,7 +99,8 @@ namespace BMS
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
 			this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-			this.toolStrip1.Size = new System.Drawing.Size(1275, 64);
+			this.toolStrip1.Size = new System.Drawing.Size(1275, 59);
+			this.toolStrip1.Stretch = true;
 			this.toolStrip1.TabIndex = 27;
 			this.toolStrip1.Text = "toolStrip2";
 			// 
@@ -187,14 +198,14 @@ namespace BMS
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.dtgvSonPlan.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5);
 			this.dtgvSonPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dtgvSonPlan.Location = new System.Drawing.Point(0, 69);
+			this.dtgvSonPlan.Location = new System.Drawing.Point(0, 98);
 			this.dtgvSonPlan.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
 			this.dtgvSonPlan.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Style3D;
 			this.dtgvSonPlan.LookAndFeel.UseDefaultLookAndFeel = false;
 			this.dtgvSonPlan.MainView = this.gvSonPlan;
 			this.dtgvSonPlan.Margin = new System.Windows.Forms.Padding(5);
 			this.dtgvSonPlan.Name = "dtgvSonPlan";
-			this.dtgvSonPlan.Size = new System.Drawing.Size(1275, 485);
+			this.dtgvSonPlan.Size = new System.Drawing.Size(1275, 456);
 			this.dtgvSonPlan.TabIndex = 29;
 			this.dtgvSonPlan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSonPlan});
@@ -233,6 +244,7 @@ namespace BMS
 			this.gvSonPlan.OptionsView.ShowGroupPanel = false;
 			this.gvSonPlan.PaintStyleName = "Flat";
 			this.gvSonPlan.RowHeight = 25;
+			this.gvSonPlan.DoubleClick += new System.EventHandler(this.gvSonPlan_DoubleClick);
 			// 
 			// colID
 			// 
@@ -728,11 +740,88 @@ namespace BMS
 			this.colPrintedDate.VisibleIndex = 16;
 			this.colPrintedDate.Width = 111;
 			// 
+			// panel2
+			// 
+			this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.panel2.Controls.Add(this.btnSearch);
+			this.panel2.Controls.Add(this.txbSearch);
+			this.panel2.Controls.Add(this.dtpFrom);
+			this.panel2.Controls.Add(this.dtpTo);
+			this.panel2.Controls.Add(this.label1);
+			this.panel2.Controls.Add(this.label3);
+			this.panel2.Location = new System.Drawing.Point(0, 63);
+			this.panel2.Margin = new System.Windows.Forms.Padding(4);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(840, 32);
+			this.panel2.TabIndex = 30;
+			// 
+			// btnSearch
+			// 
+			this.btnSearch.Location = new System.Drawing.Point(729, 0);
+			this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+			this.btnSearch.Name = "btnSearch";
+			this.btnSearch.Size = new System.Drawing.Size(100, 28);
+			this.btnSearch.TabIndex = 25;
+			this.btnSearch.Text = "Tìm kiếm";
+			this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+			// 
+			// txbSearch
+			// 
+			this.txbSearch.Location = new System.Drawing.Point(525, 4);
+			this.txbSearch.Margin = new System.Windows.Forms.Padding(4);
+			this.txbSearch.Name = "txbSearch";
+			this.txbSearch.Size = new System.Drawing.Size(195, 22);
+			this.txbSearch.TabIndex = 24;
+			// 
+			// dtpFrom
+			// 
+			this.dtpFrom.CustomFormat = "dd/MM/yyyy";
+			this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.dtpFrom.Location = new System.Drawing.Point(103, 4);
+			this.dtpFrom.Margin = new System.Windows.Forms.Padding(4);
+			this.dtpFrom.Name = "dtpFrom";
+			this.dtpFrom.Size = new System.Drawing.Size(140, 22);
+			this.dtpFrom.TabIndex = 36;
+			// 
+			// dtpTo
+			// 
+			this.dtpTo.CustomFormat = "dd/MM/yyyy";
+			this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.dtpTo.Location = new System.Drawing.Point(365, 4);
+			this.dtpTo.Margin = new System.Windows.Forms.Padding(4);
+			this.dtpTo.Name = "dtpTo";
+			this.dtpTo.Size = new System.Drawing.Size(131, 22);
+			this.dtpTo.TabIndex = 35;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.label1.Location = new System.Drawing.Point(273, 9);
+			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(83, 17);
+			this.label1.TabIndex = 34;
+			this.label1.Text = "Đến ngày: ";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.label3.Location = new System.Drawing.Point(16, 9);
+			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(74, 17);
+			this.label3.TabIndex = 33;
+			this.label3.Text = "Từ ngày: ";
+			// 
 			// frmSonPlan
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1275, 554);
+			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.dtgvSonPlan);
 			this.Controls.Add(this.toolStrip1);
 			this.Margin = new System.Windows.Forms.Padding(5);
@@ -744,6 +833,8 @@ namespace BMS
 			this.toolStrip1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvSonPlan)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvSonPlan)).EndInit();
+			this.panel2.ResumeLayout(false);
+			this.panel2.PerformLayout();
 			this.ResumeLayout(false);
 
         }
@@ -781,5 +872,13 @@ namespace BMS
 		private DevExpress.XtraGrid.Columns.GridColumn colNote;
 		private DevExpress.XtraGrid.Columns.GridColumn colWorkerCode;
 		private DevExpress.XtraGrid.Columns.GridColumn colPrintedDate;
+		private System.Windows.Forms.Timer timer1;
+		private System.Windows.Forms.Panel panel2;
+		private DevExpress.XtraEditors.SimpleButton btnSearch;
+		private System.Windows.Forms.TextBox txbSearch;
+		private System.Windows.Forms.DateTimePicker dtpFrom;
+		private System.Windows.Forms.DateTimePicker dtpTo;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label3;
 	}
 }

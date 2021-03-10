@@ -57,7 +57,6 @@ namespace BMS
 			this.btnExportExcel = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnImportEx = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnHistory = new System.Windows.Forms.ToolStripButton();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
@@ -71,6 +70,9 @@ namespace BMS
 			this.colQuantityExporting = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colQuantityAssembling = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.dtgvProducts = new DevExpress.XtraGrid.GridControl();
+			this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+			this.btnSonPlan = new System.Windows.Forms.ToolStripButton();
 			this.mnuMenu.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.panel6.SuspendLayout();
@@ -102,7 +104,7 @@ namespace BMS
 			this.btnAddProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnAddProduct.Image")));
 			this.btnAddProduct.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnAddProduct.Name = "btnAddProduct";
-			this.btnAddProduct.Size = new System.Drawing.Size(90, 37);
+			this.btnAddProduct.Size = new System.Drawing.Size(109, 41);
 			this.btnAddProduct.Tag = "frmProduct_AddProductH";
 			this.btnAddProduct.Text = "Tạo sản phẩm";
 			this.btnAddProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -118,7 +120,7 @@ namespace BMS
 			this.btnEditProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnEditProducts.Image")));
 			this.btnEditProducts.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnEditProducts.Name = "btnEditProducts";
-			this.btnEditProducts.Size = new System.Drawing.Size(91, 37);
+			this.btnEditProducts.Size = new System.Drawing.Size(110, 41);
 			this.btnEditProducts.Tag = "frmProduct_EditProductH";
 			this.btnEditProducts.Text = "Sửa sản phẩm";
 			this.btnEditProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -134,7 +136,7 @@ namespace BMS
 			this.btnDeleteProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteProduct.Image")));
 			this.btnDeleteProduct.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnDeleteProduct.Name = "btnDeleteProduct";
-			this.btnDeleteProduct.Size = new System.Drawing.Size(90, 37);
+			this.btnDeleteProduct.Size = new System.Drawing.Size(110, 41);
 			this.btnDeleteProduct.Tag = "frmProduct_DeleteProductH";
 			this.btnDeleteProduct.Text = "Xóa sản phẩm";
 			this.btnDeleteProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -151,7 +153,7 @@ namespace BMS
 			this.btnSungLuc.Image = ((System.Drawing.Image)(resources.GetObject("btnSungLuc.Image")));
 			this.btnSungLuc.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnSungLuc.Name = "btnSungLuc";
-			this.btnSungLuc.Size = new System.Drawing.Size(70, 37);
+			this.btnSungLuc.Size = new System.Drawing.Size(88, 41);
 			this.btnSungLuc.Tag = "frmProduct_GunH";
 			this.btnSungLuc.Text = "Nhập hàng";
 			this.btnSungLuc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -167,7 +169,7 @@ namespace BMS
 			this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
 			this.btnExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnExcel.Name = "btnExcel";
-			this.btnExcel.Size = new System.Drawing.Size(69, 37);
+			this.btnExcel.Size = new System.Drawing.Size(84, 41);
 			this.btnExcel.Tag = "";
 			this.btnExcel.Text = "Xuất Excel";
 			this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -183,7 +185,7 @@ namespace BMS
 			this.btnImportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnImportExcel.Image")));
 			this.btnImportExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnImportExcel.Name = "btnImportExcel";
-			this.btnImportExcel.Size = new System.Drawing.Size(71, 37);
+			this.btnImportExcel.Size = new System.Drawing.Size(88, 41);
 			this.btnImportExcel.Tag = "frmProduct_ImportExcelProductH";
 			this.btnImportExcel.Text = "Nhập Excel";
 			this.btnImportExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -199,7 +201,7 @@ namespace BMS
 			this.btnUpdateStepCode.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateStepCode.Image")));
 			this.btnUpdateStepCode.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnUpdateStepCode.Name = "btnUpdateStepCode";
-			this.btnUpdateStepCode.Size = new System.Drawing.Size(138, 37);
+			this.btnUpdateStepCode.Size = new System.Drawing.Size(168, 41);
 			this.btnUpdateStepCode.Tag = "frmProduct_UpdateCDH";
 			this.btnUpdateStepCode.Text = "Xem lịch sử nhập/xuất";
 			this.btnUpdateStepCode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -254,7 +256,9 @@ namespace BMS
             this.toolStripSeparator11,
             this.btnImportEx,
             this.toolStripSeparator12,
-            this.btnHistory});
+            this.btnHistory,
+            this.toolStripSeparator9,
+            this.btnSonPlan});
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
@@ -270,7 +274,7 @@ namespace BMS
 			this.btnCreatePart.Image = ((System.Drawing.Image)(resources.GetObject("btnCreatePart.Image")));
 			this.btnCreatePart.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnCreatePart.Name = "btnCreatePart";
-			this.btnCreatePart.Size = new System.Drawing.Size(101, 40);
+			this.btnCreatePart.Size = new System.Drawing.Size(120, 44);
 			this.btnCreatePart.Tag = "frmProduct_AddProductH";
 			this.btnCreatePart.Text = "Tạo linh kiện";
 			this.btnCreatePart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -287,7 +291,7 @@ namespace BMS
 			this.btnEditPart.Image = ((System.Drawing.Image)(resources.GetObject("btnEditPart.Image")));
 			this.btnEditPart.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnEditPart.Name = "btnEditPart";
-			this.btnEditPart.Size = new System.Drawing.Size(100, 40);
+			this.btnEditPart.Size = new System.Drawing.Size(121, 44);
 			this.btnEditPart.Tag = "frmProduct_EditProductH";
 			this.btnEditPart.Text = "Sửa linh kiện";
 			this.btnEditPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -304,7 +308,7 @@ namespace BMS
 			this.btnDelPart.Image = ((System.Drawing.Image)(resources.GetObject("btnDelPart.Image")));
 			this.btnDelPart.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnDelPart.Name = "btnDelPart";
-			this.btnDelPart.Size = new System.Drawing.Size(100, 40);
+			this.btnDelPart.Size = new System.Drawing.Size(121, 44);
 			this.btnDelPart.Tag = "frmProduct_DeleteProductH";
 			this.btnDelPart.Text = "Xóa linh kiện";
 			this.btnDelPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -322,7 +326,7 @@ namespace BMS
 			this.btnImportPart.Image = ((System.Drawing.Image)(resources.GetObject("btnImportPart.Image")));
 			this.btnImportPart.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnImportPart.Name = "btnImportPart";
-			this.btnImportPart.Size = new System.Drawing.Size(78, 40);
+			this.btnImportPart.Size = new System.Drawing.Size(91, 44);
 			this.btnImportPart.Tag = "frmProduct_GunH";
 			this.btnImportPart.Text = "Nhập kho";
 			this.btnImportPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -340,7 +344,7 @@ namespace BMS
 			this.btnExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.Image")));
 			this.btnExportExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnExportExcel.Name = "btnExportExcel";
-			this.btnExportExcel.Size = new System.Drawing.Size(84, 40);
+			this.btnExportExcel.Size = new System.Drawing.Size(103, 44);
 			this.btnExportExcel.Tag = "";
 			this.btnExportExcel.Text = "Xuất Excel";
 			this.btnExportExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -357,17 +361,11 @@ namespace BMS
 			this.btnImportEx.Image = ((System.Drawing.Image)(resources.GetObject("btnImportEx.Image")));
 			this.btnImportEx.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnImportEx.Name = "btnImportEx";
-			this.btnImportEx.Size = new System.Drawing.Size(91, 40);
+			this.btnImportEx.Size = new System.Drawing.Size(108, 44);
 			this.btnImportEx.Tag = "";
 			this.btnImportEx.Text = "Nhập Excel";
 			this.btnImportEx.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			this.btnImportEx.Click += new System.EventHandler(this.btnImportEx_Click);
-			// 
-			// toolStripSeparator12
-			// 
-			this.toolStripSeparator12.AutoSize = false;
-			this.toolStripSeparator12.Name = "toolStripSeparator12";
-			this.toolStripSeparator12.Size = new System.Drawing.Size(6, 40);
 			// 
 			// btnHistory
 			// 
@@ -375,7 +373,7 @@ namespace BMS
 			this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
 			this.btnHistory.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnHistory.Name = "btnHistory";
-			this.btnHistory.Size = new System.Drawing.Size(153, 39);
+			this.btnHistory.Size = new System.Drawing.Size(177, 42);
 			this.btnHistory.Tag = "frmProduct_UpdateCDH";
 			this.btnHistory.Text = "Xem lịch sử nhập/xuất";
 			this.btnHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -401,7 +399,7 @@ namespace BMS
 			this.label1.Location = new System.Drawing.Point(4, 12);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(64, 16);
+			this.label1.Size = new System.Drawing.Size(75, 20);
 			this.label1.TabIndex = 27;
 			this.label1.Text = "Từ khóa";
 			// 
@@ -411,7 +409,7 @@ namespace BMS
 			this.txbSearchProducts.Location = new System.Drawing.Point(76, 10);
 			this.txbSearchProducts.Margin = new System.Windows.Forms.Padding(4);
 			this.txbSearchProducts.Name = "txbSearchProducts";
-			this.txbSearchProducts.Size = new System.Drawing.Size(416, 24);
+			this.txbSearchProducts.Size = new System.Drawing.Size(416, 29);
 			this.txbSearchProducts.TabIndex = 26;
 			// 
 			// btnSearchProducts
@@ -633,16 +631,39 @@ namespace BMS
 			this.dtgvProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPart});
 			// 
+			// toolStripSeparator12
+			// 
+			this.toolStripSeparator12.AutoSize = false;
+			this.toolStripSeparator12.Name = "toolStripSeparator12";
+			this.toolStripSeparator12.Size = new System.Drawing.Size(6, 40);
+			// 
+			// toolStripSeparator9
+			// 
+			this.toolStripSeparator9.AutoSize = false;
+			this.toolStripSeparator9.Name = "toolStripSeparator9";
+			this.toolStripSeparator9.Size = new System.Drawing.Size(6, 40);
+			// 
+			// btnSonPlan
+			// 
+			this.btnSonPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSonPlan.Image = ((System.Drawing.Image)(resources.GetObject("btnSonPlan.Image")));
+			this.btnSonPlan.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnSonPlan.Name = "btnSonPlan";
+			this.btnSonPlan.Size = new System.Drawing.Size(120, 42);
+			this.btnSonPlan.Tag = "frmProduct_UpdateCDH";
+			this.btnSonPlan.Text = "Xem kế hoạch";
+			this.btnSonPlan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnSonPlan.Click += new System.EventHandler(this.btnSonPlan_Click);
+			// 
 			// frmProductListSON
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1202, 690);
 			this.Controls.Add(this.dtgvProducts);
 			this.Controls.Add(this.panel6);
 			this.Controls.Add(this.toolStrip1);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MinimumSize = new System.Drawing.Size(1192, 729);
 			this.Name = "frmProductListSON";
 			this.Text = "DANH SÁCH LINH KIỆN";
@@ -690,7 +711,6 @@ namespace BMS
         private System.Windows.Forms.Panel panel6;
         private DevExpress.XtraEditors.SimpleButton btnSearchProducts;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
 		private System.Windows.Forms.TextBox txbSearchProducts;
 		private System.Windows.Forms.Label label1;
 		private DevExpress.XtraGrid.Views.Grid.GridView gvPart;
@@ -701,5 +721,8 @@ namespace BMS
 		private DevExpress.XtraGrid.Columns.GridColumn colQuantityExporting;
 		private DevExpress.XtraGrid.Columns.GridColumn colQuantityAssembling;
 		private DevExpress.XtraGrid.GridControl dtgvProducts;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+		private System.Windows.Forms.ToolStripButton btnSonPlan;
 	}
 }
