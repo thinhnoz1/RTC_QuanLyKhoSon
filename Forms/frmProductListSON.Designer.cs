@@ -57,7 +57,10 @@ namespace BMS
 			this.btnExportExcel = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnImportEx = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnHistory = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+			this.btnSonPlan = new System.Windows.Forms.ToolStripButton();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.txbSearchProducts = new System.Windows.Forms.TextBox();
@@ -70,9 +73,6 @@ namespace BMS
 			this.colQuantityExporting = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colQuantityAssembling = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.dtgvProducts = new DevExpress.XtraGrid.GridControl();
-			this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-			this.btnSonPlan = new System.Windows.Forms.ToolStripButton();
 			this.mnuMenu.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.panel6.SuspendLayout();
@@ -270,11 +270,11 @@ namespace BMS
 			// 
 			// btnCreatePart
 			// 
-			this.btnCreatePart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCreatePart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCreatePart.Image = ((System.Drawing.Image)(resources.GetObject("btnCreatePart.Image")));
 			this.btnCreatePart.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnCreatePart.Name = "btnCreatePart";
-			this.btnCreatePart.Size = new System.Drawing.Size(120, 44);
+			this.btnCreatePart.Size = new System.Drawing.Size(135, 48);
 			this.btnCreatePart.Tag = "frmProduct_AddProductH";
 			this.btnCreatePart.Text = "Tạo linh kiện";
 			this.btnCreatePart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -287,11 +287,11 @@ namespace BMS
 			// 
 			// btnEditPart
 			// 
-			this.btnEditPart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnEditPart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEditPart.Image = ((System.Drawing.Image)(resources.GetObject("btnEditPart.Image")));
 			this.btnEditPart.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnEditPart.Name = "btnEditPart";
-			this.btnEditPart.Size = new System.Drawing.Size(121, 44);
+			this.btnEditPart.Size = new System.Drawing.Size(135, 48);
 			this.btnEditPart.Tag = "frmProduct_EditProductH";
 			this.btnEditPart.Text = "Sửa linh kiện";
 			this.btnEditPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -304,11 +304,11 @@ namespace BMS
 			// 
 			// btnDelPart
 			// 
-			this.btnDelPart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDelPart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnDelPart.Image = ((System.Drawing.Image)(resources.GetObject("btnDelPart.Image")));
 			this.btnDelPart.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnDelPart.Name = "btnDelPart";
-			this.btnDelPart.Size = new System.Drawing.Size(121, 44);
+			this.btnDelPart.Size = new System.Drawing.Size(137, 48);
 			this.btnDelPart.Tag = "frmProduct_DeleteProductH";
 			this.btnDelPart.Text = "Xóa linh kiện";
 			this.btnDelPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -322,11 +322,11 @@ namespace BMS
 			// 
 			// btnImportPart
 			// 
-			this.btnImportPart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnImportPart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnImportPart.Image = ((System.Drawing.Image)(resources.GetObject("btnImportPart.Image")));
 			this.btnImportPart.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnImportPart.Name = "btnImportPart";
-			this.btnImportPart.Size = new System.Drawing.Size(91, 44);
+			this.btnImportPart.Size = new System.Drawing.Size(104, 48);
 			this.btnImportPart.Tag = "frmProduct_GunH";
 			this.btnImportPart.Text = "Nhập kho";
 			this.btnImportPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -340,11 +340,11 @@ namespace BMS
 			// 
 			// btnExportExcel
 			// 
-			this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.Image")));
 			this.btnExportExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnExportExcel.Name = "btnExportExcel";
-			this.btnExportExcel.Size = new System.Drawing.Size(103, 44);
+			this.btnExportExcel.Size = new System.Drawing.Size(116, 48);
 			this.btnExportExcel.Tag = "";
 			this.btnExportExcel.Text = "Xuất Excel";
 			this.btnExportExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -357,27 +357,51 @@ namespace BMS
 			// 
 			// btnImportEx
 			// 
-			this.btnImportEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnImportEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnImportEx.Image = ((System.Drawing.Image)(resources.GetObject("btnImportEx.Image")));
 			this.btnImportEx.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnImportEx.Name = "btnImportEx";
-			this.btnImportEx.Size = new System.Drawing.Size(108, 44);
+			this.btnImportEx.Size = new System.Drawing.Size(123, 48);
 			this.btnImportEx.Tag = "";
 			this.btnImportEx.Text = "Nhập Excel";
 			this.btnImportEx.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			this.btnImportEx.Click += new System.EventHandler(this.btnImportEx_Click);
 			// 
+			// toolStripSeparator12
+			// 
+			this.toolStripSeparator12.AutoSize = false;
+			this.toolStripSeparator12.Name = "toolStripSeparator12";
+			this.toolStripSeparator12.Size = new System.Drawing.Size(6, 40);
+			// 
 			// btnHistory
 			// 
-			this.btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
 			this.btnHistory.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnHistory.Name = "btnHistory";
-			this.btnHistory.Size = new System.Drawing.Size(177, 42);
+			this.btnHistory.Size = new System.Drawing.Size(223, 48);
 			this.btnHistory.Tag = "frmProduct_UpdateCDH";
 			this.btnHistory.Text = "Xem lịch sử nhập/xuất";
 			this.btnHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+			// 
+			// toolStripSeparator9
+			// 
+			this.toolStripSeparator9.AutoSize = false;
+			this.toolStripSeparator9.Name = "toolStripSeparator9";
+			this.toolStripSeparator9.Size = new System.Drawing.Size(6, 40);
+			// 
+			// btnSonPlan
+			// 
+			this.btnSonPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSonPlan.Image = ((System.Drawing.Image)(resources.GetObject("btnSonPlan.Image")));
+			this.btnSonPlan.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnSonPlan.Name = "btnSonPlan";
+			this.btnSonPlan.Size = new System.Drawing.Size(150, 48);
+			this.btnSonPlan.Tag = "frmProduct_UpdateCDH";
+			this.btnSonPlan.Text = "Xem kế hoạch";
+			this.btnSonPlan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnSonPlan.Click += new System.EventHandler(this.btnSonPlan_Click);
 			// 
 			// panel6
 			// 
@@ -483,7 +507,7 @@ namespace BMS
 			this.colPartCode.OptionsColumn.AllowEdit = false;
 			this.colPartCode.Visible = true;
 			this.colPartCode.VisibleIndex = 0;
-			this.colPartCode.Width = 334;
+			this.colPartCode.Width = 232;
 			// 
 			// colPartName
 			// 
@@ -513,8 +537,6 @@ namespace BMS
 			this.colPartName.FieldName = "PartName";
 			this.colPartName.Name = "colPartName";
 			this.colPartName.OptionsColumn.AllowEdit = false;
-			this.colPartName.Visible = true;
-			this.colPartName.VisibleIndex = 1;
 			this.colPartName.Width = 290;
 			// 
 			// colDescription
@@ -545,8 +567,8 @@ namespace BMS
 			this.colDescription.Name = "colDescription";
 			this.colDescription.OptionsColumn.AllowEdit = false;
 			this.colDescription.Visible = true;
-			this.colDescription.VisibleIndex = 2;
-			this.colDescription.Width = 213;
+			this.colDescription.VisibleIndex = 1;
+			this.colDescription.Width = 199;
 			// 
 			// colQuantityExporting
 			// 
@@ -577,8 +599,8 @@ namespace BMS
 			this.colQuantityExporting.Name = "colQuantityExporting";
 			this.colQuantityExporting.OptionsColumn.AllowEdit = false;
 			this.colQuantityExporting.Visible = true;
-			this.colQuantityExporting.VisibleIndex = 3;
-			this.colQuantityExporting.Width = 168;
+			this.colQuantityExporting.VisibleIndex = 2;
+			this.colQuantityExporting.Width = 126;
 			// 
 			// colQuantityAssembling
 			// 
@@ -609,8 +631,8 @@ namespace BMS
 			this.colQuantityAssembling.Name = "colQuantityAssembling";
 			this.colQuantityAssembling.OptionsColumn.AllowEdit = false;
 			this.colQuantityAssembling.Visible = true;
-			this.colQuantityAssembling.VisibleIndex = 4;
-			this.colQuantityAssembling.Width = 180;
+			this.colQuantityAssembling.VisibleIndex = 3;
+			this.colQuantityAssembling.Width = 140;
 			// 
 			// dtgvProducts
 			// 
@@ -630,30 +652,6 @@ namespace BMS
 			this.dtgvProducts.TabIndex = 28;
 			this.dtgvProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPart});
-			// 
-			// toolStripSeparator12
-			// 
-			this.toolStripSeparator12.AutoSize = false;
-			this.toolStripSeparator12.Name = "toolStripSeparator12";
-			this.toolStripSeparator12.Size = new System.Drawing.Size(6, 40);
-			// 
-			// toolStripSeparator9
-			// 
-			this.toolStripSeparator9.AutoSize = false;
-			this.toolStripSeparator9.Name = "toolStripSeparator9";
-			this.toolStripSeparator9.Size = new System.Drawing.Size(6, 40);
-			// 
-			// btnSonPlan
-			// 
-			this.btnSonPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSonPlan.Image = ((System.Drawing.Image)(resources.GetObject("btnSonPlan.Image")));
-			this.btnSonPlan.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnSonPlan.Name = "btnSonPlan";
-			this.btnSonPlan.Size = new System.Drawing.Size(120, 42);
-			this.btnSonPlan.Tag = "frmProduct_UpdateCDH";
-			this.btnSonPlan.Text = "Xem kế hoạch";
-			this.btnSonPlan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-			this.btnSonPlan.Click += new System.EventHandler(this.btnSonPlan_Click);
 			// 
 			// frmProductListSON
 			// 

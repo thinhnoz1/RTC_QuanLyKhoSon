@@ -71,11 +71,11 @@ namespace BMS
 			// 
 			// btnSaveClose
 			// 
-			this.btnSaveClose.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSaveClose.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSaveClose.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveClose.Image")));
 			this.btnSaveClose.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnSaveClose.Name = "btnSaveClose";
-			this.btnSaveClose.Size = new System.Drawing.Size(93, 41);
+			this.btnSaveClose.Size = new System.Drawing.Size(124, 47);
 			this.btnSaveClose.Tag = "frmProduct_AddProductH";
 			this.btnSaveClose.Text = "Cất && Đóng";
 			this.btnSaveClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -89,11 +89,11 @@ namespace BMS
 			// 
 			// btnSaveNew
 			// 
-			this.btnSaveNew.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSaveNew.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSaveNew.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveNew.Image")));
 			this.btnSaveNew.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnSaveNew.Name = "btnSaveNew";
-			this.btnSaveNew.Size = new System.Drawing.Size(123, 41);
+			this.btnSaveNew.Size = new System.Drawing.Size(168, 47);
 			this.btnSaveNew.Tag = "frmProduct_AddProductH";
 			this.btnSaveNew.Text = "Cất && Thêm mới";
 			this.btnSaveNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;

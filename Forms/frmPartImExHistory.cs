@@ -23,18 +23,33 @@ namespace BMS
 
         void LoadData()
         {
+            int type = 2;
+            if (rbAll.Checked)
+            {
+                type = 2;
+            }
+            if (rbImport.Checked)
+            {
+                type = 0;   
+            }
+            if (rbExport.Checked)
+            {
+                type = 1;
+            }
             string keyword = txbSearchHistory.Text;
-            DataTable dataTable = TextUtils.LoadDataFromSP("spGetHistoryByDate", "VS", new string[] { "@dateFrom", "@dateTo", "@keyword" }, new object[] { dtpFrom.Value.ToString("yyyy/MM/dd HH:mm:ss")
+            DataTable dataTable = TextUtils.LoadDataFromSP("spGetHistoryByDate", "VS", new string[] { "@dateFrom", "@dateTo", "@keyword", "@filter" }, new object[] { dtpFrom.Value.ToString("yyyy/MM/dd HH:mm:ss")
                                         , dtpTo.Value.ToString("yyyy/MM/dd HH:mm:ss")
                                         , keyword
+                                        , type
+
                            });
             dtgvHistory.DataSource = dataTable;
         }
 
         private void btnSearchHistory_Click(object sender, EventArgs e)
         {
-            dtpFrom.Value = DateTime.Today.AddHours(00).AddMinutes(00).AddSeconds(00);
-            dtpTo.Value = DateTime.Today.AddHours(23).AddMinutes(59).AddSeconds(59);
+            dtpFrom.Value = dtpFrom.Value.AddHours(00).AddMinutes(00).AddSeconds(00);
+            dtpTo.Value = dtpTo.Value.AddHours(23).AddMinutes(59).AddSeconds(59);
             LoadData();
         }
 
@@ -46,15 +61,7 @@ namespace BMS
 
         }
 
-        private void btnSearchDate_Click(object sender, EventArgs e)
-        {
-            string keyword = txbSearchHistory.Text;
-            DataTable dataTable = TextUtils.LoadDataFromSP("spGetHistoryByDate", "VS", new string[] { "@dateFrom", "@dateTo", "@keyword" }, new object[] { dtpFrom.Value.ToString("yyyy/MM/dd HH:mm:ss")
-                                        , dtpTo.Value.ToString("yyyy/MM/dd HH:mm:ss")
-                                        , keyword
-                           });
-            dtgvHistory.DataSource = dataTable;
-        }
+    
 
         private void btnDelPart_Click(object sender, EventArgs e)
         {
@@ -94,6 +101,9 @@ namespace BMS
             }
         }
 
-        
-    }
+		private void rbAll_CheckedChanged(object sender, EventArgs e)
+		{
+            LoadData();
+		}
+	}
 }

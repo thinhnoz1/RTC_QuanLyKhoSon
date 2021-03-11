@@ -266,6 +266,12 @@
     <Compile Include="frmPartImExHistory.Designer.cs">
       <DependentUpon>frmPartImExHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhoMotor\frmMotorPartList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhoMotor\frmMotorPartList.Designer.cs">
+      <DependentUpon>frmMotorPartList.cs</DependentUpon>
+    </Compile>
     <Compile Include="PLC\CellDataTypes.cs" />
     <Compile Include="PLC\FX\FxAddress.cs" />
     <Compile Include="PLC\FX\FxAddressLayoutInfo.cs" />
@@ -321,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSonPlan.resx">
       <DependentUpon>frmSonPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhoMotor\frmMotorPartList.resx">
+      <DependentUpon>frmMotorPartList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -387,6 +396,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

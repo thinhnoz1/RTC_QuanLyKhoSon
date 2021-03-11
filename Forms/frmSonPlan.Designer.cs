@@ -106,11 +106,11 @@ namespace BMS
 			// 
 			// btnCreatePlan
 			// 
-			this.btnCreatePlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCreatePlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCreatePlan.Image = ((System.Drawing.Image)(resources.GetObject("btnCreatePlan.Image")));
 			this.btnCreatePlan.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnCreatePlan.Name = "btnCreatePlan";
-			this.btnCreatePlan.Size = new System.Drawing.Size(125, 44);
+			this.btnCreatePlan.Size = new System.Drawing.Size(142, 48);
 			this.btnCreatePlan.Tag = "frmProduct_AddProductH";
 			this.btnCreatePlan.Text = "Tạo kế hoạch";
 			this.btnCreatePlan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -123,11 +123,11 @@ namespace BMS
 			// 
 			// btnEditPlan
 			// 
-			this.btnEditPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnEditPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEditPlan.Image = ((System.Drawing.Image)(resources.GetObject("btnEditPlan.Image")));
 			this.btnEditPlan.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnEditPlan.Name = "btnEditPlan";
-			this.btnEditPlan.Size = new System.Drawing.Size(126, 44);
+			this.btnEditPlan.Size = new System.Drawing.Size(142, 48);
 			this.btnEditPlan.Tag = "frmProduct_EditProductH";
 			this.btnEditPlan.Text = "Sửa kế hoạch";
 			this.btnEditPlan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -140,11 +140,11 @@ namespace BMS
 			// 
 			// btnDelPlan
 			// 
-			this.btnDelPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDelPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnDelPlan.Image = ((System.Drawing.Image)(resources.GetObject("btnDelPlan.Image")));
 			this.btnDelPlan.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnDelPlan.Name = "btnDelPlan";
-			this.btnDelPlan.Size = new System.Drawing.Size(126, 44);
+			this.btnDelPlan.Size = new System.Drawing.Size(144, 48);
 			this.btnDelPlan.Tag = "frmProduct_DeleteProductH";
 			this.btnDelPlan.Text = "Xóa kế hoạch";
 			this.btnDelPlan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -158,11 +158,11 @@ namespace BMS
 			// 
 			// btnExportExcel
 			// 
-			this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.Image")));
 			this.btnExportExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnExportExcel.Name = "btnExportExcel";
-			this.btnExportExcel.Size = new System.Drawing.Size(103, 44);
+			this.btnExportExcel.Size = new System.Drawing.Size(116, 48);
 			this.btnExportExcel.Tag = "";
 			this.btnExportExcel.Text = "Xuất Excel";
 			this.btnExportExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -175,11 +175,11 @@ namespace BMS
 			// 
 			// btnImportExcel
 			// 
-			this.btnImportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnImportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnImportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnImportExcel.Image")));
 			this.btnImportExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnImportExcel.Name = "btnImportExcel";
-			this.btnImportExcel.Size = new System.Drawing.Size(108, 44);
+			this.btnImportExcel.Size = new System.Drawing.Size(123, 48);
 			this.btnImportExcel.Tag = "";
 			this.btnImportExcel.Text = "Nhập Excel";
 			this.btnImportExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -196,14 +196,14 @@ namespace BMS
 			this.dtgvSonPlan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.dtgvSonPlan.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5);
+			this.dtgvSonPlan.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
 			this.dtgvSonPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dtgvSonPlan.Location = new System.Drawing.Point(0, 98);
 			this.dtgvSonPlan.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
 			this.dtgvSonPlan.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Style3D;
 			this.dtgvSonPlan.LookAndFeel.UseDefaultLookAndFeel = false;
 			this.dtgvSonPlan.MainView = this.gvSonPlan;
-			this.dtgvSonPlan.Margin = new System.Windows.Forms.Padding(5);
+			this.dtgvSonPlan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
 			this.dtgvSonPlan.Name = "dtgvSonPlan";
 			this.dtgvSonPlan.Size = new System.Drawing.Size(1275, 456);
 			this.dtgvSonPlan.TabIndex = 29;
@@ -447,6 +447,7 @@ namespace BMS
 			this.colProdDate.AppearanceHeader.Options.UseTextOptions = true;
 			this.colProdDate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colProdDate.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+			this.colProdDate.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
 			this.colProdDate.Caption = "Ngày sản xuất thực tế";
 			this.colProdDate.FieldName = "ProdDate";
 			this.colProdDate.Name = "colProdDate";
@@ -474,6 +475,7 @@ namespace BMS
 			this.colOK.AppearanceHeader.Options.UseTextOptions = true;
 			this.colOK.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colOK.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+			this.colOK.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
 			this.colOK.Caption = "OK (Số lượng sản xuất thực tế)";
 			this.colOK.FieldName = "RealProdQty";
 			this.colOK.Name = "colOK";
@@ -750,16 +752,18 @@ namespace BMS
 			this.panel2.Controls.Add(this.dtpTo);
 			this.panel2.Controls.Add(this.label1);
 			this.panel2.Controls.Add(this.label3);
-			this.panel2.Location = new System.Drawing.Point(0, 63);
-			this.panel2.Margin = new System.Windows.Forms.Padding(4);
+			this.panel2.Location = new System.Drawing.Point(0, 53);
+			this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(840, 32);
+			this.panel2.Size = new System.Drawing.Size(840, 42);
 			this.panel2.TabIndex = 30;
 			// 
 			// btnSearch
 			// 
-			this.btnSearch.Location = new System.Drawing.Point(729, 0);
-			this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+			this.btnSearch.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSearch.Appearance.Options.UseFont = true;
+			this.btnSearch.Location = new System.Drawing.Point(729, 6);
+			this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnSearch.Name = "btnSearch";
 			this.btnSearch.Size = new System.Drawing.Size(100, 28);
 			this.btnSearch.TabIndex = 25;
@@ -768,51 +772,54 @@ namespace BMS
 			// 
 			// txbSearch
 			// 
-			this.txbSearch.Location = new System.Drawing.Point(525, 4);
-			this.txbSearch.Margin = new System.Windows.Forms.Padding(4);
+			this.txbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txbSearch.Location = new System.Drawing.Point(525, 7);
+			this.txbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.txbSearch.Name = "txbSearch";
-			this.txbSearch.Size = new System.Drawing.Size(195, 22);
+			this.txbSearch.Size = new System.Drawing.Size(195, 28);
 			this.txbSearch.TabIndex = 24;
 			// 
 			// dtpFrom
 			// 
 			this.dtpFrom.CustomFormat = "dd/MM/yyyy";
+			this.dtpFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dtpFrom.Location = new System.Drawing.Point(103, 4);
-			this.dtpFrom.Margin = new System.Windows.Forms.Padding(4);
+			this.dtpFrom.Location = new System.Drawing.Point(103, 7);
+			this.dtpFrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.dtpFrom.Name = "dtpFrom";
-			this.dtpFrom.Size = new System.Drawing.Size(140, 22);
+			this.dtpFrom.Size = new System.Drawing.Size(140, 28);
 			this.dtpFrom.TabIndex = 36;
 			// 
 			// dtpTo
 			// 
 			this.dtpTo.CustomFormat = "dd/MM/yyyy";
+			this.dtpTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dtpTo.Location = new System.Drawing.Point(365, 4);
-			this.dtpTo.Margin = new System.Windows.Forms.Padding(4);
+			this.dtpTo.Location = new System.Drawing.Point(365, 7);
+			this.dtpTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.dtpTo.Name = "dtpTo";
-			this.dtpTo.Size = new System.Drawing.Size(131, 22);
+			this.dtpTo.Size = new System.Drawing.Size(131, 28);
 			this.dtpTo.TabIndex = 35;
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.label1.Location = new System.Drawing.Point(273, 9);
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(273, 10);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(83, 17);
+			this.label1.Size = new System.Drawing.Size(101, 24);
 			this.label1.TabIndex = 34;
 			this.label1.Text = "Đến ngày: ";
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.label3.Location = new System.Drawing.Point(16, 9);
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(16, 10);
 			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(74, 17);
+			this.label3.Size = new System.Drawing.Size(89, 24);
 			this.label3.TabIndex = 33;
 			this.label3.Text = "Từ ngày: ";
 			// 
@@ -824,7 +831,7 @@ namespace BMS
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.dtgvSonPlan);
 			this.Controls.Add(this.toolStrip1);
-			this.Margin = new System.Windows.Forms.Padding(5);
+			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
 			this.Name = "frmSonPlan";
 			this.Text = "KẾ HOẠCH LINH KIỆN";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -204,7 +204,7 @@ namespace BMS
 
 		private void cấtToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-            btnSaveClose_Click(null, null);
+            btnSaveNew_Click(null, null);
 
         }
 

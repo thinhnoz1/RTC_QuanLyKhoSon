@@ -56,6 +56,9 @@ namespace BMS
 			this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnDelPart = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+			this.rbAll = new System.Windows.Forms.RadioButton();
+			this.rbImport = new System.Windows.Forms.RadioButton();
+			this.rbExport = new System.Windows.Forms.RadioButton();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvHistory)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvHistory)).BeginInit();
 			this.panel2.SuspendLayout();
@@ -67,13 +70,13 @@ namespace BMS
 			this.dtgvHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.dtgvHistory.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dtgvHistory.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
 			this.dtgvHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dtgvHistory.Location = new System.Drawing.Point(0, 102);
+			this.dtgvHistory.Location = new System.Drawing.Point(0, 55);
 			this.dtgvHistory.MainView = this.gvHistory;
-			this.dtgvHistory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dtgvHistory.Margin = new System.Windows.Forms.Padding(4);
 			this.dtgvHistory.Name = "dtgvHistory";
-			this.dtgvHistory.Size = new System.Drawing.Size(1065, 601);
+			this.dtgvHistory.Size = new System.Drawing.Size(1323, 648);
 			this.dtgvHistory.TabIndex = 29;
 			this.dtgvHistory.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvHistory});
@@ -391,8 +394,10 @@ namespace BMS
 			// 
 			// btnSearchHistory
 			// 
-			this.btnSearchHistory.Location = new System.Drawing.Point(729, 0);
-			this.btnSearchHistory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnSearchHistory.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSearchHistory.Appearance.Options.UseFont = true;
+			this.btnSearchHistory.Location = new System.Drawing.Point(729, 12);
+			this.btnSearchHistory.Margin = new System.Windows.Forms.Padding(4);
 			this.btnSearchHistory.Name = "btnSearchHistory";
 			this.btnSearchHistory.Size = new System.Drawing.Size(100, 28);
 			this.btnSearchHistory.TabIndex = 25;
@@ -401,67 +406,73 @@ namespace BMS
 			// 
 			// txbSearchHistory
 			// 
-			this.txbSearchHistory.Location = new System.Drawing.Point(525, 4);
-			this.txbSearchHistory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txbSearchHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txbSearchHistory.Location = new System.Drawing.Point(525, 12);
+			this.txbSearchHistory.Margin = new System.Windows.Forms.Padding(4);
 			this.txbSearchHistory.Name = "txbSearchHistory";
-			this.txbSearchHistory.Size = new System.Drawing.Size(195, 22);
+			this.txbSearchHistory.Size = new System.Drawing.Size(195, 28);
 			this.txbSearchHistory.TabIndex = 24;
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.label3.Location = new System.Drawing.Point(16, 9);
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(16, 14);
 			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(74, 17);
+			this.label3.Size = new System.Drawing.Size(89, 24);
 			this.label3.TabIndex = 33;
 			this.label3.Text = "Từ ngày: ";
 			// 
 			// dtpFrom
 			// 
 			this.dtpFrom.CustomFormat = "dd/MM/yyyy";
+			this.dtpFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dtpFrom.Location = new System.Drawing.Point(103, 4);
-			this.dtpFrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dtpFrom.Location = new System.Drawing.Point(99, 12);
+			this.dtpFrom.Margin = new System.Windows.Forms.Padding(4);
 			this.dtpFrom.Name = "dtpFrom";
-			this.dtpFrom.Size = new System.Drawing.Size(140, 22);
+			this.dtpFrom.Size = new System.Drawing.Size(140, 28);
 			this.dtpFrom.TabIndex = 36;
 			// 
 			// panel2
 			// 
 			this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.panel2.Controls.Add(this.rbExport);
+			this.panel2.Controls.Add(this.rbImport);
+			this.panel2.Controls.Add(this.rbAll);
 			this.panel2.Controls.Add(this.btnSearchHistory);
 			this.panel2.Controls.Add(this.txbSearchHistory);
 			this.panel2.Controls.Add(this.dtpFrom);
 			this.panel2.Controls.Add(this.dtpTo);
 			this.panel2.Controls.Add(this.label1);
 			this.panel2.Controls.Add(this.label3);
-			this.panel2.Location = new System.Drawing.Point(0, 15);
-			this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.panel2.Location = new System.Drawing.Point(0, 1);
+			this.panel2.Margin = new System.Windows.Forms.Padding(4);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(1065, 32);
+			this.panel2.Size = new System.Drawing.Size(1323, 52);
 			this.panel2.TabIndex = 4;
 			// 
 			// dtpTo
 			// 
 			this.dtpTo.CustomFormat = "dd/MM/yyyy";
+			this.dtpTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dtpTo.Location = new System.Drawing.Point(365, 4);
-			this.dtpTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dtpTo.Location = new System.Drawing.Point(365, 12);
+			this.dtpTo.Margin = new System.Windows.Forms.Padding(4);
 			this.dtpTo.Name = "dtpTo";
-			this.dtpTo.Size = new System.Drawing.Size(131, 22);
+			this.dtpTo.Size = new System.Drawing.Size(131, 28);
 			this.dtpTo.TabIndex = 35;
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.label1.Location = new System.Drawing.Point(273, 9);
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(273, 14);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(83, 17);
+			this.label1.Size = new System.Drawing.Size(101, 24);
 			this.label1.TabIndex = 34;
 			this.label1.Text = "Đến ngày: ";
 			// 
@@ -484,9 +495,10 @@ namespace BMS
 			this.toolStrip1.Location = new System.Drawing.Point(0, 50);
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-			this.toolStrip1.Size = new System.Drawing.Size(1068, 52);
+			this.toolStrip1.Size = new System.Drawing.Size(1326, 48);
 			this.toolStrip1.TabIndex = 30;
 			this.toolStrip1.Text = "toolStrip2";
+			this.toolStrip1.Visible = false;
 			// 
 			// btnEditPart
 			// 
@@ -524,15 +536,56 @@ namespace BMS
 			this.toolStripSeparator8.Name = "toolStripSeparator8";
 			this.toolStripSeparator8.Size = new System.Drawing.Size(6, 40);
 			// 
+			// rbAll
+			// 
+			this.rbAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.rbAll.AutoSize = true;
+			this.rbAll.Checked = true;
+			this.rbAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+			this.rbAll.Location = new System.Drawing.Point(892, 12);
+			this.rbAll.Name = "rbAll";
+			this.rbAll.Size = new System.Drawing.Size(102, 28);
+			this.rbAll.TabIndex = 37;
+			this.rbAll.TabStop = true;
+			this.rbAll.Text = "Toàn bộ";
+			this.rbAll.UseVisualStyleBackColor = true;
+			this.rbAll.CheckedChanged += new System.EventHandler(this.rbAll_CheckedChanged);
+			// 
+			// rbImport
+			// 
+			this.rbImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.rbImport.AutoSize = true;
+			this.rbImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+			this.rbImport.Location = new System.Drawing.Point(1045, 12);
+			this.rbImport.Name = "rbImport";
+			this.rbImport.Size = new System.Drawing.Size(82, 28);
+			this.rbImport.TabIndex = 38;
+			this.rbImport.Text = "Nhập ";
+			this.rbImport.UseVisualStyleBackColor = true;
+			this.rbImport.CheckedChanged += new System.EventHandler(this.rbAll_CheckedChanged);
+			// 
+			// rbExport
+			// 
+			this.rbExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.rbExport.AutoSize = true;
+			this.rbExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+			this.rbExport.Location = new System.Drawing.Point(1192, 12);
+			this.rbExport.Name = "rbExport";
+			this.rbExport.Size = new System.Drawing.Size(70, 28);
+			this.rbExport.TabIndex = 39;
+			this.rbExport.Text = "Xuất";
+			this.rbExport.UseVisualStyleBackColor = true;
+			this.rbExport.CheckedChanged += new System.EventHandler(this.rbAll_CheckedChanged);
+			// 
 			// frmPartImExHistory
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1067, 703);
+			this.ClientSize = new System.Drawing.Size(1325, 703);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.dtgvHistory);
 			this.Controls.Add(this.panel2);
-			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.Margin = new System.Windows.Forms.Padding(5);
 			this.Name = "frmPartImExHistory";
 			this.Text = "LỊCH SỬ NHẬP XUẤT";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -574,5 +627,8 @@ namespace BMS
         private DevExpress.XtraGrid.Columns.GridColumn colWorkerCode;
         private DevExpress.XtraGrid.Columns.GridColumn colHour;
         private DevExpress.XtraGrid.Columns.GridColumn colMonth;
-    }
+		private System.Windows.Forms.RadioButton rbExport;
+		private System.Windows.Forms.RadioButton rbImport;
+		private System.Windows.Forms.RadioButton rbAll;
+	}
 }
