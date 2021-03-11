@@ -88,11 +88,6 @@ namespace BMS
                 MessageBox.Show("Xin hãy nhập mã linh kiện.", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return false;
             }
-            if (txtPartName.Text.Trim() == "")
-            {
-                MessageBox.Show("Xin hãy nhập mã linh kiện.", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                return false;
-            }
             return true;
 
         }
@@ -183,7 +178,20 @@ namespace BMS
                 txtExQuantity.ReadOnly = false;
                 txtAsQuantity.ReadOnly = false;
                 this.Text = "Thêm danh mục linh kiện";
+                Type = 1;
             }
         }
-    }
+
+		private void catVaThemOiToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            btnSaveNew_Click(null, null);
+
+        }
+
+		private void cấtToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            btnSaveClose_Click(null, null);
+
+        }
+	}
 }

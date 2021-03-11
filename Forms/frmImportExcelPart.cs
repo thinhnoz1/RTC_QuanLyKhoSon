@@ -401,6 +401,12 @@ namespace BMS
 				backgroundWorker1.RunWorkerAsync();
 			}
 		}
-        #endregion
-    }
+		#endregion
+
+		private void frmImportExcelPart_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			this.DialogResult = DialogResult.OK;
+
+		}
+	}
 }

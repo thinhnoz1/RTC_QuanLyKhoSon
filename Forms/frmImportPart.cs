@@ -220,5 +220,11 @@ namespace BMS
 
             timer1.Enabled = true;
         }
-	}
+
+		private void txbWorkerCode_KeyPress(object sender, KeyPressEventArgs e)
+		{
+            if (e.KeyChar == (char)13)
+                txbOrderCode.Focus();
+        }
+    }
 }

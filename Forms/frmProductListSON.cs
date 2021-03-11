@@ -184,6 +184,11 @@ namespace BMS
         {
             frmImportExcelPart frm = new frmImportExcelPart();
             frm.ShowDialog();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                LoadListProducts();
+         
+            }
         }
 
 		private void btnSonPlan_Click(object sender, EventArgs e)

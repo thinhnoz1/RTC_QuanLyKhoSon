@@ -117,7 +117,7 @@ namespace BMS
 					sonPlanModel.PartCode = _partCode;
 					sonPlanModel.LotSize = TextUtils.ToInt(grvData.GetRowCellValue(i, "F3"));
 					sonPlanModel.QtyPlan = TextUtils.ToInt(grvData.GetRowCellValue(i, "F4"));
-					sonPlanModel.ProdDate = TextUtils.ToDate3(grvData.GetRowCellValue(i, "F5"));
+					sonPlanModel.ProdDate = TextUtils.ToDate2(grvData.GetRowCellValue(i, "F5"));
 					sonPlanModel.RealProdQty = TextUtils.ToInt(grvData.GetRowCellValue(i, "F6"));
 					sonPlanModel.NG = TextUtils.ToInt(grvData.GetRowCellValue(i, "F7"));
 					sonPlanModel.OrderCode = _orderCode;
@@ -128,7 +128,7 @@ namespace BMS
 					sonPlanModel.ConfirmCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F13"));
 					sonPlanModel.Note = TextUtils.ToString(grvData.GetRowCellValue(i, "F14"));
 					sonPlanModel.WorkerCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F15"));
-					sonPlanModel.PrintedDate = TextUtils.ToDate3(grvData.GetRowCellValue(i, "F16"));
+					sonPlanModel.PrintedDate = TextUtils.ToDate2(grvData.GetRowCellValue(i, "F16"));
 					#endregion
 
 					// Kiem tra xem ma san pham/ma order da ton tai chua
@@ -195,7 +195,7 @@ namespace BMS
 						sonPlanModel.PartCode = _partCode;
 						sonPlanModel.LotSize = TextUtils.ToInt(grvData.GetRowCellValue(i, "F3"));
 						sonPlanModel.QtyPlan = TextUtils.ToInt(grvData.GetRowCellValue(i, "F4"));
-						sonPlanModel.ProdDate = TextUtils.ToDate3(grvData.GetRowCellValue(i, "F5"));
+						sonPlanModel.ProdDate = TextUtils.ToDate2(grvData.GetRowCellValue(i, "F5"));
 						sonPlanModel.RealProdQty = TextUtils.ToInt(grvData.GetRowCellValue(i, "F6"));
 						sonPlanModel.NG = TextUtils.ToInt(grvData.GetRowCellValue(i, "F7"));
 						sonPlanModel.OrderCode = _orderCode;
@@ -206,7 +206,7 @@ namespace BMS
 						sonPlanModel.ConfirmCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F13"));
 						sonPlanModel.Note = TextUtils.ToString(grvData.GetRowCellValue(i, "F14"));
 						sonPlanModel.WorkerCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F15"));
-						sonPlanModel.PrintedDate = TextUtils.ToDate3(grvData.GetRowCellValue(i, "F16"));
+						sonPlanModel.PrintedDate = TextUtils.ToDate2(grvData.GetRowCellValue(i, "F16"));
 						#endregion
 
 						// Kiem tra xem ma san pham/ma order da ton tai chua
@@ -398,6 +398,12 @@ namespace BMS
 			MessageBox.Show("Đã xong! Chạy hết " + time.ToString() + " giây");
 			enableControl(true);
 		}
-        #endregion
-    }
+		#endregion
+
+		private void frmImportExcel_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			this.DialogResult = DialogResult.OK;
+
+		}
+	}
 }

@@ -61,9 +61,10 @@ namespace BMS
 			this.groupControl1.Controls.Add(this.label5);
 			this.groupControl1.Controls.Add(this.btnBrowse);
 			this.groupControl1.Controls.Add(this.labelControl5);
-			this.groupControl1.Location = new System.Drawing.Point(3, 49);
+			this.groupControl1.Location = new System.Drawing.Point(4, 60);
+			this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.groupControl1.Name = "groupControl1";
-			this.groupControl1.Size = new System.Drawing.Size(958, 71);
+			this.groupControl1.Size = new System.Drawing.Size(1277, 87);
 			this.groupControl1.TabIndex = 179;
 			this.groupControl1.Text = "Thông tin";
 			// 
@@ -73,9 +74,10 @@ namespace BMS
 			this.chkAutoCheck.AutoSize = true;
 			this.chkAutoCheck.Checked = true;
 			this.chkAutoCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.chkAutoCheck.Location = new System.Drawing.Point(865, 35);
+			this.chkAutoCheck.Location = new System.Drawing.Point(1161, 43);
+			this.chkAutoCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.chkAutoCheck.Name = "chkAutoCheck";
-			this.chkAutoCheck.Size = new System.Drawing.Size(81, 17);
+			this.chkAutoCheck.Size = new System.Drawing.Size(101, 21);
 			this.chkAutoCheck.TabIndex = 177;
 			this.chkAutoCheck.Text = "New ImPort";
 			this.chkAutoCheck.UseVisualStyleBackColor = true;
@@ -83,38 +85,42 @@ namespace BMS
 			// cboSheet
 			// 
 			this.cboSheet.FormattingEnabled = true;
-			this.cboSheet.Location = new System.Drawing.Point(660, 33);
+			this.cboSheet.Location = new System.Drawing.Point(880, 41);
+			this.cboSheet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.cboSheet.Name = "cboSheet";
-			this.cboSheet.Size = new System.Drawing.Size(157, 21);
+			this.cboSheet.Size = new System.Drawing.Size(208, 24);
 			this.cboSheet.TabIndex = 1;
 			this.cboSheet.SelectionChangeCommitted += new System.EventHandler(this.cboSheet_SelectionChangeCommitted);
 			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(597, 37);
+			this.label5.Location = new System.Drawing.Point(796, 46);
+			this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(60, 13);
+			this.label5.Size = new System.Drawing.Size(78, 17);
 			this.label5.TabIndex = 147;
 			this.label5.Text = "Tên Sheet:";
 			// 
 			// btnBrowse
 			// 
-			this.btnBrowse.Location = new System.Drawing.Point(70, 34);
+			this.btnBrowse.Location = new System.Drawing.Point(93, 42);
+			this.btnBrowse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnBrowse.Name = "btnBrowse";
 			this.btnBrowse.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
 			this.btnBrowse.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
 			this.btnBrowse.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-			this.btnBrowse.Size = new System.Drawing.Size(511, 20);
+			this.btnBrowse.Size = new System.Drawing.Size(681, 22);
 			this.btnBrowse.TabIndex = 0;
 			this.btnBrowse.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnBrowse_ButtonClick);
 			// 
 			// labelControl5
 			// 
-			this.labelControl5.Location = new System.Drawing.Point(9, 37);
+			this.labelControl5.Location = new System.Drawing.Point(12, 46);
+			this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.labelControl5.Name = "labelControl5";
-			this.labelControl5.Size = new System.Drawing.Size(54, 13);
+			this.labelControl5.Size = new System.Drawing.Size(63, 16);
 			this.labelControl5.TabIndex = 4;
 			this.labelControl5.Text = "Đường dẫn";
 			// 
@@ -123,10 +129,12 @@ namespace BMS
 			this.grdData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.grdData.Location = new System.Drawing.Point(3, 122);
+			this.grdData.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.grdData.Location = new System.Drawing.Point(4, 150);
 			this.grdData.MainView = this.grvData;
+			this.grdData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.grdData.Name = "grdData";
-			this.grdData.Size = new System.Drawing.Size(958, 400);
+			this.grdData.Size = new System.Drawing.Size(1277, 492);
 			this.grdData.TabIndex = 180;
 			this.grdData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvData});
@@ -162,9 +170,9 @@ namespace BMS
 			this.mnuMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
 			this.mnuMenu.Location = new System.Drawing.Point(0, 0);
 			this.mnuMenu.Name = "mnuMenu";
-			this.mnuMenu.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+			this.mnuMenu.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
 			this.mnuMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-			this.mnuMenu.Size = new System.Drawing.Size(964, 46);
+			this.mnuMenu.Size = new System.Drawing.Size(1285, 57);
 			this.mnuMenu.TabIndex = 181;
 			this.mnuMenu.Text = "toolStrip2";
 			// 
@@ -184,9 +192,10 @@ namespace BMS
 			// 
 			this.chbAdvImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.chbAdvImport.AutoSize = true;
-			this.chbAdvImport.Location = new System.Drawing.Point(468, 12);
+			this.chbAdvImport.Location = new System.Drawing.Point(628, 15);
+			this.chbAdvImport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.chbAdvImport.Name = "chbAdvImport";
-			this.chbAdvImport.Size = new System.Drawing.Size(103, 17);
+			this.chbAdvImport.Size = new System.Drawing.Size(133, 21);
 			this.chbAdvImport.TabIndex = 184;
 			this.chbAdvImport.Text = "Nhập dữ liệu lớn";
 			this.chbAdvImport.UseVisualStyleBackColor = true;
@@ -194,33 +203,37 @@ namespace BMS
 			// txtRate
 			// 
 			this.txtRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtRate.Location = new System.Drawing.Point(576, 10);
+			this.txtRate.Location = new System.Drawing.Point(768, 12);
+			this.txtRate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.txtRate.Name = "txtRate";
 			this.txtRate.ReadOnly = true;
-			this.txtRate.Size = new System.Drawing.Size(100, 20);
+			this.txtRate.Size = new System.Drawing.Size(132, 22);
 			this.txtRate.TabIndex = 183;
 			// 
 			// progressBar1
 			// 
 			this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.progressBar1.Location = new System.Drawing.Point(680, 9);
+			this.progressBar1.Location = new System.Drawing.Point(907, 11);
+			this.progressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.progressBar1.Name = "progressBar1";
-			this.progressBar1.Size = new System.Drawing.Size(279, 23);
+			this.progressBar1.Size = new System.Drawing.Size(372, 28);
 			this.progressBar1.TabIndex = 182;
 			// 
 			// frmImportExcelPart
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(964, 526);
+			this.ClientSize = new System.Drawing.Size(1285, 647);
 			this.Controls.Add(this.chbAdvImport);
 			this.Controls.Add(this.txtRate);
 			this.Controls.Add(this.progressBar1);
 			this.Controls.Add(this.mnuMenu);
 			this.Controls.Add(this.groupControl1);
 			this.Controls.Add(this.grdData);
+			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
 			this.Name = "frmImportExcelPart";
 			this.Text = "NHẬP EXCEL";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmImportExcelPart_FormClosing);
 			this.Load += new System.EventHandler(this.frmImportExcelPart_Load);
 			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
 			this.groupControl1.ResumeLayout(false);

@@ -196,14 +196,14 @@ namespace BMS
 			this.dtgvSonPlan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.dtgvSonPlan.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.dtgvSonPlan.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5);
 			this.dtgvSonPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dtgvSonPlan.Location = new System.Drawing.Point(0, 98);
 			this.dtgvSonPlan.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
 			this.dtgvSonPlan.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Style3D;
 			this.dtgvSonPlan.LookAndFeel.UseDefaultLookAndFeel = false;
 			this.dtgvSonPlan.MainView = this.gvSonPlan;
-			this.dtgvSonPlan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.dtgvSonPlan.Margin = new System.Windows.Forms.Padding(5);
 			this.dtgvSonPlan.Name = "dtgvSonPlan";
 			this.dtgvSonPlan.Size = new System.Drawing.Size(1275, 456);
 			this.dtgvSonPlan.TabIndex = 29;
@@ -212,7 +212,7 @@ namespace BMS
 			// 
 			// gvSonPlan
 			// 
-			this.gvSonPlan.ColumnPanelRowHeight = 40;
+			this.gvSonPlan.ColumnPanelRowHeight = 60;
 			this.gvSonPlan.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colID,
             this.colStt,
@@ -267,6 +267,7 @@ namespace BMS
 			this.colID.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colID.Caption = "ID";
 			this.colID.FieldName = "ID";
+			this.colID.MinWidth = 25;
 			this.colID.Name = "colID";
 			this.colID.OptionsColumn.AllowEdit = false;
 			// 
@@ -291,6 +292,7 @@ namespace BMS
 			this.colStt.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colStt.Caption = "STT";
 			this.colStt.FieldName = "STT";
+			this.colStt.MinWidth = 25;
 			this.colStt.Name = "colStt";
 			this.colStt.Visible = true;
 			this.colStt.VisibleIndex = 0;
@@ -322,6 +324,7 @@ namespace BMS
 			this.colDateExported.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
 			this.colDateExported.Caption = "Ngày xuất kho";
 			this.colDateExported.FieldName = "DateExported";
+			this.colDateExported.MinWidth = 25;
 			this.colDateExported.Name = "colDateExported";
 			this.colDateExported.OptionsColumn.AllowEdit = false;
 			this.colDateExported.Visible = true;
@@ -354,6 +357,7 @@ namespace BMS
 			this.colPartCode.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
 			this.colPartCode.Caption = "Mã linh kiện";
 			this.colPartCode.FieldName = "PartCode";
+			this.colPartCode.MinWidth = 25;
 			this.colPartCode.Name = "colPartCode";
 			this.colPartCode.OptionsColumn.AllowEdit = false;
 			this.colPartCode.Visible = true;
@@ -386,6 +390,7 @@ namespace BMS
 			this.colLotSize.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
 			this.colLotSize.Caption = "Lot Size";
 			this.colLotSize.FieldName = "LotSize";
+			this.colLotSize.MinWidth = 25;
 			this.colLotSize.Name = "colLotSize";
 			this.colLotSize.OptionsColumn.AllowEdit = false;
 			this.colLotSize.Visible = true;
@@ -418,6 +423,7 @@ namespace BMS
 			this.colQtyPlan.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
 			this.colQtyPlan.Caption = "Kế hoạch";
 			this.colQtyPlan.FieldName = "QtyPlan";
+			this.colQtyPlan.MinWidth = 25;
 			this.colQtyPlan.Name = "colQtyPlan";
 			this.colQtyPlan.OptionsColumn.AllowEdit = false;
 			this.colQtyPlan.Visible = true;
@@ -450,6 +456,7 @@ namespace BMS
 			this.colProdDate.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
 			this.colProdDate.Caption = "Ngày sản xuất thực tế";
 			this.colProdDate.FieldName = "ProdDate";
+			this.colProdDate.MinWidth = 25;
 			this.colProdDate.Name = "colProdDate";
 			this.colProdDate.OptionsColumn.AllowEdit = false;
 			this.colProdDate.Visible = true;
@@ -476,8 +483,9 @@ namespace BMS
 			this.colOK.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colOK.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colOK.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-			this.colOK.Caption = "OK (Số lượng sản xuất thực tế)";
+			this.colOK.Caption = "OK";
 			this.colOK.FieldName = "RealProdQty";
+			this.colOK.MinWidth = 25;
 			this.colOK.Name = "colOK";
 			this.colOK.Visible = true;
 			this.colOK.VisibleIndex = 6;
@@ -503,6 +511,7 @@ namespace BMS
 			this.colNG.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colNG.Caption = "NG";
 			this.colNG.FieldName = "NG";
+			this.colNG.MinWidth = 25;
 			this.colNG.Name = "colNG";
 			this.colNG.Visible = true;
 			this.colNG.VisibleIndex = 7;
@@ -529,6 +538,7 @@ namespace BMS
 			this.colOrderCode.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colOrderCode.Caption = "MÃ ORDER";
 			this.colOrderCode.FieldName = "OrderCode";
+			this.colOrderCode.MinWidth = 25;
 			this.colOrderCode.Name = "colOrderCode";
 			this.colOrderCode.Visible = true;
 			this.colOrderCode.VisibleIndex = 8;
@@ -555,6 +565,7 @@ namespace BMS
 			this.colSaleCode.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colSaleCode.Caption = "SALE ORDER";
 			this.colSaleCode.FieldName = "SaleCode";
+			this.colSaleCode.MinWidth = 25;
 			this.colSaleCode.Name = "colSaleCode";
 			this.colSaleCode.Visible = true;
 			this.colSaleCode.VisibleIndex = 9;
@@ -581,6 +592,7 @@ namespace BMS
 			this.colOP.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colOP.Caption = "OP";
 			this.colOP.FieldName = "OP";
+			this.colOP.MinWidth = 25;
 			this.colOP.Name = "colOP";
 			this.colOP.Visible = true;
 			this.colOP.VisibleIndex = 10;
@@ -606,6 +618,7 @@ namespace BMS
 			this.colShipTo.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colShipTo.Caption = "SHIP TO";
 			this.colShipTo.FieldName = "ShipTo";
+			this.colShipTo.MinWidth = 25;
 			this.colShipTo.Name = "colShipTo";
 			this.colShipTo.Visible = true;
 			this.colShipTo.VisibleIndex = 11;
@@ -632,6 +645,7 @@ namespace BMS
 			this.colShipVia.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colShipVia.Caption = "SHIP VIA";
 			this.colShipVia.FieldName = "ShipVia";
+			this.colShipVia.MinWidth = 25;
 			this.colShipVia.Name = "colShipVia";
 			this.colShipVia.Visible = true;
 			this.colShipVia.VisibleIndex = 12;
@@ -658,6 +672,7 @@ namespace BMS
 			this.colConfirmCode.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colConfirmCode.Caption = "CONFIRM";
 			this.colConfirmCode.FieldName = "ConfirmCode";
+			this.colConfirmCode.MinWidth = 25;
 			this.colConfirmCode.Name = "colConfirmCode";
 			this.colConfirmCode.Visible = true;
 			this.colConfirmCode.VisibleIndex = 13;
@@ -685,6 +700,7 @@ namespace BMS
 			this.colNote.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colNote.Caption = "Chú ý";
 			this.colNote.FieldName = "Note";
+			this.colNote.MinWidth = 25;
 			this.colNote.Name = "colNote";
 			this.colNote.Visible = true;
 			this.colNote.VisibleIndex = 14;
@@ -711,6 +727,7 @@ namespace BMS
 			this.colWorkerCode.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colWorkerCode.Caption = "Người in";
 			this.colWorkerCode.FieldName = "WorkerCode";
+			this.colWorkerCode.MinWidth = 25;
 			this.colWorkerCode.Name = "colWorkerCode";
 			this.colWorkerCode.Visible = true;
 			this.colWorkerCode.VisibleIndex = 15;
@@ -737,6 +754,7 @@ namespace BMS
 			this.colPrintedDate.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colPrintedDate.Caption = "Ngày in";
 			this.colPrintedDate.FieldName = "PrintedDate";
+			this.colPrintedDate.MinWidth = 25;
 			this.colPrintedDate.Name = "colPrintedDate";
 			this.colPrintedDate.Visible = true;
 			this.colPrintedDate.VisibleIndex = 16;
@@ -753,7 +771,7 @@ namespace BMS
 			this.panel2.Controls.Add(this.label1);
 			this.panel2.Controls.Add(this.label3);
 			this.panel2.Location = new System.Drawing.Point(0, 53);
-			this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.panel2.Margin = new System.Windows.Forms.Padding(4);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(840, 42);
 			this.panel2.TabIndex = 30;
@@ -763,7 +781,7 @@ namespace BMS
 			this.btnSearch.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSearch.Appearance.Options.UseFont = true;
 			this.btnSearch.Location = new System.Drawing.Point(729, 6);
-			this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
 			this.btnSearch.Name = "btnSearch";
 			this.btnSearch.Size = new System.Drawing.Size(100, 28);
 			this.btnSearch.TabIndex = 25;
@@ -774,7 +792,7 @@ namespace BMS
 			// 
 			this.txbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txbSearch.Location = new System.Drawing.Point(525, 7);
-			this.txbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txbSearch.Margin = new System.Windows.Forms.Padding(4);
 			this.txbSearch.Name = "txbSearch";
 			this.txbSearch.Size = new System.Drawing.Size(195, 28);
 			this.txbSearch.TabIndex = 24;
@@ -785,10 +803,11 @@ namespace BMS
 			this.dtpFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
 			this.dtpFrom.Location = new System.Drawing.Point(103, 7);
-			this.dtpFrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dtpFrom.Margin = new System.Windows.Forms.Padding(4);
 			this.dtpFrom.Name = "dtpFrom";
 			this.dtpFrom.Size = new System.Drawing.Size(140, 28);
 			this.dtpFrom.TabIndex = 36;
+			this.dtpFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtpFrom_KeyPress);
 			// 
 			// dtpTo
 			// 
@@ -796,10 +815,11 @@ namespace BMS
 			this.dtpTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
 			this.dtpTo.Location = new System.Drawing.Point(365, 7);
-			this.dtpTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dtpTo.Margin = new System.Windows.Forms.Padding(4);
 			this.dtpTo.Name = "dtpTo";
 			this.dtpTo.Size = new System.Drawing.Size(131, 28);
 			this.dtpTo.TabIndex = 35;
+			this.dtpTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtpTo_KeyPress);
 			// 
 			// label1
 			// 
@@ -831,7 +851,7 @@ namespace BMS
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.dtgvSonPlan);
 			this.Controls.Add(this.toolStrip1);
-			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.Margin = new System.Windows.Forms.Padding(5);
 			this.Name = "frmSonPlan";
 			this.Text = "KẾ HOẠCH LINH KIỆN";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

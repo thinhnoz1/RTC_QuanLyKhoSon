@@ -180,12 +180,12 @@ namespace BMS
 			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-			this.label1.Location = new System.Drawing.Point(248, 2);
+			this.label1.Location = new System.Drawing.Point(236, 2);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(319, 36);
+			this.label1.Size = new System.Drawing.Size(371, 36);
 			this.label1.TabIndex = 218;
-			this.label1.Text = "Nhập dữ liệu tổ sơn";
+			this.label1.Text = "NHẬP DỮ LIỆU TỔ SƠN";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// menuStrip1
@@ -302,6 +302,7 @@ namespace BMS
 			this.txbWorkerCode.Size = new System.Drawing.Size(415, 53);
 			this.txbWorkerCode.TabIndex = 212;
 			this.txbWorkerCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txbWorkerCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbWorkerCode_KeyPress);
 			// 
 			// txbOrderCode
 			// 

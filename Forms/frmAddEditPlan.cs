@@ -86,6 +86,7 @@ namespace BMS
 			{
 				return false;
 			}
+
 			sonPlanModel.PartCode = txbPartCode.Text;
 			sonPlanModel.OrderCode = txbOrderCode.Text;
 			sonPlanModel.Note = txbNote.Text;
@@ -108,10 +109,33 @@ namespace BMS
 				switch (Type)
 				{
 					case 1:
-						int result = (int)SonPlanBO.Instance.Insert(sonPlanModel);
+						if (PartSonBO.Instance.CheckExist("PartCode", sonPlanModel.PartCode) == true)
+						{
+							if (SonPlanBO.Instance.CheckExist("OrderCode", sonPlanModel.OrderCode) == false) { 
+								int result = (int)SonPlanBO.Instance.Insert(sonPlanModel);
+							}
+							else
+							{
+								MessageBox.Show("Mã order đã tồn tại !!");
+								return false;
+							}
+						}
+						else
+						{
+							MessageBox.Show("Mã linh kiện không tồn tại !!");
+							return false;
+						}
 						break;
 					case 2:
-						SonPlanBO.Instance.Update(sonPlanModel);
+						if (SonPlanBO.Instance.CheckExist("OrderCode", sonPlanModel.OrderCode) == false)
+						{
+							SonPlanBO.Instance.Update(sonPlanModel);
+						}
+						else
+						{
+							MessageBox.Show("Mã order đã tồn tại !!");
+							return false;
+						}
 						break;
 				}
 			}
@@ -159,12 +183,24 @@ namespace BMS
 				dtpDateExported.Value = TextUtils.ToDate3(sonPlanModel.DateExported);
 				dtpPrintedDate.Value = TextUtils.ToDate3(sonPlanModel.PrintedDate);
 				dtpProdDate.Value = TextUtils.ToDate3(sonPlanModel.ProdDate);
+				this.Text = "Thêm kế hoạch";
+				Type = 1;
 			}
 		}
 
 		private void frmAddEditPlan_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			this.DialogResult = DialogResult.OK;
+		}
+
+		private void cấtToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			btnSaveClose_Click(null, null);
+		}
+
+		private void catVaThemOiToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			btnSaveNew_Click(null, null);
 		}
 	}
 }

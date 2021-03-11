@@ -104,6 +104,9 @@
     <Compile Include="BO\FormAndFunctionBO.cs" />
     <Compile Include="BO\FormAndFunctionGroupBO.cs" />
     <Compile Include="BO\ManufacturerBO.cs" />
+    <Compile Include="BO\MotorHistoryImExBO.cs" />
+    <Compile Include="BO\MotorPartListBO.cs" />
+    <Compile Include="BO\MotorStorageListBO.cs" />
     <Compile Include="BO\PartSonBO.cs" />
     <Compile Include="BO\ProductBO.cs" />
     <Compile Include="BO\ProductCheckHistoryBO.cs" />
@@ -145,6 +148,9 @@
     <Compile Include="Facade\FormAndFunctionFacade.cs" />
     <Compile Include="Facade\FormAndFunctionGroupFacade.cs" />
     <Compile Include="Facade\ManufacturerFacade.cs" />
+    <Compile Include="Facade\MotorHistoryImExFacade.cs" />
+    <Compile Include="Facade\MotorPartListFacade.cs" />
+    <Compile Include="Facade\MotorStorageListFacade.cs" />
     <Compile Include="Facade\PartSonFacade.cs" />
     <Compile Include="Facade\ProductCheckHistoryDetailFacade.cs" />
     <Compile Include="Facade\ProductCheckHistoryFacade.cs" />
@@ -186,6 +192,9 @@
     <Compile Include="Model\FormAndFunctionGroupModel.cs" />
     <Compile Include="Model\FormAndFunctionModel.cs" />
     <Compile Include="Model\ManufacturerModel.cs" />
+    <Compile Include="Model\MotorHistoryImExModel.cs" />
+    <Compile Include="Model\MotorPartListModel.cs" />
+    <Compile Include="Model\MotorStorageListModel.cs" />
     <Compile Include="Model\NotUseAttribute.cs" />
     <Compile Include="Model\PartSonModel.cs" />
     <Compile Include="Model\ProductCheckHistoryDetailModel.cs" />

@@ -49,6 +49,9 @@ namespace BMS
 			this.label3 = new System.Windows.Forms.Label();
 			this.dtpFrom = new System.Windows.Forms.DateTimePicker();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.rbExport = new System.Windows.Forms.RadioButton();
+			this.rbImport = new System.Windows.Forms.RadioButton();
+			this.rbAll = new System.Windows.Forms.RadioButton();
 			this.dtpTo = new System.Windows.Forms.DateTimePicker();
 			this.label1 = new System.Windows.Forms.Label();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -56,9 +59,6 @@ namespace BMS
 			this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnDelPart = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-			this.rbAll = new System.Windows.Forms.RadioButton();
-			this.rbImport = new System.Windows.Forms.RadioButton();
-			this.rbExport = new System.Windows.Forms.RadioButton();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvHistory)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvHistory)).BeginInit();
 			this.panel2.SuspendLayout();
@@ -365,8 +365,6 @@ namespace BMS
 			this.colHour.Caption = "Khung giờ";
 			this.colHour.FieldName = "Hour";
 			this.colHour.Name = "colHour";
-			this.colHour.Visible = true;
-			this.colHour.VisibleIndex = 8;
 			// 
 			// colMonth
 			// 
@@ -389,8 +387,6 @@ namespace BMS
 			this.colMonth.Caption = "Tháng";
 			this.colMonth.FieldName = "Month";
 			this.colMonth.Name = "colMonth";
-			this.colMonth.Visible = true;
-			this.colMonth.VisibleIndex = 9;
 			// 
 			// btnSearchHistory
 			// 
@@ -434,6 +430,7 @@ namespace BMS
 			this.dtpFrom.Name = "dtpFrom";
 			this.dtpFrom.Size = new System.Drawing.Size(140, 28);
 			this.dtpFrom.TabIndex = 36;
+			this.dtpFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtpFrom_KeyPress);
 			// 
 			// panel2
 			// 
@@ -454,6 +451,47 @@ namespace BMS
 			this.panel2.Size = new System.Drawing.Size(1323, 52);
 			this.panel2.TabIndex = 4;
 			// 
+			// rbExport
+			// 
+			this.rbExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.rbExport.AutoSize = true;
+			this.rbExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+			this.rbExport.Location = new System.Drawing.Point(1192, 12);
+			this.rbExport.Name = "rbExport";
+			this.rbExport.Size = new System.Drawing.Size(70, 28);
+			this.rbExport.TabIndex = 39;
+			this.rbExport.Text = "Xuất";
+			this.rbExport.UseVisualStyleBackColor = true;
+			this.rbExport.CheckedChanged += new System.EventHandler(this.rbAll_CheckedChanged);
+			// 
+			// rbImport
+			// 
+			this.rbImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.rbImport.AutoSize = true;
+			this.rbImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+			this.rbImport.Location = new System.Drawing.Point(1045, 12);
+			this.rbImport.Name = "rbImport";
+			this.rbImport.Size = new System.Drawing.Size(82, 28);
+			this.rbImport.TabIndex = 38;
+			this.rbImport.Text = "Nhập ";
+			this.rbImport.UseVisualStyleBackColor = true;
+			this.rbImport.CheckedChanged += new System.EventHandler(this.rbAll_CheckedChanged);
+			// 
+			// rbAll
+			// 
+			this.rbAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.rbAll.AutoSize = true;
+			this.rbAll.Checked = true;
+			this.rbAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+			this.rbAll.Location = new System.Drawing.Point(892, 12);
+			this.rbAll.Name = "rbAll";
+			this.rbAll.Size = new System.Drawing.Size(102, 28);
+			this.rbAll.TabIndex = 37;
+			this.rbAll.TabStop = true;
+			this.rbAll.Text = "Toàn bộ";
+			this.rbAll.UseVisualStyleBackColor = true;
+			this.rbAll.CheckedChanged += new System.EventHandler(this.rbAll_CheckedChanged);
+			// 
 			// dtpTo
 			// 
 			this.dtpTo.CustomFormat = "dd/MM/yyyy";
@@ -464,6 +502,7 @@ namespace BMS
 			this.dtpTo.Name = "dtpTo";
 			this.dtpTo.Size = new System.Drawing.Size(131, 28);
 			this.dtpTo.TabIndex = 35;
+			this.dtpTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtpTo_KeyPress);
 			// 
 			// label1
 			// 
@@ -535,47 +574,6 @@ namespace BMS
 			this.toolStripSeparator8.AutoSize = false;
 			this.toolStripSeparator8.Name = "toolStripSeparator8";
 			this.toolStripSeparator8.Size = new System.Drawing.Size(6, 40);
-			// 
-			// rbAll
-			// 
-			this.rbAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.rbAll.AutoSize = true;
-			this.rbAll.Checked = true;
-			this.rbAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-			this.rbAll.Location = new System.Drawing.Point(892, 12);
-			this.rbAll.Name = "rbAll";
-			this.rbAll.Size = new System.Drawing.Size(102, 28);
-			this.rbAll.TabIndex = 37;
-			this.rbAll.TabStop = true;
-			this.rbAll.Text = "Toàn bộ";
-			this.rbAll.UseVisualStyleBackColor = true;
-			this.rbAll.CheckedChanged += new System.EventHandler(this.rbAll_CheckedChanged);
-			// 
-			// rbImport
-			// 
-			this.rbImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.rbImport.AutoSize = true;
-			this.rbImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-			this.rbImport.Location = new System.Drawing.Point(1045, 12);
-			this.rbImport.Name = "rbImport";
-			this.rbImport.Size = new System.Drawing.Size(82, 28);
-			this.rbImport.TabIndex = 38;
-			this.rbImport.Text = "Nhập ";
-			this.rbImport.UseVisualStyleBackColor = true;
-			this.rbImport.CheckedChanged += new System.EventHandler(this.rbAll_CheckedChanged);
-			// 
-			// rbExport
-			// 
-			this.rbExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.rbExport.AutoSize = true;
-			this.rbExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-			this.rbExport.Location = new System.Drawing.Point(1192, 12);
-			this.rbExport.Name = "rbExport";
-			this.rbExport.Size = new System.Drawing.Size(70, 28);
-			this.rbExport.TabIndex = 39;
-			this.rbExport.Text = "Xuất";
-			this.rbExport.UseVisualStyleBackColor = true;
-			this.rbExport.CheckedChanged += new System.EventHandler(this.rbAll_CheckedChanged);
 			// 
 			// frmPartImExHistory
 			// 

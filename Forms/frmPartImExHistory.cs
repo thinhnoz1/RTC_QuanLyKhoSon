@@ -36,9 +36,11 @@ namespace BMS
             {
                 type = 1;
             }
+            DateTime timeFrom = dtpFrom.Value.AddHours(00).AddMinutes(00).AddSeconds(00);
+            DateTime timeTo = dtpTo.Value.AddHours(23).AddMinutes(59).AddSeconds(59);
             string keyword = txbSearchHistory.Text;
-            DataTable dataTable = TextUtils.LoadDataFromSP("spGetHistoryByDate", "VS", new string[] { "@dateFrom", "@dateTo", "@keyword", "@filter" }, new object[] { dtpFrom.Value.ToString("yyyy/MM/dd HH:mm:ss")
-                                        , dtpTo.Value.ToString("yyyy/MM/dd HH:mm:ss")
+            DataTable dataTable = TextUtils.LoadDataFromSP("spGetHistoryByDate", "VS", new string[] { "@dateFrom", "@dateTo", "@keyword", "@filter" }, new object[] { timeFrom.ToString("yyyy/MM/dd HH:mm:ss")
+                                        , timeTo.ToString("yyyy/MM/dd HH:mm:ss")
                                         , keyword
                                         , type
 
@@ -48,15 +50,12 @@ namespace BMS
 
         private void btnSearchHistory_Click(object sender, EventArgs e)
         {
-            dtpFrom.Value = dtpFrom.Value.AddHours(00).AddMinutes(00).AddSeconds(00);
-            dtpTo.Value = dtpTo.Value.AddHours(23).AddMinutes(59).AddSeconds(59);
             LoadData();
         }
 
         private void frmPartImExHistory_Load(object sender, EventArgs e)
         {
-            dtpFrom.Value = DateTime.Today.AddHours(00).AddMinutes(00).AddSeconds(00);
-            dtpTo.Value = DateTime.Today.AddHours(23).AddMinutes(59).AddSeconds(59);
+            
             LoadData();
 
         }
@@ -105,5 +104,21 @@ namespace BMS
 		{
             LoadData();
 		}
+
+		private void dtpFrom_KeyPress(object sender, KeyPressEventArgs e)
+		{
+            if (e.KeyChar == (char)13)
+            {
+                btnSearchHistory_Click(null, null);
+            }
+        }
+
+		private void dtpTo_KeyPress(object sender, KeyPressEventArgs e)
+		{
+            if (e.KeyChar == (char)13)
+            {
+                btnSearchHistory_Click(null, null);
+            }
+        }
 	}
 }

@@ -24,7 +24,7 @@ namespace BMS
 
         #region Method
         void LoadDataToForm() {
-            string sql = "select ROW_NUMBER() OVER (ORDER BY ID) AS STT, * from SonPlan";
+            string sql = "select ROW_NUMBER() OVER (ORDER BY ID) AS STT, * from SonPlan ORDER BY DateExported";
             DataTable dt = TextUtils.Select(sql);
             dtgvSonPlan.DataSource = dt;
         }
@@ -79,7 +79,11 @@ namespace BMS
 		{
             frmImportExcel frm = new frmImportExcel();
             frm.ShowDialog();
-		}
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                LoadDataWithDate();
+            }
+        }
 
 		private void btnExportExcel_Click(object sender, EventArgs e)
 		{
@@ -110,13 +114,14 @@ namespace BMS
             {
                 LoadDataWithDate();
                 // Tu dong focus ve dong vua tao
-                gvSonPlan.FocusedRowHandle = gvSonPlan.RowCount - 1;
+                //gvSonPlan.FocusedRowHandle = gvSonPlan.RowCount - 1;
             }
         }
 
 		private void btnEditPlan_Click(object sender, EventArgs e)
 		{
-            prevRow = gvSonPlan.GetSelectedRows()[0];
+            if (gvSonPlan.GetSelectedRows().Length != 0)
+                prevRow = gvSonPlan.GetSelectedRows()[0];
             DataRow row = gvSonPlan.GetFocusedDataRow();
             if (row != null) { 
                 SonPlanModel model = DataRowToSonPlanModel(row);
@@ -126,7 +131,8 @@ namespace BMS
                 {
                     LoadDataWithDate();
                     //  Tu dong focus lai ve dong vua chon
-                    gvSonPlan.FocusedRowHandle = prevRow;
+                    if (gvSonPlan.GetSelectedRows().Length != 0)
+                        gvSonPlan.FocusedRowHandle = prevRow;
                 }
             }
         }
@@ -168,5 +174,20 @@ namespace BMS
         }
 		#endregion
 
-    }
+		private void dtpFrom_KeyPress(object sender, KeyPressEventArgs e)
+		{
+            if (e.KeyChar == (char)13)
+            {
+                btnSearch_Click(null, null);
+            }
+        }
+
+		private void dtpTo_KeyPress(object sender, KeyPressEventArgs e)
+		{
+            if (e.KeyChar == (char)13)
+            {
+                btnSearch_Click(null, null);
+            }
+        }
+	}
 }
