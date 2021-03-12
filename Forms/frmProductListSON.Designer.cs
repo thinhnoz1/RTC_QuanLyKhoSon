@@ -465,6 +465,7 @@ namespace BMS
 			this.gvPart.OptionsBehavior.AllowFixedGroups = DevExpress.Utils.DefaultBoolean.False;
 			this.gvPart.OptionsBehavior.AllowIncrementalSearch = true;
 			this.gvPart.OptionsBehavior.Editable = false;
+			this.gvPart.OptionsNavigation.AutoFocusNewRow = true;
 			this.gvPart.OptionsView.ShowGroupPanel = false;
 			this.gvPart.PaintStyleName = "Flat";
 			this.gvPart.RowHeight = 25;

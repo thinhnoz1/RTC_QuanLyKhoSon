@@ -266,6 +266,12 @@
     <Compile Include="frmPartImExHistory.Designer.cs">
       <DependentUpon>frmPartImExHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhoMotor\frmAddEditMotorPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhoMotor\frmAddEditMotorPart.Designer.cs">
+      <DependentUpon>frmAddEditMotorPart.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhoMotor\frmMotorPartList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -327,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSonPlan.resx">
       <DependentUpon>frmSonPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhoMotor\frmAddEditMotorPart.resx">
+      <DependentUpon>frmAddEditMotorPart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhoMotor\frmMotorPartList.resx">
       <DependentUpon>frmMotorPartList.cs</DependentUpon>

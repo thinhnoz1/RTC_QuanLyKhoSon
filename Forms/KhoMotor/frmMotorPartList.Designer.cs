@@ -35,7 +35,6 @@ namespace BMS
 			this.trdStorageList = new DevExpress.XtraTreeList.TreeList();
 			this.tlID = new DevExpress.XtraTreeList.Columns.TreeListColumn();
 			this.tlStorageCode = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-			this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
 			this.tlStorageName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
 			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
 			this.dtgvMotorList = new DevExpress.XtraGrid.GridControl();
@@ -66,20 +65,21 @@ namespace BMS
 			this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnSonPlan = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-			this.btnDeleteStore = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnCreateStore = new System.Windows.Forms.ToolStripButton();
-			this.btnEditStore = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+			this.btnDeleteStore = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+			this.btnEditStore = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.colStorageID = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colStorageCode = new DevExpress.XtraGrid.Columns.GridColumn();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.trdStorageList)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvMotorList)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvMotor)).BeginInit();
 			this.toolStrip1.SuspendLayout();
@@ -148,53 +148,45 @@ namespace BMS
 			this.trdStorageList.Name = "trdStorageList";
 			this.trdStorageList.OptionsBehavior.AllowExpandOnDblClick = false;
 			this.trdStorageList.OptionsBehavior.Editable = false;
-			this.trdStorageList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemMemoEdit2});
 			this.trdStorageList.Size = new System.Drawing.Size(268, 524);
 			this.trdStorageList.TabIndex = 25;
 			this.trdStorageList.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.trdStorageList_FocusedNodeChanged);
 			// 
 			// tlID
 			// 
-			this.tlID.Caption = "Mã nhóm";
+			this.tlID.Caption = "treeListColumn1";
 			this.tlID.FieldName = "id";
 			this.tlID.Name = "tlID";
 			// 
 			// tlStorageCode
 			// 
-			this.tlStorageCode.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.tlStorageCode.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tlStorageCode.AppearanceCell.Options.UseFont = true;
+			this.tlStorageCode.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tlStorageCode.AppearanceHeader.Options.UseFont = true;
 			this.tlStorageCode.AppearanceHeader.Options.UseTextOptions = true;
 			this.tlStorageCode.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.tlStorageCode.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.tlStorageCode.Caption = "Mã kho";
-			this.tlStorageCode.ColumnEdit = this.repositoryItemMemoEdit2;
 			this.tlStorageCode.FieldName = "StorageCode";
 			this.tlStorageCode.Name = "tlStorageCode";
-			this.tlStorageCode.OptionsColumn.AllowEdit = false;
-			this.tlStorageCode.OptionsColumn.AllowFocus = false;
 			this.tlStorageCode.Visible = true;
 			this.tlStorageCode.VisibleIndex = 0;
-			this.tlStorageCode.Width = 299;
-			// 
-			// repositoryItemMemoEdit2
-			// 
-			this.repositoryItemMemoEdit2.Name = "repositoryItemMemoEdit2";
 			// 
 			// tlStorageName
 			// 
-			this.tlStorageName.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.tlStorageName.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tlStorageName.AppearanceCell.Options.UseFont = true;
+			this.tlStorageName.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tlStorageName.AppearanceHeader.Options.UseFont = true;
 			this.tlStorageName.AppearanceHeader.Options.UseTextOptions = true;
 			this.tlStorageName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.tlStorageName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.tlStorageName.Caption = "Tên kho";
 			this.tlStorageName.FieldName = "StorageName";
 			this.tlStorageName.Name = "tlStorageName";
-			this.tlStorageName.OptionsColumn.AllowEdit = false;
-			this.tlStorageName.OptionsColumn.AllowFocus = false;
-			this.tlStorageName.SortOrder = System.Windows.Forms.SortOrder.Ascending;
 			this.tlStorageName.Visible = true;
 			this.tlStorageName.VisibleIndex = 1;
-			this.tlStorageName.Width = 386;
 			// 
 			// labelControl1
 			// 
@@ -232,7 +224,9 @@ namespace BMS
 			this.gvMotor.ColumnPanelRowHeight = 40;
 			this.gvMotor.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colID,
+            this.colStorageID,
             this.colPartCode,
+            this.colStorageCode,
             this.colDescription,
             this.colQuantity,
             this.colSTT});
@@ -281,7 +275,7 @@ namespace BMS
 			this.colPartCode.OptionsColumn.AllowEdit = false;
 			this.colPartCode.Visible = true;
 			this.colPartCode.VisibleIndex = 1;
-			this.colPartCode.Width = 258;
+			this.colPartCode.Width = 366;
 			// 
 			// colDescription
 			// 
@@ -305,8 +299,8 @@ namespace BMS
 			this.colDescription.Name = "colDescription";
 			this.colDescription.OptionsColumn.AllowEdit = false;
 			this.colDescription.Visible = true;
-			this.colDescription.VisibleIndex = 2;
-			this.colDescription.Width = 245;
+			this.colDescription.VisibleIndex = 3;
+			this.colDescription.Width = 338;
 			// 
 			// colQuantity
 			// 
@@ -331,8 +325,8 @@ namespace BMS
 			this.colQuantity.Name = "colQuantity";
 			this.colQuantity.OptionsColumn.AllowEdit = false;
 			this.colQuantity.Visible = true;
-			this.colQuantity.VisibleIndex = 3;
-			this.colQuantity.Width = 120;
+			this.colQuantity.VisibleIndex = 4;
+			this.colQuantity.Width = 140;
 			// 
 			// colSTT
 			// 
@@ -355,7 +349,7 @@ namespace BMS
 			this.colSTT.Name = "colSTT";
 			this.colSTT.Visible = true;
 			this.colSTT.VisibleIndex = 0;
-			this.colSTT.Width = 74;
+			this.colSTT.Width = 105;
 			// 
 			// btnFindAll
 			// 
@@ -436,6 +430,7 @@ namespace BMS
 			this.btnCreatePart.Tag = "frmProduct_AddProductH";
 			this.btnCreatePart.Text = "Tạo linh kiện";
 			this.btnCreatePart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnCreatePart.Click += new System.EventHandler(this.btnCreatePart_Click);
 			// 
 			// toolStripSeparator1
 			// 
@@ -453,6 +448,7 @@ namespace BMS
 			this.btnEditPart.Tag = "frmProduct_EditProductH";
 			this.btnEditPart.Text = "Sửa linh kiện";
 			this.btnEditPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnEditPart.Click += new System.EventHandler(this.btnEditPart_Click);
 			// 
 			// toolStripSeparator7
 			// 
@@ -470,6 +466,7 @@ namespace BMS
 			this.btnDelPart.Tag = "frmProduct_DeleteProductH";
 			this.btnDelPart.Text = "Xóa linh kiện";
 			this.btnDelPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnDelPart.Click += new System.EventHandler(this.btnDelPart_Click);
 			// 
 			// toolStripSeparator8
 			// 
@@ -599,11 +596,22 @@ namespace BMS
 			this.toolStrip1.TabIndex = 27;
 			this.toolStrip1.Text = "toolStrip2";
 			// 
-			// toolStripSeparator2
+			// btnCreateStore
 			// 
-			this.toolStripSeparator2.AutoSize = false;
-			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
+			this.btnCreateStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCreateStore.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnCreateStore.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateStore.Image")));
+			this.btnCreateStore.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnCreateStore.Name = "btnCreateStore";
+			this.btnCreateStore.Size = new System.Drawing.Size(79, 44);
+			this.btnCreateStore.Tag = "frmProduct_AddProductH";
+			this.btnCreateStore.Text = "Tạo kho";
+			this.btnCreateStore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			// 
+			// toolStripSeparator4
+			// 
+			this.toolStripSeparator4.Name = "toolStripSeparator4";
+			this.toolStripSeparator4.Size = new System.Drawing.Size(6, 23);
 			// 
 			// btnDeleteStore
 			// 
@@ -617,22 +625,10 @@ namespace BMS
 			this.btnDeleteStore.Text = "Xóa kho";
 			this.btnDeleteStore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			// 
-			// toolStripSeparator4
+			// toolStripSeparator3
 			// 
-			this.toolStripSeparator4.Name = "toolStripSeparator4";
-			this.toolStripSeparator4.Size = new System.Drawing.Size(6, 23);
-			// 
-			// btnCreateStore
-			// 
-			this.btnCreateStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCreateStore.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.btnCreateStore.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateStore.Image")));
-			this.btnCreateStore.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnCreateStore.Name = "btnCreateStore";
-			this.btnCreateStore.Size = new System.Drawing.Size(79, 44);
-			this.btnCreateStore.Tag = "frmProduct_AddProductH";
-			this.btnCreateStore.Text = "Tạo kho";
-			this.btnCreateStore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.toolStripSeparator3.Name = "toolStripSeparator3";
+			this.toolStripSeparator3.Size = new System.Drawing.Size(6, 23);
 			// 
 			// btnEditStore
 			// 
@@ -646,16 +642,47 @@ namespace BMS
 			this.btnEditStore.Text = "Sửa kho";
 			this.btnEditStore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			// 
-			// toolStripSeparator3
-			// 
-			this.toolStripSeparator3.Name = "toolStripSeparator3";
-			this.toolStripSeparator3.Size = new System.Drawing.Size(6, 23);
-			// 
 			// toolStripSeparator5
 			// 
 			this.toolStripSeparator5.AutoSize = false;
 			this.toolStripSeparator5.Name = "toolStripSeparator5";
 			this.toolStripSeparator5.Size = new System.Drawing.Size(6, 40);
+			// 
+			// toolStripSeparator2
+			// 
+			this.toolStripSeparator2.AutoSize = false;
+			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
+			// 
+			// colStorageID
+			// 
+			this.colStorageID.Caption = "gridColumn1";
+			this.colStorageID.FieldName = "StorageID";
+			this.colStorageID.Name = "colStorageID";
+			// 
+			// colStorageCode
+			// 
+			this.colStorageCode.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11F);
+			this.colStorageCode.AppearanceCell.Options.UseFont = true;
+			this.colStorageCode.AppearanceCell.Options.UseTextOptions = true;
+			this.colStorageCode.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.colStorageCode.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+			this.colStorageCode.AppearanceHeader.BackColor = System.Drawing.Color.MediumPurple;
+			this.colStorageCode.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+			this.colStorageCode.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+			this.colStorageCode.AppearanceHeader.Options.UseBackColor = true;
+			this.colStorageCode.AppearanceHeader.Options.UseFont = true;
+			this.colStorageCode.AppearanceHeader.Options.UseForeColor = true;
+			this.colStorageCode.AppearanceHeader.Options.UseTextOptions = true;
+			this.colStorageCode.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.colStorageCode.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+			this.colStorageCode.Caption = "Kho";
+			this.colStorageCode.FieldName = "StorageCode";
+			this.colStorageCode.Name = "colStorageCode";
+			this.colStorageCode.OptionsColumn.AllowEdit = false;
+			this.colStorageCode.Visible = true;
+			this.colStorageCode.VisibleIndex = 2;
+			this.colStorageCode.Width = 147;
 			// 
 			// frmMotorPartList
 			// 
@@ -677,7 +704,6 @@ namespace BMS
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.trdStorageList)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvMotorList)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvMotor)).EndInit();
 			this.toolStrip1.ResumeLayout(false);
@@ -702,10 +728,6 @@ namespace BMS
 		private DevExpress.XtraGrid.Columns.GridColumn colSTT;
 		private DevExpress.XtraEditors.LabelControl labelControl1;
 		private DevExpress.XtraTreeList.TreeList trdStorageList;
-		private DevExpress.XtraTreeList.Columns.TreeListColumn tlID;
-		private DevExpress.XtraTreeList.Columns.TreeListColumn tlStorageCode;
-		private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit2;
-		private DevExpress.XtraTreeList.Columns.TreeListColumn tlStorageName;
 		private DevExpress.XtraTreeList.Columns.TreeListColumn tlStorageCode2;
 		private System.Windows.Forms.ToolStripButton btnCreatePart;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -730,5 +752,10 @@ namespace BMS
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 		private System.Windows.Forms.ToolStripButton btnEditStore;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+		private DevExpress.XtraTreeList.Columns.TreeListColumn tlID;
+		private DevExpress.XtraTreeList.Columns.TreeListColumn tlStorageCode;
+		private DevExpress.XtraTreeList.Columns.TreeListColumn tlStorageName;
+		private DevExpress.XtraGrid.Columns.GridColumn colStorageID;
+		private DevExpress.XtraGrid.Columns.GridColumn colStorageCode;
 	}
 }

@@ -16,6 +16,7 @@ namespace BMS
 	{
 		int _curentNode = 0;
 		int _catID = 0;
+		int _rowHandle = 0;
 
 		public frmMotorPartList()
 		{
@@ -40,14 +41,14 @@ namespace BMS
 		{
 			try
 			{
-				DataTable tbl = TextUtils.Select("Select * from MotorStorageList with(nolock) order by id");
+				DataTable tbl = TextUtils.Select("Select * from MotorStorageList with(nolock) order by id asc");
 
 				trdStorageList.DataSource = tbl;
-				trdStorageList.KeyFieldName = "ID";
-				trdStorageList.PreviewFieldName = "StorageName";
+				/*trdStorageList.KeyFieldName = "ID";
+				trdStorageList.PreviewFieldName = "StorageName";*/
 				trdStorageList.ExpandAll();
 
-				DevExpress.XtraTreeList.Nodes.TreeListNode currentNode = trdStorageList.FindNodeByFieldValue("ID", _curentNode);
+				DevExpress.XtraTreeList.Nodes.TreeListNode currentNode = trdStorageList.FindNodeByFieldValue("id", _curentNode);
 				trdStorageList.SetFocusedNode(currentNode);
 			}
 			catch (Exception ex)
@@ -77,6 +78,66 @@ namespace BMS
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.ToString());
+			}
+		}
+
+		private void btnCreatePart_Click(object sender, EventArgs e)
+		{
+			int id = TextUtils.ToInt(trdStorageList.FocusedNode.GetValue(tlID));
+			frmAddEditMotorPart frm = new frmAddEditMotorPart(1);
+			frm.CurrentStorageSelection= id;
+			if (frm.ShowDialog() == DialogResult.OK)
+			{
+				LoadPartList();
+			}
+		}
+
+		private void btnEditPart_Click(object sender, EventArgs e)
+		{
+			int id = TextUtils.ToInt(gvMotor.GetFocusedRowCellValue(colID));
+			if (id == 0) return;
+			MotorPartListModel model = (MotorPartListModel)MotorPartListBO.Instance.FindByPK(id);
+			int catId = TextUtils.ToInt(gvMotor.GetFocusedRowCellValue(colStorageID));
+			_rowHandle = gvMotor.FocusedRowHandle;
+
+			frmAddEditMotorPart frm = new frmAddEditMotorPart(2);
+			frm.CurrentStorageSelection = catId;
+			frm.motorPart = model;
+			if (frm.ShowDialog() == DialogResult.OK)
+			{
+				LoadPartList();
+			}
+		}
+
+		private void btnDelPart_Click(object sender, EventArgs e)
+		{
+			if (!gvMotor.IsDataRow(gvMotor.FocusedRowHandle))
+				return;
+			int strID = TextUtils.ToInt(gvMotor.GetFocusedRowCellValue(colID));
+			string str = TextUtils.ToString(gvMotor.GetFocusedRowCellValue("PartCode"));
+
+			try
+			{
+				if (MessageBox.Show(String.Format("Bạn có chắc muốn xóa linh kiện [{0}] không?", str), TextUtils.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+				{
+					if (MotorHistoryImExBO.Instance.CheckExist("PartID", strID))
+					{
+						MessageBox.Show("Linh kiện này đã có lịch sử xuất/nhập nên không thể xóa được!", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+						return;
+					}
+					else
+					{
+						MotorPartListBO.Instance.Delete(strID);
+						gvMotor.DeleteRow(gvMotor.FocusedRowHandle);
+						MessageBox.Show("Xoá thành công", TextUtils.Caption);
+					}
+				}
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Lỗi hệ thống!", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+				return;
 			}
 		}
 	}

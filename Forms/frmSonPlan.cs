@@ -78,7 +78,6 @@ namespace BMS
         private void btnImportExcel_Click(object sender, EventArgs e)
 		{
             frmImportExcel frm = new frmImportExcel();
-            frm.ShowDialog();
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 LoadDataWithDate();

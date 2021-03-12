@@ -76,7 +76,7 @@ namespace BMS
                 LoadListProducts();
 
                 // Tu dong focus ve dong vua tao
-                gvPart.FocusedRowHandle = gvPart.RowCount - 1;
+                //gvPart.FocusedRowHandle = gvPart.RowCount - 1;
             }
         }
 

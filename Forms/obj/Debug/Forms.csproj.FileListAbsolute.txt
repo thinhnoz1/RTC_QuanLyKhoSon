@@ -908,3 +908,4 @@ D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\Forms.pdb
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmSonPlan.resources
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmAddEditPlan.resources
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmMotorPartList.resources
+D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmAddEditMotorPart.resources
