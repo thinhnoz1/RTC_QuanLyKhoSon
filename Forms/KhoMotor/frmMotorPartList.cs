@@ -140,5 +140,29 @@ namespace BMS
 				return;
 			}
 		}
+
+		private void btnExportExcel_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				if (gvMotor.RowCount > 0)
+				{
+					FolderBrowserDialog od = new FolderBrowserDialog();
+					if (od.ShowDialog() == DialogResult.OK)
+					{
+						TextUtils.ExportExcel(gvMotor, od.SelectedPath, string.Format("DslinhkienMotor_{0}", DateTime.Now.ToString("yyyy_MM_dd")));
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.ToString());
+			}
+		}
+
+		private void btnHistory_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

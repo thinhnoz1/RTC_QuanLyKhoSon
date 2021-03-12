@@ -503,6 +503,7 @@ namespace BMS
 			this.btnExportExcel.Tag = "";
 			this.btnExportExcel.Text = "Xuất Excel";
 			this.btnExportExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
 			// 
 			// toolStripSeparator11
 			// 
@@ -538,6 +539,7 @@ namespace BMS
 			this.btnHistory.Tag = "frmProduct_UpdateCDH";
 			this.btnHistory.Text = "Xem lịch sử";
 			this.btnHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
 			// 
 			// toolStripSeparator9
 			// 
