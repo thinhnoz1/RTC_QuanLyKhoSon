@@ -37,8 +37,8 @@ namespace BMS
                 type = 1;
             }
 
-            DateTime timeFrom = dtpFrom.Value.AddHours(-23).AddMinutes(00).AddSeconds(00);
-            DateTime timeTo = dtpTo.Value.AddHours(23).AddMinutes(59).AddSeconds(59);
+            DateTime timeFrom = dtpFrom.Value;
+            DateTime timeTo = dtpTo.Value;
             string keyword = txbSearchHistory.Text;
             DataTable dataTable = TextUtils.LoadDataFromSP("spGetHistoryByDate", "VS", new string[] { "@dateFrom", "@dateTo", "@keyword", "@filter" }, new object[] { timeFrom.ToString("yyyy/MM/dd HH:mm:ss")
                                         , timeTo.ToString("yyyy/MM/dd HH:mm:ss")

@@ -60,7 +60,7 @@ namespace BMS
 			// mnuMenu
 			// 
 			this.mnuMenu.AutoSize = false;
-			this.mnuMenu.BackColor = System.Drawing.Color.LightSeaGreen;
+			this.mnuMenu.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.mnuMenu.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.mnuMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
 			this.mnuMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -79,7 +79,7 @@ namespace BMS
 			// btnSaveClose
 			// 
 			this.btnSaveClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-			this.btnSaveClose.ForeColor = System.Drawing.Color.White;
+			this.btnSaveClose.ForeColor = System.Drawing.Color.Black;
 			this.btnSaveClose.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveClose.Image")));
 			this.btnSaveClose.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnSaveClose.Name = "btnSaveClose";
@@ -98,7 +98,7 @@ namespace BMS
 			// btnSaveNew
 			// 
 			this.btnSaveNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-			this.btnSaveNew.ForeColor = System.Drawing.Color.White;
+			this.btnSaveNew.ForeColor = System.Drawing.Color.Black;
 			this.btnSaveNew.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveNew.Image")));
 			this.btnSaveNew.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnSaveNew.Name = "btnSaveNew";
@@ -113,12 +113,13 @@ namespace BMS
 			this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.panel2.Controls.Add(this.tableLayoutPanel2);
 			this.panel2.Controls.Add(this.tableLayoutPanel1);
-			this.panel2.Location = new System.Drawing.Point(16, 70);
+			this.panel2.Location = new System.Drawing.Point(0, 54);
 			this.panel2.Margin = new System.Windows.Forms.Padding(4);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(804, 309);
+			this.panel2.Size = new System.Drawing.Size(836, 311);
 			this.panel2.TabIndex = 221;
 			// 
 			// tableLayoutPanel2
@@ -141,7 +142,7 @@ namespace BMS
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.2237F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.2237F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.32889F));
-			this.tableLayoutPanel2.Size = new System.Drawing.Size(429, 305);
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(457, 305);
 			this.tableLayoutPanel2.TabIndex = 220;
 			// 
 			// txbQuantity
@@ -156,7 +157,7 @@ namespace BMS
             0,
             0});
 			this.txbQuantity.Name = "txbQuantity";
-			this.txbQuantity.Size = new System.Drawing.Size(415, 53);
+			this.txbQuantity.Size = new System.Drawing.Size(443, 53);
 			this.txbQuantity.TabIndex = 218;
 			this.txbQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
@@ -168,7 +169,7 @@ namespace BMS
 			this.txbPartCode.Location = new System.Drawing.Point(7, 7);
 			this.txbPartCode.Margin = new System.Windows.Forms.Padding(4);
 			this.txbPartCode.Name = "txbPartCode";
-			this.txbPartCode.Size = new System.Drawing.Size(415, 53);
+			this.txbPartCode.Size = new System.Drawing.Size(443, 53);
 			this.txbPartCode.TabIndex = 217;
 			this.txbPartCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
@@ -180,7 +181,7 @@ namespace BMS
 			this.txbDescription.Margin = new System.Windows.Forms.Padding(4);
 			this.txbDescription.Multiline = true;
 			this.txbDescription.Name = "txbDescription";
-			this.txbDescription.Size = new System.Drawing.Size(415, 90);
+			this.txbDescription.Size = new System.Drawing.Size(443, 90);
 			this.txbDescription.TabIndex = 213;
 			// 
 			// cbStorage
@@ -192,7 +193,7 @@ namespace BMS
 			this.cbStorage.Properties.Appearance.Options.UseFont = true;
 			this.cbStorage.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.cbStorage.Size = new System.Drawing.Size(417, 52);
+			this.cbStorage.Size = new System.Drawing.Size(445, 52);
 			this.cbStorage.TabIndex = 216;
 			// 
 			// tableLayoutPanel1
@@ -283,7 +284,7 @@ namespace BMS
             this.catVaThemOiToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(438, 9);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(322, 28);
+			this.menuStrip1.Size = new System.Drawing.Size(172, 28);
 			this.menuStrip1.TabIndex = 222;
 			this.menuStrip1.Text = "menuStrip1";
 			this.menuStrip1.Visible = false;
@@ -292,7 +293,7 @@ namespace BMS
 			// 
 			this.cấtToolStripMenuItem.Name = "cấtToolStripMenuItem";
 			this.cấtToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-			this.cấtToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
+			this.cấtToolStripMenuItem.Size = new System.Drawing.Size(45, 26);
 			this.cấtToolStripMenuItem.Text = "Cất";
 			this.cấtToolStripMenuItem.Click += new System.EventHandler(this.cấtToolStripMenuItem_Click);
 			// 
@@ -300,7 +301,7 @@ namespace BMS
 			// 
 			this.catVaThemOiToolStripMenuItem.Name = "catVaThemOiToolStripMenuItem";
 			this.catVaThemOiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-			this.catVaThemOiToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
+			this.catVaThemOiToolStripMenuItem.Size = new System.Drawing.Size(119, 26);
 			this.catVaThemOiToolStripMenuItem.Text = "Cat va them oi";
 			this.catVaThemOiToolStripMenuItem.Click += new System.EventHandler(this.catVaThemOiToolStripMenuItem_Click);
 			// 
@@ -308,8 +309,8 @@ namespace BMS
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Salmon;
-			this.ClientSize = new System.Drawing.Size(836, 395);
+			this.BackColor = System.Drawing.Color.White;
+			this.ClientSize = new System.Drawing.Size(836, 370);
 			this.Controls.Add(this.menuStrip1);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.mnuMenu);

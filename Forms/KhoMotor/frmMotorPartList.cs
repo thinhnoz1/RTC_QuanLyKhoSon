@@ -17,6 +17,7 @@ namespace BMS
 		int _curentNode = 0;
 		int _catID = 0;
 		int _rowHandle = 0;
+		int prevRow;
 
 		public frmMotorPartList()
 		{
@@ -25,87 +26,43 @@ namespace BMS
 
 		void LoadPartList()
 		{
-			_catID = TextUtils.ToInt(trdStorageList.FocusedNode.GetValue(tlID));
-			//paraName[0] = "@GroupID"; paraValue[0] = _catID;
-			//paraName[1] = "@TextFilter"; paraValue[1] = txtName.Text.Trim();
-
 			DataTable arr = TextUtils.LoadDataFromSP("spGetMotorPartListWithFilter"
 								  , "A"
-								  , new string[] { "@storageID", "@keyword" }
-								   , new object[] { _catID, txtName.Text.Trim() }
+								  , new string[] { "@keyword" }
+								   , new object[] { txtName.Text.Trim() }
 					);
 			dtgvMotorList.DataSource = arr;
 		}
 
-		void loadTree()
-		{
-			try
-			{
-				DataTable tbl = TextUtils.Select("Select * from MotorStorageList with(nolock) order by id asc");
-
-				trdStorageList.DataSource = tbl;
-				/*trdStorageList.KeyFieldName = "ID";
-				trdStorageList.PreviewFieldName = "StorageName";*/
-				trdStorageList.ExpandAll();
-
-				DevExpress.XtraTreeList.Nodes.TreeListNode currentNode = trdStorageList.FindNodeByFieldValue("id", _curentNode);
-				trdStorageList.SetFocusedNode(currentNode);
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.ToString());
-			}
-		}
 
 		private void frmMotorPartList_Load(object sender, EventArgs e)
 		{
-			loadTree();
+			LoadPartList();
 
-		}
-
-
-		private void trdStorageList_FocusedNodeChanged(object sender, DevExpress.XtraTreeList.FocusedNodeChangedEventArgs e)
-		{
-			try
-			{
-				int id = TextUtils.ToInt(trdStorageList.FocusedNode.GetValue(tlID));
-				if (id > 0)
-				{
-					txtName.Text = txtName.Text = "";
-					LoadPartList();
-				}
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.ToString());
-			}
 		}
 
 		private void btnCreatePart_Click(object sender, EventArgs e)
 		{
-			int id = TextUtils.ToInt(trdStorageList.FocusedNode.GetValue(tlID));
 			frmAddEditMotorPart frm = new frmAddEditMotorPart(1);
-			frm.CurrentStorageSelection= id;
 			if (frm.ShowDialog() == DialogResult.OK)
 			{
 				LoadPartList();
 			}
 		}
-
 		private void btnEditPart_Click(object sender, EventArgs e)
 		{
 			int id = TextUtils.ToInt(gvMotor.GetFocusedRowCellValue(colID));
 			if (id == 0) return;
+			//  Lay so dong da chon
+			prevRow = gvMotor.GetSelectedRows()[0];
 			MotorPartListModel model = (MotorPartListModel)MotorPartListBO.Instance.FindByPK(id);
-			int catId = TextUtils.ToInt(gvMotor.GetFocusedRowCellValue(colStorageID));
-			_rowHandle = gvMotor.FocusedRowHandle;
 
 			frmAddEditMotorPart frm = new frmAddEditMotorPart(2);
-			frm.CurrentStorageSelection = catId;
 			frm.motorPart = model;
 			if (frm.ShowDialog() == DialogResult.OK)
 			{
 				LoadPartList();
+				gvMotor.FocusedRowHandle = prevRow;
 			}
 		}
 
@@ -162,7 +119,25 @@ namespace BMS
 
 		private void btnHistory_Click(object sender, EventArgs e)
 		{
+			frmMotorHistoryImEx frm = new frmMotorHistoryImEx();
+			frm.ShowDialog();
+		}
+
+		private void btnFindAll_Click(object sender, EventArgs e)
+		{
 
 		}
+
+		private void gvMotor_DoubleClick(object sender, EventArgs e)
+		{
+			btnEditPart_Click(null, null);
+		}
+
+		private void btnImportPart_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		
 	}
 }

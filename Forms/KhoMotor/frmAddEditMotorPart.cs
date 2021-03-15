@@ -15,7 +15,6 @@ namespace BMS
 	{
 		public MotorPartListModel motorPart = new MotorPartListModel();
 		private int type;
-		private int currentStorageSelection;
 
 		public int Type
 		{
@@ -30,18 +29,6 @@ namespace BMS
 			}
 		}
 
-		public int CurrentStorageSelection
-		{
-			get
-			{
-				return currentStorageSelection;
-			}
-
-			set
-			{
-				currentStorageSelection = value;
-			}
-		}
 
 		public frmAddEditMotorPart(int type)
 		{
@@ -56,28 +43,14 @@ namespace BMS
 			}
 		}
 
-
-		void LoadStorage() {
-			DataTable tbl = TextUtils.Select("Select * from MotorStorageList with(nolock) order by id asc");
-			cbStorage.Properties.DataSource = tbl;
-			cbStorage.Properties.DisplayMember = "StorageCode";
-			cbStorage.Properties.ValueMember = "id";
-		}
-
 		void LoadDataToForm() {
 			txbPartCode.Text = motorPart.PartCode;
-			cbStorage.EditValue = motorPart.StorageID;
 			txbDescription.Text = motorPart.Description;
 			txbQuantity.Value = motorPart.Quantity;
 		}
 
 		private bool ValidateForm()
 		{
-			if (cbStorage.EditValue == null)
-			{
-				MessageBox.Show("Xin hãy chọn vị trí kho.", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-				return false;
-			}
 			if (string.IsNullOrEmpty(txbPartCode.Text.Trim()))
 			{
 				MessageBox.Show("Xin hãy nhập mã linh kiện.", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -87,7 +60,7 @@ namespace BMS
 			{
 				if (Type == 1) {
 					if (MotorPartListBO.Instance.CheckExist("PartCode", txbPartCode.Text.Trim())) { 
-						MessageBox.Show("Xin hãy nhập mã linh kiện.", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+						MessageBox.Show("Mã linh kiện đã tồn tại!", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
 						return false;
 					}
 				}
@@ -99,11 +72,8 @@ namespace BMS
 			if (!ValidateForm()) {
 				return false;
 			}
-			DataRowView chooseData = (DataRowView)cbStorage.GetSelectedDataRow();
 			
 			motorPart.PartCode = txbPartCode.Text.Trim();
-			motorPart.StorageID = TextUtils.ToInt(chooseData.Row.ItemArray[0]);
-			motorPart.StorageCode = TextUtils.ToString(chooseData.Row.ItemArray[1]);
 			motorPart.Description = txbDescription.Text;
 			motorPart.Quantity = TextUtils.ToInt(txbQuantity.Value);
 			if (Type == 1)
@@ -113,14 +83,17 @@ namespace BMS
 
 			try
 			{
-				if (motorPart.Id > 0)
+				if (motorPart.ID > 0)
 				{
 					TextUtils.ExcuteProcedure("spMotorUpdatePart",
-							new string[] { "@id", "@partCode", "@storageID", "@storageCode", "@description", "@quantity", "@modifiedDate" },
-							new object[] { motorPart.Id, motorPart.PartCode, motorPart.StorageID, motorPart.StorageCode, motorPart.Description, motorPart.Quantity, motorPart.ModifiedDate});
+							new string[] { "@id", "@partCode", "@description", "@quantity", "@modifiedDate" },
+							new object[] { motorPart.ID, motorPart.PartCode, motorPart.Description, motorPart.Quantity, motorPart.ModifiedDate});
 				}
-				else { 
-					decimal test = MotorPartListBO.Instance.Insert(motorPart);
+				else {
+					/*string sql = string.Format("INSERT dbo.MotorPartList ( PartCode, Quantity, Description, CreatedDate ) VALUES  ( '{0}', {1}, '{2}', '{3}' )", motorPart.PartCode, motorPart.Quantity, motorPart.Description, motorPart.CreatedDate);
+					TextUtils.ExcuteSQL(sql);*/
+
+					decimal exec = MotorPartListBO.Instance.Insert(motorPart);
 				}
 
 			}
@@ -132,11 +105,6 @@ namespace BMS
 
 		private void frmAddEditMotorPart_Load(object sender, EventArgs e)
 		{
-			LoadStorage();
-			if (CurrentStorageSelection > 0)
-			{
-				cbStorage.EditValue = CurrentStorageSelection;
-			}
 			if (Type == 2)
 				LoadDataToForm();
 		}

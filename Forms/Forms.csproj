@@ -343,6 +343,9 @@
     <EmbeddedResource Include="KhoMotor\frmAddEditMotorPart.resx">
       <DependentUpon>frmAddEditMotorPart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KhoMotor\frmMotorHistoryImEx.resx">
+      <DependentUpon>frmMotorHistoryImEx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KhoMotor\frmMotorPartList.resx">
       <DependentUpon>frmMotorPartList.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,7 +414,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="TestDemo\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
