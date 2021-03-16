@@ -103,9 +103,6 @@ namespace BMS
         {
             if (gvPart.RowCount > 0 && btnEditPart.Enabled == true) {
                 btnEditPart_Click(null, null);
-
-                //  Tu dong focus lai ve dong vua chon
-                gvPart.FocusedRowHandle = prevRow;
             }
         }
 

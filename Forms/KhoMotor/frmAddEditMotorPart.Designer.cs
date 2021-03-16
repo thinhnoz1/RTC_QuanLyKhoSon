@@ -39,10 +39,8 @@ namespace BMS
 			this.txbQuantity = new System.Windows.Forms.NumericUpDown();
 			this.txbPartCode = new System.Windows.Forms.TextBox();
 			this.txbDescription = new System.Windows.Forms.TextBox();
-			this.cbStorage = new DevExpress.XtraEditors.LookUpEdit();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.label5 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -52,7 +50,6 @@ namespace BMS
 			this.panel2.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txbQuantity)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cbStorage.Properties)).BeginInit();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
@@ -130,18 +127,16 @@ namespace BMS
 			this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
 			this.tableLayoutPanel2.ColumnCount = 1;
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel2.Controls.Add(this.txbQuantity, 0, 2);
+			this.tableLayoutPanel2.Controls.Add(this.txbQuantity, 0, 1);
 			this.tableLayoutPanel2.Controls.Add(this.txbPartCode, 0, 0);
-			this.tableLayoutPanel2.Controls.Add(this.txbDescription, 0, 3);
-			this.tableLayoutPanel2.Controls.Add(this.cbStorage, 0, 1);
+			this.tableLayoutPanel2.Controls.Add(this.txbDescription, 0, 2);
 			this.tableLayoutPanel2.Location = new System.Drawing.Point(375, -2);
 			this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-			this.tableLayoutPanel2.RowCount = 4;
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.2237F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.2237F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.2237F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.32889F));
+			this.tableLayoutPanel2.RowCount = 3;
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.2775F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.2775F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.445F));
 			this.tableLayoutPanel2.Size = new System.Drawing.Size(457, 305);
 			this.tableLayoutPanel2.TabIndex = 220;
 			// 
@@ -149,7 +144,7 @@ namespace BMS
 			// 
 			this.txbQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.txbQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txbQuantity.Location = new System.Drawing.Point(7, 141);
+			this.txbQuantity.Location = new System.Drawing.Point(7, 78);
 			this.txbQuantity.Margin = new System.Windows.Forms.Padding(4);
 			this.txbQuantity.Maximum = new decimal(new int[] {
             999999999,
@@ -177,24 +172,12 @@ namespace BMS
 			// 
 			this.txbDescription.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.txbDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txbDescription.Location = new System.Drawing.Point(7, 208);
+			this.txbDescription.Location = new System.Drawing.Point(7, 149);
 			this.txbDescription.Margin = new System.Windows.Forms.Padding(4);
 			this.txbDescription.Multiline = true;
 			this.txbDescription.Name = "txbDescription";
-			this.txbDescription.Size = new System.Drawing.Size(443, 90);
-			this.txbDescription.TabIndex = 213;
-			// 
-			// cbStorage
-			// 
-			this.cbStorage.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.cbStorage.Location = new System.Drawing.Point(6, 73);
-			this.cbStorage.Name = "cbStorage";
-			this.cbStorage.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-			this.cbStorage.Properties.Appearance.Options.UseFont = true;
-			this.cbStorage.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.cbStorage.Size = new System.Drawing.Size(445, 52);
-			this.cbStorage.TabIndex = 216;
+			this.txbDescription.Size = new System.Drawing.Size(443, 149);
+			this.txbDescription.TabIndex = 219;
 			// 
 			// tableLayoutPanel1
 			// 
@@ -202,18 +185,16 @@ namespace BMS
 			this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
 			this.tableLayoutPanel1.ColumnCount = 1;
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel1.Controls.Add(this.label5, 1, 3);
-			this.tableLayoutPanel1.Controls.Add(this.label3, 1, 1);
+			this.tableLayoutPanel1.Controls.Add(this.label5, 1, 2);
 			this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
-			this.tableLayoutPanel1.Controls.Add(this.label6, 0, 2);
+			this.tableLayoutPanel1.Controls.Add(this.label6, 0, 1);
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, -2);
 			this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 4;
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.2237F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.2237F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.2237F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.32889F));
+			this.tableLayoutPanel1.RowCount = 3;
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.57564F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.57564F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.84872F));
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(375, 305);
 			this.tableLayoutPanel1.TabIndex = 219;
 			// 
@@ -222,28 +203,13 @@ namespace BMS
 			this.label5.BackColor = System.Drawing.Color.LightSkyBlue;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
 			this.label5.ForeColor = System.Drawing.Color.Navy;
-			this.label5.Location = new System.Drawing.Point(7, 204);
+			this.label5.Location = new System.Drawing.Point(7, 141);
 			this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(359, 58);
 			this.label5.TabIndex = 221;
 			this.label5.Text = "Mô tả";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// label3
-			// 
-			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.label3.BackColor = System.Drawing.Color.LightSkyBlue;
-			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-			this.label3.ForeColor = System.Drawing.Color.Navy;
-			this.label3.Location = new System.Drawing.Point(7, 70);
-			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(361, 58);
-			this.label3.TabIndex = 219;
-			this.label3.Text = "Kho chứa";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label2
 			// 
@@ -267,7 +233,7 @@ namespace BMS
 			this.label6.BackColor = System.Drawing.Color.LightSkyBlue;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
 			this.label6.ForeColor = System.Drawing.Color.Navy;
-			this.label6.Location = new System.Drawing.Point(7, 137);
+			this.label6.Location = new System.Drawing.Point(7, 72);
 			this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(361, 58);
@@ -293,7 +259,7 @@ namespace BMS
 			// 
 			this.cấtToolStripMenuItem.Name = "cấtToolStripMenuItem";
 			this.cấtToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-			this.cấtToolStripMenuItem.Size = new System.Drawing.Size(45, 26);
+			this.cấtToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
 			this.cấtToolStripMenuItem.Text = "Cất";
 			this.cấtToolStripMenuItem.Click += new System.EventHandler(this.cấtToolStripMenuItem_Click);
 			// 
@@ -301,7 +267,7 @@ namespace BMS
 			// 
 			this.catVaThemOiToolStripMenuItem.Name = "catVaThemOiToolStripMenuItem";
 			this.catVaThemOiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-			this.catVaThemOiToolStripMenuItem.Size = new System.Drawing.Size(119, 26);
+			this.catVaThemOiToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
 			this.catVaThemOiToolStripMenuItem.Text = "Cat va them oi";
 			this.catVaThemOiToolStripMenuItem.Click += new System.EventHandler(this.catVaThemOiToolStripMenuItem_Click);
 			// 
@@ -324,7 +290,6 @@ namespace BMS
 			this.tableLayoutPanel2.ResumeLayout(false);
 			this.tableLayoutPanel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txbQuantity)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cbStorage.Properties)).EndInit();
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
@@ -344,10 +309,8 @@ namespace BMS
 		private System.Windows.Forms.NumericUpDown txbQuantity;
 		private System.Windows.Forms.TextBox txbPartCode;
 		private System.Windows.Forms.TextBox txbDescription;
-		private DevExpress.XtraEditors.LookUpEdit cbStorage;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.MenuStrip menuStrip1;

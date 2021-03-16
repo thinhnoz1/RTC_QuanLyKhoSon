@@ -216,6 +216,9 @@
     <Content Include="Resources\Icon\export.png" />
     <Content Include="Resources\Icon\import %281%29.png" />
     <Content Include="Resources\Icon\import.png" />
+    <Content Include="Resources\Icon\store_create.png" />
+    <Content Include="Resources\Icon\store_delete.png" />
+    <Content Include="Resources\Icon\store_edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

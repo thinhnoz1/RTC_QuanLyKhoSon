@@ -69,10 +69,12 @@ namespace BMS
 			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
 			this.panel6 = new System.Windows.Forms.Panel();
+			this.btnCancelSearch = new DevExpress.XtraEditors.SimpleButton();
 			this.label1 = new System.Windows.Forms.Label();
 			this.txbSearch = new System.Windows.Forms.TextBox();
 			this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
-			this.btnCancelSearch = new DevExpress.XtraEditors.SimpleButton();
+			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			this.btnExportPart = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gvMotor)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvMotorList)).BeginInit();
@@ -258,6 +260,8 @@ namespace BMS
             this.btnDelPart,
             this.toolStripSeparator8,
             this.btnImportPart,
+            this.toolStripSeparator5,
+            this.btnExportPart,
             this.toolStripSeparator13,
             this.btnExportExcel,
             this.toolStripSeparator11,
@@ -298,6 +302,10 @@ namespace BMS
 			// 
 			// gvMotor
 			// 
+			this.gvMotor.Appearance.FocusedRow.BackColor = System.Drawing.Color.SandyBrown;
+			this.gvMotor.Appearance.FocusedRow.ForeColor = System.Drawing.Color.Black;
+			this.gvMotor.Appearance.FocusedRow.Options.UseBackColor = true;
+			this.gvMotor.Appearance.FocusedRow.Options.UseForeColor = true;
 			this.gvMotor.ColumnPanelRowHeight = 40;
 			this.gvMotor.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colID,
@@ -642,6 +650,18 @@ namespace BMS
 			this.panel6.Size = new System.Drawing.Size(822, 44);
 			this.panel6.TabIndex = 35;
 			// 
+			// btnCancelSearch
+			// 
+			this.btnCancelSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnCancelSearch.Location = new System.Drawing.Point(604, 8);
+			this.btnCancelSearch.Margin = new System.Windows.Forms.Padding(4);
+			this.btnCancelSearch.Name = "btnCancelSearch";
+			this.btnCancelSearch.Size = new System.Drawing.Size(84, 25);
+			this.btnCancelSearch.TabIndex = 28;
+			this.btnCancelSearch.Text = "Hủy";
+			this.btnCancelSearch.Click += new System.EventHandler(this.btnCancelSearch_Click);
+			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
@@ -674,17 +694,22 @@ namespace BMS
 			this.btnSearch.Text = "Tìm kiếm";
 			this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
 			// 
-			// btnCancelSearch
+			// toolStripSeparator5
 			// 
-			this.btnCancelSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnCancelSearch.Location = new System.Drawing.Point(604, 8);
-			this.btnCancelSearch.Margin = new System.Windows.Forms.Padding(4);
-			this.btnCancelSearch.Name = "btnCancelSearch";
-			this.btnCancelSearch.Size = new System.Drawing.Size(84, 25);
-			this.btnCancelSearch.TabIndex = 28;
-			this.btnCancelSearch.Text = "Hủy";
-			this.btnCancelSearch.Click += new System.EventHandler(this.btnCancelSearch_Click);
+			this.toolStripSeparator5.Name = "toolStripSeparator5";
+			this.toolStripSeparator5.Size = new System.Drawing.Size(6, 23);
+			// 
+			// btnExportPart
+			// 
+			this.btnExportPart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnExportPart.ForeColor = System.Drawing.Color.Black;
+			this.btnExportPart.Image = ((System.Drawing.Image)(resources.GetObject("btnExportPart.Image")));
+			this.btnExportPart.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnExportPart.Name = "btnExportPart";
+			this.btnExportPart.Size = new System.Drawing.Size(86, 44);
+			this.btnExportPart.Tag = "frmProduct_GunH";
+			this.btnExportPart.Text = "Xuất kho";
+			this.btnExportPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			// 
 			// frmMotorPartList
 			// 
@@ -760,5 +785,7 @@ namespace BMS
 		private System.Windows.Forms.TextBox txbSearch;
 		private DevExpress.XtraEditors.SimpleButton btnSearch;
 		private DevExpress.XtraEditors.SimpleButton btnCancelSearch;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+		private System.Windows.Forms.ToolStripButton btnExportPart;
 	}
 }

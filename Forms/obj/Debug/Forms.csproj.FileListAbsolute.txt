@@ -910,3 +910,4 @@ D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmAd
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmMotorPartList.resources
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmAddEditMotorPart.resources
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmMotorHistoryImEx.resources
+D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmMotorPartDetails.resources

@@ -41,6 +41,18 @@ namespace BMS
 			{
 				this.Text = "SỬA DANH MỤC LINH KIỆN";
 			}
+			if (Type == 3)
+			{
+				this.Text = "XUẤT LINH KIỆN";
+				txbPartCode.Enabled = false;
+				txbPartCode.ReadOnly = true;
+			}
+			if (Type == 4)
+			{
+				this.Text = "NHẬP LINH KIỆN";
+				txbPartCode.Enabled = false;
+				txbPartCode.ReadOnly = true;
+			}
 		}
 
 		void LoadDataToForm() {
@@ -83,19 +95,18 @@ namespace BMS
 
 			try
 			{
-				if (motorPart.ID > 0)
-				{
-					TextUtils.ExcuteProcedure("spMotorUpdatePart",
-							new string[] { "@id", "@partCode", "@description", "@quantity", "@modifiedDate" },
-							new object[] { motorPart.ID, motorPart.PartCode, motorPart.Description, motorPart.Quantity, motorPart.ModifiedDate});
-				}
-				else {
-					/*string sql = string.Format("INSERT dbo.MotorPartList ( PartCode, Quantity, Description, CreatedDate ) VALUES  ( '{0}', {1}, '{2}', '{3}' )", motorPart.PartCode, motorPart.Quantity, motorPart.Description, motorPart.CreatedDate);
-					TextUtils.ExcuteSQL(sql);*/
+					if (motorPart.ID > 0)
+					{
+						TextUtils.ExcuteProcedure("spMotorUpdatePart",
+								new string[] { "@id", "@partCode", "@description", "@quantity", "@modifiedDate" },
+								new object[] { motorPart.ID, motorPart.PartCode, motorPart.Description, motorPart.Quantity, motorPart.ModifiedDate});
+					}
+					else {
+						/*string sql = string.Format("INSERT dbo.MotorPartList ( PartCode, Quantity, Description, CreatedDate ) VALUES  ( '{0}', {1}, '{2}', '{3}' )", motorPart.PartCode, motorPart.Quantity, motorPart.Description, motorPart.CreatedDate);
+						TextUtils.ExcuteSQL(sql);*/
 
-					decimal exec = MotorPartListBO.Instance.Insert(motorPart);
-				}
-
+						decimal exec = MotorPartListBO.Instance.Insert(motorPart);
+					}
 			}
 			catch (Exception e) {
 				return false;
