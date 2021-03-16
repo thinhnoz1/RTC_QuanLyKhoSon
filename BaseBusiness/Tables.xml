@@ -3,7 +3,7 @@
 	<Table>
 		<name>MotorHistoryImEx</name>
 		<column>
-			<name>id</name>
+			<name>iD</name>
 			<dataType>int</dataType>
 			<isPK>true</isPK>
 			<isFK>false</isFK>
@@ -52,12 +52,42 @@
 			<alias>Worker Code</alias>
 			<number>4</number>
 		</column>
+		<column>
+			<name>isExported</name>
+			<dataType>bit</dataType>
+			<isPK>false</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias>Is Exported</alias>
+			<number>5</number>
+		</column>
+		<column>
+			<name>positionCode</name>
+			<dataType>varchar</dataType>
+			<isPK>false</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias>Position Code</alias>
+			<number>6</number>
+		</column>
+		<column>
+			<name>positionID</name>
+			<dataType>int</dataType>
+			<isPK>false</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias>Position</alias>
+			<number>7</number>
+		</column>
 	</Table>
 
 	<Table>
 		<name>MotorPartList</name>
 		<column>
-			<name>id</name>
+			<name>iD</name>
 			<dataType>int</dataType>
 			<isPK>true</isPK>
 			<isFK>false</isFK>
@@ -77,26 +107,6 @@
 			<number>1</number>
 		</column>
 		<column>
-			<name>storageID</name>
-			<dataType>int</dataType>
-			<isPK>false</isPK>
-			<isFK>false</isFK>
-			<isUnique>false</isUnique>
-			<tableRelate></tableRelate>
-			<alias>Storage</alias>
-			<number>2</number>
-		</column>
-		<column>
-			<name>storageCode</name>
-			<dataType>varchar</dataType>
-			<isPK>false</isPK>
-			<isFK>false</isFK>
-			<isUnique>false</isUnique>
-			<tableRelate></tableRelate>
-			<alias>Storage Code</alias>
-			<number>3</number>
-		</column>
-		<column>
 			<name>quantity</name>
 			<dataType>int</dataType>
 			<isPK>false</isPK>
@@ -104,7 +114,7 @@
 			<isUnique>false</isUnique>
 			<tableRelate></tableRelate>
 			<alias>Quantity</alias>
-			<number>4</number>
+			<number>2</number>
 		</column>
 		<column>
 			<name>description</name>
@@ -114,7 +124,7 @@
 			<isUnique>false</isUnique>
 			<tableRelate></tableRelate>
 			<alias>Description</alias>
-			<number>5</number>
+			<number>3</number>
 		</column>
 		<column>
 			<name>createdDate</name>
@@ -124,7 +134,7 @@
 			<isUnique>false</isUnique>
 			<tableRelate></tableRelate>
 			<alias>Created Date</alias>
-			<number>6</number>
+			<number>4</number>
 		</column>
 		<column>
 			<name>modifiedDate</name>
@@ -134,14 +144,112 @@
 			<isUnique>false</isUnique>
 			<tableRelate></tableRelate>
 			<alias>Modified Date</alias>
-			<number>7</number>
+			<number>5</number>
+		</column>
+	</Table>
+
+	<Table>
+		<name>MotorPartListDetails</name>
+		<column>
+			<name>iD</name>
+			<dataType>int</dataType>
+			<isPK>true</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias></alias>
+			<number>0</number>
+		</column>
+		<column>
+			<name>partID</name>
+			<dataType>int</dataType>
+			<isPK>false</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias>Part</alias>
+			<number>1</number>
+		</column>
+		<column>
+			<name>partCode</name>
+			<dataType>varchar</dataType>
+			<isPK>false</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias>Part Code</alias>
+			<number>2</number>
+		</column>
+		<column>
+			<name>positionID</name>
+			<dataType>int</dataType>
+			<isPK>false</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias>Position</alias>
+			<number>3</number>
+		</column>
+		<column>
+			<name>positionCode</name>
+			<dataType>varchar</dataType>
+			<isPK>false</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias>Position Code</alias>
+			<number>4</number>
+		</column>
+		<column>
+			<name>quantity</name>
+			<dataType>int</dataType>
+			<isPK>false</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias>Quantity</alias>
+			<number>5</number>
+		</column>
+	</Table>
+
+	<Table>
+		<name>MotorPositionList</name>
+		<column>
+			<name>iD</name>
+			<dataType>int</dataType>
+			<isPK>true</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias></alias>
+			<number>0</number>
+		</column>
+		<column>
+			<name>positionCode</name>
+			<dataType>varchar</dataType>
+			<isPK>false</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias>Position Code</alias>
+			<number>1</number>
+		</column>
+		<column>
+			<name>description</name>
+			<dataType>nvarchar</dataType>
+			<isPK>false</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias>Description</alias>
+			<number>2</number>
 		</column>
 	</Table>
 
 	<Table>
 		<name>MotorStorageList</name>
 		<column>
-			<name>id</name>
+			<name>iD</name>
 			<dataType>int</dataType>
 			<isPK>true</isPK>
 			<isFK>false</isFK>

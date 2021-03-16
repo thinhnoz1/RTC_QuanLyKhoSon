@@ -4,13 +4,13 @@ namespace BMS.Model
 {
 	public class MotorStorageListModel : BaseModel
 	{
-		private int id;
+		private int iD;
 		private string storageCode;
 		private string storageName;
-		public int Id
+		public int ID
 		{
-			get { return id; }
-			set { id = value; }
+			get { return iD; }
+			set { iD = value; }
 		}
 	
 		public string StorageCode

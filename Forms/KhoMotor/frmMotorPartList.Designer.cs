@@ -48,6 +48,7 @@ namespace BMS
 			this.btnSonPlan = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.btnRefresh = new System.Windows.Forms.ToolStripButton();
 			this.gvMotor = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colPartCode = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,12 +57,33 @@ namespace BMS
 			this.colSTT = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.dtgvMotorList = new DevExpress.XtraGrid.GridControl();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+			this.treeData = new DevExpress.XtraTreeList.TreeList();
+			this.colIDTree = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+			this.colDescriptionTree = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+			this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+			this.colPositionCodeTree = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+			this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+			this.panel6 = new System.Windows.Forms.Panel();
+			this.label1 = new System.Windows.Forms.Label();
+			this.txbSearch = new System.Windows.Forms.TextBox();
+			this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+			this.btnCancelSearch = new DevExpress.XtraEditors.SimpleButton();
 			this.toolStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gvMotor)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvMotorList)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.treeData)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
+			this.toolStrip2.SuspendLayout();
+			this.panel6.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tlStorageCode2
@@ -244,13 +266,14 @@ namespace BMS
             this.btnHistory,
             this.toolStripSeparator9,
             this.btnSonPlan,
-            this.toolStripSeparator2});
+            this.toolStripSeparator2,
+            this.btnRefresh});
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
 			this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-			this.toolStrip1.Size = new System.Drawing.Size(1219, 52);
+			this.toolStrip1.Size = new System.Drawing.Size(1293, 52);
 			this.toolStrip1.TabIndex = 27;
 			this.toolStrip1.Text = "toolStrip2";
 			// 
@@ -259,6 +282,19 @@ namespace BMS
 			this.toolStripSeparator2.AutoSize = false;
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
 			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
+			// 
+			// btnRefresh
+			// 
+			this.btnRefresh.AutoSize = false;
+			this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+			this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnRefresh.Name = "btnRefresh";
+			this.btnRefresh.Size = new System.Drawing.Size(91, 44);
+			this.btnRefresh.Tag = "";
+			this.btnRefresh.Text = "Làm mới";
+			this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
 			// 
 			// gvMotor
 			// 
@@ -400,37 +436,262 @@ namespace BMS
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.dtgvMotorList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
 			this.dtgvMotorList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dtgvMotorList.Location = new System.Drawing.Point(4, 4);
+			this.dtgvMotorList.Location = new System.Drawing.Point(4, 55);
 			this.dtgvMotorList.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
 			this.dtgvMotorList.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Office2003;
 			this.dtgvMotorList.LookAndFeel.UseDefaultLookAndFeel = false;
 			this.dtgvMotorList.MainView = this.gvMotor;
 			this.dtgvMotorList.Margin = new System.Windows.Forms.Padding(4);
 			this.dtgvMotorList.Name = "dtgvMotorList";
-			this.dtgvMotorList.Size = new System.Drawing.Size(897, 574);
+			this.dtgvMotorList.Size = new System.Drawing.Size(976, 618);
 			this.dtgvMotorList.TabIndex = 34;
 			this.dtgvMotorList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMotor});
 			// 
 			// splitContainer1
 			// 
-			this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.splitContainer1.Location = new System.Drawing.Point(0, 55);
 			this.splitContainer1.Name = "splitContainer1";
 			// 
+			// splitContainer1.Panel1
+			// 
+			this.splitContainer1.Panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.splitContainer1.Panel1.Controls.Add(this.treeData);
+			this.splitContainer1.Panel1.Controls.Add(this.toolStrip2);
+			this.splitContainer1.Panel1MinSize = 15;
+			// 
 			// splitContainer1.Panel2
 			// 
+			this.splitContainer1.Panel2.Controls.Add(this.panel6);
 			this.splitContainer1.Panel2.Controls.Add(this.dtgvMotorList);
-			this.splitContainer1.Size = new System.Drawing.Size(1219, 586);
-			this.splitContainer1.SplitterDistance = 306;
+			this.splitContainer1.Size = new System.Drawing.Size(1293, 684);
+			this.splitContainer1.SplitterDistance = 303;
 			this.splitContainer1.TabIndex = 35;
+			// 
+			// treeData
+			// 
+			this.treeData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.treeData.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.treeData.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.treeData.Appearance.FocusedRow.Options.UseBackColor = true;
+			this.treeData.Appearance.HideSelectionRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.treeData.Appearance.HideSelectionRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.treeData.Appearance.HideSelectionRow.Options.UseBackColor = true;
+			this.treeData.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+			this.treeData.ColumnPanelRowHeight = 30;
+			this.treeData.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
+            this.colIDTree,
+            this.colDescriptionTree,
+            this.colPositionCodeTree});
+			this.treeData.Location = new System.Drawing.Point(4, 55);
+			this.treeData.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
+			this.treeData.LookAndFeel.UseDefaultLookAndFeel = false;
+			this.treeData.Margin = new System.Windows.Forms.Padding(4);
+			this.treeData.Name = "treeData";
+			this.treeData.OptionsBehavior.AllowExpandOnDblClick = false;
+			this.treeData.OptionsBehavior.Editable = false;
+			this.treeData.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemMemoEdit2});
+			this.treeData.Size = new System.Drawing.Size(293, 618);
+			this.treeData.TabIndex = 18;
+			this.treeData.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeData_FocusedNodeChanged);
+			// 
+			// colIDTree
+			// 
+			this.colIDTree.Caption = "Mã nhóm";
+			this.colIDTree.FieldName = "ID";
+			this.colIDTree.Name = "colIDTree";
+			// 
+			// colDescriptionTree
+			// 
+			this.colDescriptionTree.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11F);
+			this.colDescriptionTree.AppearanceCell.Options.UseFont = true;
+			this.colDescriptionTree.AppearanceCell.Options.UseTextOptions = true;
+			this.colDescriptionTree.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.colDescriptionTree.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+			this.colDescriptionTree.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+			this.colDescriptionTree.AppearanceHeader.BackColor = System.Drawing.Color.LightSalmon;
+			this.colDescriptionTree.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.colDescriptionTree.AppearanceHeader.Options.UseBackColor = true;
+			this.colDescriptionTree.AppearanceHeader.Options.UseFont = true;
+			this.colDescriptionTree.AppearanceHeader.Options.UseTextOptions = true;
+			this.colDescriptionTree.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.colDescriptionTree.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+			this.colDescriptionTree.Caption = "Mô tả";
+			this.colDescriptionTree.ColumnEdit = this.repositoryItemMemoEdit2;
+			this.colDescriptionTree.FieldName = "Description";
+			this.colDescriptionTree.Name = "colDescriptionTree";
+			this.colDescriptionTree.OptionsColumn.AllowEdit = false;
+			this.colDescriptionTree.OptionsColumn.AllowFocus = false;
+			this.colDescriptionTree.Visible = true;
+			this.colDescriptionTree.VisibleIndex = 1;
+			this.colDescriptionTree.Width = 207;
+			// 
+			// repositoryItemMemoEdit2
+			// 
+			this.repositoryItemMemoEdit2.Name = "repositoryItemMemoEdit2";
+			// 
+			// colPositionCodeTree
+			// 
+			this.colPositionCodeTree.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11F);
+			this.colPositionCodeTree.AppearanceCell.Options.UseFont = true;
+			this.colPositionCodeTree.AppearanceCell.Options.UseTextOptions = true;
+			this.colPositionCodeTree.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.colPositionCodeTree.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+			this.colPositionCodeTree.AppearanceHeader.BackColor = System.Drawing.Color.LightSalmon;
+			this.colPositionCodeTree.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.colPositionCodeTree.AppearanceHeader.Options.UseBackColor = true;
+			this.colPositionCodeTree.AppearanceHeader.Options.UseFont = true;
+			this.colPositionCodeTree.AppearanceHeader.Options.UseTextOptions = true;
+			this.colPositionCodeTree.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.colPositionCodeTree.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+			this.colPositionCodeTree.Caption = "Mã vị trí";
+			this.colPositionCodeTree.FieldName = "PositionCode";
+			this.colPositionCodeTree.Name = "colPositionCodeTree";
+			this.colPositionCodeTree.OptionsColumn.AllowEdit = false;
+			this.colPositionCodeTree.OptionsColumn.AllowFocus = false;
+			this.colPositionCodeTree.Visible = true;
+			this.colPositionCodeTree.VisibleIndex = 0;
+			this.colPositionCodeTree.Width = 117;
+			// 
+			// toolStrip2
+			// 
+			this.toolStrip2.AutoSize = false;
+			this.toolStrip2.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.toolStrip2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+			this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+			this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripSeparator3,
+            this.toolStripButton2,
+            this.toolStripSeparator4,
+            this.toolStripButton3});
+			this.toolStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
+			this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+			this.toolStrip2.Name = "toolStrip2";
+			this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+			this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+			this.toolStrip2.Size = new System.Drawing.Size(301, 51);
+			this.toolStrip2.TabIndex = 28;
+			this.toolStrip2.Text = "toolStrip2";
+			// 
+			// toolStripButton1
+			// 
+			this.toolStripButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.toolStripButton1.ForeColor = System.Drawing.Color.Black;
+			this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton1.Name = "toolStripButton1";
+			this.toolStripButton1.Size = new System.Drawing.Size(88, 44);
+			this.toolStripButton1.Tag = "frmProduct_AddProductH";
+			this.toolStripButton1.Text = "Tạo vị trí";
+			this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			// 
+			// toolStripSeparator3
+			// 
+			this.toolStripSeparator3.Name = "toolStripSeparator3";
+			this.toolStripSeparator3.Size = new System.Drawing.Size(6, 23);
+			// 
+			// toolStripButton2
+			// 
+			this.toolStripButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.toolStripButton2.ForeColor = System.Drawing.Color.Black;
+			this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+			this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton2.Name = "toolStripButton2";
+			this.toolStripButton2.Size = new System.Drawing.Size(89, 44);
+			this.toolStripButton2.Tag = "frmProduct_EditProductH";
+			this.toolStripButton2.Text = "Sửa vị trí";
+			this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			// 
+			// toolStripSeparator4
+			// 
+			this.toolStripSeparator4.Name = "toolStripSeparator4";
+			this.toolStripSeparator4.Size = new System.Drawing.Size(6, 23);
+			// 
+			// toolStripButton3
+			// 
+			this.toolStripButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.toolStripButton3.ForeColor = System.Drawing.Color.Black;
+			this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+			this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton3.Name = "toolStripButton3";
+			this.toolStripButton3.Size = new System.Drawing.Size(89, 44);
+			this.toolStripButton3.Tag = "frmProduct_DeleteProductH";
+			this.toolStripButton3.Text = "Xóa vị trí";
+			this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			// 
+			// panel6
+			// 
+			this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.panel6.Controls.Add(this.btnCancelSearch);
+			this.panel6.Controls.Add(this.label1);
+			this.panel6.Controls.Add(this.txbSearch);
+			this.panel6.Controls.Add(this.btnSearch);
+			this.panel6.Location = new System.Drawing.Point(4, 7);
+			this.panel6.Margin = new System.Windows.Forms.Padding(4);
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new System.Drawing.Size(822, 44);
+			this.panel6.TabIndex = 35;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(4, 10);
+			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(75, 20);
+			this.label1.TabIndex = 27;
+			this.label1.Text = "Từ khóa";
+			// 
+			// txbSearch
+			// 
+			this.txbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txbSearch.Location = new System.Drawing.Point(88, 6);
+			this.txbSearch.Margin = new System.Windows.Forms.Padding(4);
+			this.txbSearch.Name = "txbSearch";
+			this.txbSearch.Size = new System.Drawing.Size(416, 29);
+			this.txbSearch.TabIndex = 26;
+			// 
+			// btnSearch
+			// 
+			this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnSearch.Location = new System.Drawing.Point(512, 8);
+			this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+			this.btnSearch.Name = "btnSearch";
+			this.btnSearch.Size = new System.Drawing.Size(84, 25);
+			this.btnSearch.TabIndex = 25;
+			this.btnSearch.Text = "Tìm kiếm";
+			this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+			// 
+			// btnCancelSearch
+			// 
+			this.btnCancelSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnCancelSearch.Location = new System.Drawing.Point(604, 8);
+			this.btnCancelSearch.Margin = new System.Windows.Forms.Padding(4);
+			this.btnCancelSearch.Name = "btnCancelSearch";
+			this.btnCancelSearch.Size = new System.Drawing.Size(84, 25);
+			this.btnCancelSearch.TabIndex = 28;
+			this.btnCancelSearch.Text = "Hủy";
+			this.btnCancelSearch.Click += new System.EventHandler(this.btnCancelSearch_Click);
 			// 
 			// frmMotorPartList
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(1219, 642);
+			this.ClientSize = new System.Drawing.Size(1293, 741);
 			this.Controls.Add(this.splitContainer1);
 			this.Controls.Add(this.toolStrip1);
 			this.Name = "frmMotorPartList";
@@ -441,9 +702,16 @@ namespace BMS
 			this.toolStrip1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gvMotor)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvMotorList)).EndInit();
+			this.splitContainer1.Panel1.ResumeLayout(false);
 			this.splitContainer1.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 			this.splitContainer1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.treeData)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
+			this.toolStrip2.ResumeLayout(false);
+			this.toolStrip2.PerformLayout();
+			this.panel6.ResumeLayout(false);
+			this.panel6.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -475,5 +743,22 @@ namespace BMS
 		private DevExpress.XtraGrid.Columns.GridColumn colSTT;
 		private DevExpress.XtraGrid.GridControl dtgvMotorList;
 		private System.Windows.Forms.SplitContainer splitContainer1;
+		private DevExpress.XtraTreeList.TreeList treeData;
+		private DevExpress.XtraTreeList.Columns.TreeListColumn colIDTree;
+		private DevExpress.XtraTreeList.Columns.TreeListColumn colDescriptionTree;
+		private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit2;
+		private DevExpress.XtraTreeList.Columns.TreeListColumn colPositionCodeTree;
+		private System.Windows.Forms.ToolStripButton btnRefresh;
+		private System.Windows.Forms.ToolStrip toolStrip2;
+		private System.Windows.Forms.ToolStripButton toolStripButton1;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+		private System.Windows.Forms.ToolStripButton toolStripButton2;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+		private System.Windows.Forms.ToolStripButton toolStripButton3;
+		private System.Windows.Forms.Panel panel6;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.TextBox txbSearch;
+		private DevExpress.XtraEditors.SimpleButton btnSearch;
+		private DevExpress.XtraEditors.SimpleButton btnCancelSearch;
 	}
 }

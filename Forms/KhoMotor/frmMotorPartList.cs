@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,19 +27,28 @@ namespace BMS
 
 		void LoadPartList()
 		{
-			DataTable arr = TextUtils.LoadDataFromSP("spGetMotorPartListWithFilter"
-								  , "A"
-								  , new string[] { "@keyword" }
-								   , new object[] { txtName.Text.Trim() }
-					);
-			dtgvMotorList.DataSource = arr;
+
+			int id = TextUtils.ToInt(treeData.FocusedNode.GetValue(colIDTree));
+			if (id > 0)
+			{
+				DataTable arr = TextUtils.LoadDataFromSP("spGetMotorPartListWithFilter"
+									  , "A"
+									  , new string[] { "@keyword", "@positionID" }
+									   , new object[] { txbSearch.Text.Trim(), id }
+						);
+				dtgvMotorList.DataSource = arr;
+			}
 		}
 
+		void LoadPositionList() {
+			ArrayList arr = MotorPositionListBO.Instance.FindAll();
+			treeData.DataSource = arr;
+		}
 
 		private void frmMotorPartList_Load(object sender, EventArgs e)
 		{
+			LoadPositionList();
 			LoadPartList();
-
 		}
 
 		private void btnCreatePart_Click(object sender, EventArgs e)
@@ -138,6 +148,38 @@ namespace BMS
 
 		}
 
-		
+		private void treeData_FocusedNodeChanged(object sender, DevExpress.XtraTreeList.FocusedNodeChangedEventArgs e)
+		{
+			try
+			{
+				int id = TextUtils.ToInt(treeData.FocusedNode.GetValue(colIDTree));
+				if (id > 0)
+				{
+					txbSearch.Text = "";
+					LoadPartList();
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.ToString());
+			}
+		}
+
+		private void btnRefresh_Click(object sender, EventArgs e)
+		{
+			LoadPartList();
+			LoadPositionList();
+		}
+
+		private void btnSearch_Click(object sender, EventArgs e)
+		{
+			LoadPartList();
+		}
+
+		private void btnCancelSearch_Click(object sender, EventArgs e)
+		{
+			txbSearch.Text = "";
+			LoadPartList();
+		}
 	}
 }

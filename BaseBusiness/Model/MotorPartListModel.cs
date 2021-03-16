@@ -4,36 +4,22 @@ namespace BMS.Model
 {
 	public class MotorPartListModel : BaseModel
 	{
-		private int id;
+		private int iD;
 		private string partCode;
-		private int storageID;
-		private string storageCode;
 		private int quantity;
 		private string description;
 		private DateTime? createdDate;
 		private DateTime? modifiedDate;
-		public int Id
+		public int ID
 		{
-			get { return id; }
-			set { id = value; }
+			get { return iD; }
+			set { iD = value; }
 		}
 	
 		public string PartCode
 		{
 			get { return partCode; }
 			set { partCode = value; }
-		}
-	
-		public int StorageID
-		{
-			get { return storageID; }
-			set { storageID = value; }
-		}
-	
-		public string StorageCode
-		{
-			get { return storageCode; }
-			set { storageCode = value; }
 		}
 	
 		public int Quantity

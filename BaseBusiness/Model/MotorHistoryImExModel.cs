@@ -4,15 +4,18 @@ namespace BMS.Model
 {
 	public class MotorHistoryImExModel : BaseModel
 	{
-		private int id;
+		private int iD;
 		private int partID;
 		private string partCode;
 		private DateTime? dateImEx;
 		private string workerCode;
-		public int Id
+		private bool isExported;
+		private string positionCode;
+		private int positionID;
+		public int ID
 		{
-			get { return id; }
-			set { id = value; }
+			get { return iD; }
+			set { iD = value; }
 		}
 	
 		public int PartID
@@ -37,6 +40,24 @@ namespace BMS.Model
 		{
 			get { return workerCode; }
 			set { workerCode = value; }
+		}
+	
+		public bool IsExported
+		{
+			get { return isExported; }
+			set { isExported = value; }
+		}
+	
+		public string PositionCode
+		{
+			get { return positionCode; }
+			set { positionCode = value; }
+		}
+	
+		public int PositionID
+		{
+			get { return positionID; }
+			set { positionID = value; }
 		}
 	
 	}

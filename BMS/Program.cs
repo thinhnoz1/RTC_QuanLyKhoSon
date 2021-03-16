@@ -38,6 +38,8 @@ namespace BMS
             //Application.Run(new frmImportExcelPart());
             //Application.Run(new frmImportExcel());
             Application.Run(new frmMotorPartList());
+            //Application.Run(new frmProductListSON());
+
             //Application.Run(new ProductCheckHistory());
         }
         static bool SetAccessRule()
