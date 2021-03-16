@@ -278,6 +278,12 @@
     <Compile Include="KhoMotor\frmMotorHistoryImEx.Designer.cs">
       <DependentUpon>frmMotorHistoryImEx.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhoMotor\frmMotorImExPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhoMotor\frmMotorImExPart.Designer.cs">
+      <DependentUpon>frmMotorImExPart.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhoMotor\frmMotorPartDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KhoMotor\frmMotorHistoryImEx.resx">
       <DependentUpon>frmMotorHistoryImEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhoMotor\frmMotorImExPart.resx">
+      <DependentUpon>frmMotorImExPart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhoMotor\frmMotorPartDetails.resx">
       <DependentUpon>frmMotorPartDetails.cs</DependentUpon>
