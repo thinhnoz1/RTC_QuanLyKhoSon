@@ -67,28 +67,56 @@ namespace BMS
 			}
 			if (MessageBox.Show(String.Format("Bạn có chắc muốn lưu không?"), TextUtils.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 			{
-				if (txbQuantity.Value > 0)
+				if (type == 2)
 				{
-
-					motorPart.PartCode = txbPartCode.Text.Trim();
-					
-					if (MotorPartListBO.Instance.CheckExist("PartCode", txbPartCode.Text.Trim()))
+					if (txbQuantity.Value > 0)
 					{
-						TextUtils.ExcuteProcedure("spMotorImportPart",
-									new string[] { "@partID" , "@partCode" , "@positionID" , "@quantity" , "@workerCode"  },
-									new object[] { motorPart.ID, motorPart.PartCode, TextUtils.ToInt(cbPosition.EditValue), txbQuantity.Value, txbWorkerCode.Text});
-						return true;
+
+						motorPart.PartCode = txbPartCode.Text.Trim();
+
+						if (MotorPartListBO.Instance.CheckExist("PartCode", txbPartCode.Text.Trim()))
+						{
+							TextUtils.ExcuteProcedure("spMotorImportPart",
+										new string[] { "@partID", "@partCode", "@positionID", "@quantity", "@workerCode" },
+										new object[] { motorPart.ID, motorPart.PartCode, TextUtils.ToInt(cbPosition.EditValue), txbQuantity.Value, txbWorkerCode.Text });
+							return true;
+						}
+						else
+						{
+							MessageBox.Show("Mã linh kiện không tồn tại!", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+							return false;
+						}
 					}
 					else
 					{
-						MessageBox.Show("Mã linh kiện không tồn tại!", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+						MessageBox.Show("Vui lòng nhập số lượng!", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
 						return false;
 					}
 				}
-				else
-				{
-					MessageBox.Show("Vui lòng nhập số lượng!", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-					return false;
+				else {
+					if (txbQuantity.Value > 0)
+					{
+
+						motorPart.PartCode = txbPartCode.Text.Trim();
+
+						if (MotorPartListBO.Instance.CheckExist("PartCode", txbPartCode.Text.Trim()))
+						{
+							TextUtils.ExcuteProcedure("spMotorImportPart",
+										new string[] { "@partID", "@partCode", "@positionID", "@quantity", "@workerCode" },
+										new object[] { motorPart.ID, motorPart.PartCode, TextUtils.ToInt(cbPosition.EditValue), txbQuantity.Value, txbWorkerCode.Text });
+							return true;
+						}
+						else
+						{
+							MessageBox.Show("Mã linh kiện không tồn tại!", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+							return false;
+						}
+					}
+					else
+					{
+						MessageBox.Show("Vui lòng nhập số lượng!", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+						return false;
+					}
 				}
 
 			}
