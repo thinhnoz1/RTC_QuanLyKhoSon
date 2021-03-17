@@ -40,6 +40,7 @@ namespace BMS
 			if (Type == 2)
 			{
 				this.Text = "SỬA DANH MỤC LINH KIỆN";
+				txbQuantity.Enabled = false;
 			}
 			if (Type == 3)
 			{

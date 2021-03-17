@@ -43,6 +43,8 @@ namespace BMS
 			this.btnSaveClose = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnSaveNew = new System.Windows.Forms.ToolStripButton();
+			this.txbWorkerCode = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
 			this.panel2.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txbQuantity)).BeginInit();
@@ -62,7 +64,7 @@ namespace BMS
 			this.panel2.Location = new System.Drawing.Point(0, 54);
 			this.panel2.Margin = new System.Windows.Forms.Padding(4);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(889, 208);
+			this.panel2.Size = new System.Drawing.Size(889, 273);
 			this.panel2.TabIndex = 222;
 			// 
 			// tableLayoutPanel2
@@ -73,25 +75,26 @@ namespace BMS
 			this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
 			this.tableLayoutPanel2.ColumnCount = 1;
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel2.Controls.Add(this.txbWorkerCode, 0, 3);
 			this.tableLayoutPanel2.Controls.Add(this.txbQuantity, 0, 1);
 			this.tableLayoutPanel2.Controls.Add(this.txbPartCode, 0, 0);
 			this.tableLayoutPanel2.Controls.Add(this.cbPosition, 0, 2);
 			this.tableLayoutPanel2.Location = new System.Drawing.Point(375, -2);
 			this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-			this.tableLayoutPanel2.RowCount = 3;
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel2.Size = new System.Drawing.Size(510, 206);
+			this.tableLayoutPanel2.RowCount = 4;
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(510, 260);
 			this.tableLayoutPanel2.TabIndex = 220;
 			// 
 			// txbQuantity
 			// 
 			this.txbQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.txbQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txbQuantity.Location = new System.Drawing.Point(7, 74);
+			this.txbQuantity.Location = new System.Drawing.Point(7, 71);
 			this.txbQuantity.Margin = new System.Windows.Forms.Padding(4);
 			this.txbQuantity.Maximum = new decimal(new int[] {
             999999999,
@@ -105,14 +108,12 @@ namespace BMS
 			// 
 			// txbPartCode
 			// 
-			this.txbPartCode.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.txbPartCode.BackColor = System.Drawing.SystemColors.Window;
 			this.txbPartCode.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.txbPartCode.Enabled = false;
 			this.txbPartCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txbPartCode.Location = new System.Drawing.Point(7, 7);
 			this.txbPartCode.Margin = new System.Windows.Forms.Padding(4);
 			this.txbPartCode.Name = "txbPartCode";
-			this.txbPartCode.ReadOnly = true;
 			this.txbPartCode.Size = new System.Drawing.Size(496, 53);
 			this.txbPartCode.TabIndex = 217;
 			this.txbPartCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -120,12 +121,19 @@ namespace BMS
 			// cbPosition
 			// 
 			this.cbPosition.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.cbPosition.Location = new System.Drawing.Point(6, 140);
+			this.cbPosition.Location = new System.Drawing.Point(6, 134);
 			this.cbPosition.Name = "cbPosition";
+			this.cbPosition.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
 			this.cbPosition.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
 			this.cbPosition.Properties.Appearance.Options.UseFont = true;
+			this.cbPosition.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbPosition.Properties.AppearanceDropDown.Options.UseFont = true;
+			this.cbPosition.Properties.AppearanceDropDownHeader.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbPosition.Properties.AppearanceDropDownHeader.Options.UseFont = true;
 			this.cbPosition.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.cbPosition.Properties.NullText = "";
+			this.cbPosition.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
 			this.cbPosition.Size = new System.Drawing.Size(498, 52);
 			this.cbPosition.TabIndex = 219;
 			// 
@@ -135,18 +143,19 @@ namespace BMS
 			this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
 			this.tableLayoutPanel1.ColumnCount = 1;
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel1.Controls.Add(this.label1, 0, 3);
 			this.tableLayoutPanel1.Controls.Add(this.label5, 1, 2);
 			this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
 			this.tableLayoutPanel1.Controls.Add(this.label6, 0, 1);
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, -2);
 			this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 3;
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(375, 206);
+			this.tableLayoutPanel1.RowCount = 4;
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(375, 260);
 			this.tableLayoutPanel1.TabIndex = 219;
 			// 
 			// label5
@@ -154,7 +163,7 @@ namespace BMS
 			this.label5.BackColor = System.Drawing.Color.LightSkyBlue;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
 			this.label5.ForeColor = System.Drawing.Color.Navy;
-			this.label5.Location = new System.Drawing.Point(7, 137);
+			this.label5.Location = new System.Drawing.Point(7, 131);
 			this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(359, 58);
@@ -184,7 +193,7 @@ namespace BMS
 			this.label6.BackColor = System.Drawing.Color.LightSkyBlue;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
 			this.label6.ForeColor = System.Drawing.Color.Navy;
-			this.label6.Location = new System.Drawing.Point(7, 70);
+			this.label6.Location = new System.Drawing.Point(7, 67);
 			this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(361, 58);
@@ -222,6 +231,7 @@ namespace BMS
 			this.btnSaveClose.Tag = "frmProduct_AddProductH";
 			this.btnSaveClose.Text = "Cất && Đóng";
 			this.btnSaveClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnSaveClose.Click += new System.EventHandler(this.btnSaveClose_Click);
 			// 
 			// toolStripSeparator2
 			// 
@@ -240,16 +250,43 @@ namespace BMS
 			this.btnSaveNew.Tag = "frmProduct_AddProductH";
 			this.btnSaveNew.Text = "Cất && Thêm mới";
 			this.btnSaveNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnSaveNew.Click += new System.EventHandler(this.btnSaveNew_Click);
+			// 
+			// txbWorkerCode
+			// 
+			this.txbWorkerCode.BackColor = System.Drawing.SystemColors.Window;
+			this.txbWorkerCode.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.txbWorkerCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txbWorkerCode.Location = new System.Drawing.Point(7, 199);
+			this.txbWorkerCode.Margin = new System.Windows.Forms.Padding(4);
+			this.txbWorkerCode.Name = "txbWorkerCode";
+			this.txbWorkerCode.Size = new System.Drawing.Size(496, 53);
+			this.txbWorkerCode.TabIndex = 220;
+			this.txbWorkerCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// label1
+			// 
+			this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+			this.label1.ForeColor = System.Drawing.Color.Navy;
+			this.label1.Location = new System.Drawing.Point(7, 195);
+			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(359, 58);
+			this.label1.TabIndex = 223;
+			this.label1.Text = "Nhân viên";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// frmMotorImExPart
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(889, 272);
+			this.ClientSize = new System.Drawing.Size(889, 337);
 			this.Controls.Add(this.mnuMenu);
 			this.Controls.Add(this.panel2);
 			this.Name = "frmMotorImExPart";
 			this.Text = "NHẬP/XUẤT";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMotorImExPart_FormClosing);
 			this.Load += new System.EventHandler(this.frmMotorImExPart_Load);
 			this.panel2.ResumeLayout(false);
 			this.tableLayoutPanel2.ResumeLayout(false);
@@ -278,5 +315,7 @@ namespace BMS
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
 		private System.Windows.Forms.ToolStripButton btnSaveNew;
 		private DevExpress.XtraEditors.LookUpEdit cbPosition;
+		private System.Windows.Forms.TextBox txbWorkerCode;
+		private System.Windows.Forms.Label label1;
 	}
 }

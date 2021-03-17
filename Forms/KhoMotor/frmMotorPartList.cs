@@ -163,7 +163,19 @@ namespace BMS
 
 		private void btnImportPart_Click(object sender, EventArgs e)
 		{
+			int id = TextUtils.ToInt(gvMotor.GetFocusedRowCellValue(colID));
+			if (id == 0) return;
+			//  Lay so dong da chon
+			prevRow = gvMotor.GetSelectedRows()[0];
+			MotorPartListModel model = (MotorPartListModel)MotorPartListBO.Instance.FindByPK(id);
 
+			frmMotorImExPart frm = new frmMotorImExPart(2);
+			frm.motorPart = model;
+			if (frm.ShowDialog() == DialogResult.OK)
+			{
+				LoadPartList();
+				gvMotor.FocusedRowHandle = prevRow;
+			}
 		}
 
 		private void treeData_FocusedNodeChanged(object sender, DevExpress.XtraTreeList.FocusedNodeChangedEventArgs e)
