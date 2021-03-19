@@ -47,6 +47,8 @@ namespace BMS
 			this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnSonPlan = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			this.btnExportPart = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnRefresh = new System.Windows.Forms.ToolStripButton();
 			this.gvMotor = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -73,8 +75,6 @@ namespace BMS
 			this.label1 = new System.Windows.Forms.Label();
 			this.txbSearch = new System.Windows.Forms.TextBox();
 			this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
-			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-			this.btnExportPart = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gvMotor)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvMotorList)).BeginInit();
@@ -198,6 +198,7 @@ namespace BMS
 			// 
 			// btnImportEx
 			// 
+			this.btnImportEx.Enabled = false;
 			this.btnImportEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnImportEx.ForeColor = System.Drawing.Color.Black;
 			this.btnImportEx.Image = ((System.Drawing.Image)(resources.GetObject("btnImportEx.Image")));
@@ -235,6 +236,7 @@ namespace BMS
 			// 
 			// btnSonPlan
 			// 
+			this.btnSonPlan.Enabled = false;
 			this.btnSonPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSonPlan.ForeColor = System.Drawing.Color.Black;
 			this.btnSonPlan.Image = ((System.Drawing.Image)(resources.GetObject("btnSonPlan.Image")));
@@ -281,6 +283,24 @@ namespace BMS
 			this.toolStrip1.TabIndex = 27;
 			this.toolStrip1.Text = "toolStrip2";
 			// 
+			// toolStripSeparator5
+			// 
+			this.toolStripSeparator5.Name = "toolStripSeparator5";
+			this.toolStripSeparator5.Size = new System.Drawing.Size(6, 23);
+			// 
+			// btnExportPart
+			// 
+			this.btnExportPart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnExportPart.ForeColor = System.Drawing.Color.Black;
+			this.btnExportPart.Image = ((System.Drawing.Image)(resources.GetObject("btnExportPart.Image")));
+			this.btnExportPart.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnExportPart.Name = "btnExportPart";
+			this.btnExportPart.Size = new System.Drawing.Size(86, 44);
+			this.btnExportPart.Tag = "frmProduct_GunH";
+			this.btnExportPart.Text = "Xuất kho";
+			this.btnExportPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnExportPart.Click += new System.EventHandler(this.btnExportPart_Click);
+			// 
 			// toolStripSeparator2
 			// 
 			this.toolStripSeparator2.AutoSize = false;
@@ -302,10 +322,6 @@ namespace BMS
 			// 
 			// gvMotor
 			// 
-			this.gvMotor.Appearance.FocusedRow.BackColor = System.Drawing.Color.SandyBrown;
-			this.gvMotor.Appearance.FocusedRow.ForeColor = System.Drawing.Color.Black;
-			this.gvMotor.Appearance.FocusedRow.Options.UseBackColor = true;
-			this.gvMotor.Appearance.FocusedRow.Options.UseForeColor = true;
 			this.gvMotor.ColumnPanelRowHeight = 40;
 			this.gvMotor.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colID,
@@ -693,23 +709,6 @@ namespace BMS
 			this.btnSearch.TabIndex = 25;
 			this.btnSearch.Text = "Tìm kiếm";
 			this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-			// 
-			// toolStripSeparator5
-			// 
-			this.toolStripSeparator5.Name = "toolStripSeparator5";
-			this.toolStripSeparator5.Size = new System.Drawing.Size(6, 23);
-			// 
-			// btnExportPart
-			// 
-			this.btnExportPart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnExportPart.ForeColor = System.Drawing.Color.Black;
-			this.btnExportPart.Image = ((System.Drawing.Image)(resources.GetObject("btnExportPart.Image")));
-			this.btnExportPart.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnExportPart.Name = "btnExportPart";
-			this.btnExportPart.Size = new System.Drawing.Size(86, 44);
-			this.btnExportPart.Tag = "frmProduct_GunH";
-			this.btnExportPart.Text = "Xuất kho";
-			this.btnExportPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			// 
 			// frmMotorPartList
 			// 

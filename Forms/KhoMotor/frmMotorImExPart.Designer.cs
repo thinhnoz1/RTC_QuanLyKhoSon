@@ -32,10 +32,12 @@ namespace BMS
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMotorImExPart));
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+			this.txbWorkerCode = new System.Windows.Forms.TextBox();
 			this.txbQuantity = new System.Windows.Forms.NumericUpDown();
 			this.txbPartCode = new System.Windows.Forms.TextBox();
 			this.cbPosition = new DevExpress.XtraEditors.LookUpEdit();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.label1 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
@@ -43,8 +45,6 @@ namespace BMS
 			this.btnSaveClose = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnSaveNew = new System.Windows.Forms.ToolStripButton();
-			this.txbWorkerCode = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
 			this.panel2.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txbQuantity)).BeginInit();
@@ -89,6 +89,18 @@ namespace BMS
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
 			this.tableLayoutPanel2.Size = new System.Drawing.Size(510, 260);
 			this.tableLayoutPanel2.TabIndex = 220;
+			// 
+			// txbWorkerCode
+			// 
+			this.txbWorkerCode.BackColor = System.Drawing.SystemColors.Window;
+			this.txbWorkerCode.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.txbWorkerCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txbWorkerCode.Location = new System.Drawing.Point(7, 199);
+			this.txbWorkerCode.Margin = new System.Windows.Forms.Padding(4);
+			this.txbWorkerCode.Name = "txbWorkerCode";
+			this.txbWorkerCode.Size = new System.Drawing.Size(496, 53);
+			this.txbWorkerCode.TabIndex = 220;
+			this.txbWorkerCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// txbQuantity
 			// 
@@ -157,6 +169,19 @@ namespace BMS
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(375, 260);
 			this.tableLayoutPanel1.TabIndex = 219;
+			// 
+			// label1
+			// 
+			this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+			this.label1.ForeColor = System.Drawing.Color.Navy;
+			this.label1.Location = new System.Drawing.Point(7, 195);
+			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(359, 58);
+			this.label1.TabIndex = 223;
+			this.label1.Text = "Nhân viên";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label5
 			// 
@@ -251,31 +276,6 @@ namespace BMS
 			this.btnSaveNew.Text = "Cất && Thêm mới";
 			this.btnSaveNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			this.btnSaveNew.Click += new System.EventHandler(this.btnSaveNew_Click);
-			// 
-			// txbWorkerCode
-			// 
-			this.txbWorkerCode.BackColor = System.Drawing.SystemColors.Window;
-			this.txbWorkerCode.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.txbWorkerCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txbWorkerCode.Location = new System.Drawing.Point(7, 199);
-			this.txbWorkerCode.Margin = new System.Windows.Forms.Padding(4);
-			this.txbWorkerCode.Name = "txbWorkerCode";
-			this.txbWorkerCode.Size = new System.Drawing.Size(496, 53);
-			this.txbWorkerCode.TabIndex = 220;
-			this.txbWorkerCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			// 
-			// label1
-			// 
-			this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-			this.label1.ForeColor = System.Drawing.Color.Navy;
-			this.label1.Location = new System.Drawing.Point(7, 195);
-			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(359, 58);
-			this.label1.TabIndex = 223;
-			this.label1.Text = "Nhân viên";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// frmMotorImExPart
 			// 

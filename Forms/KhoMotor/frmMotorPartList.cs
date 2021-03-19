@@ -149,6 +149,7 @@ namespace BMS
 			frm.motorPartList = model;
 			if (frm.ShowDialog() == DialogResult.OK)
 			{
+				LoadPartList();
 				gvMotor.FocusedRowHandle = prevRow;
 			}
 			/*frmAddEditMotorPart frm = new frmAddEditMotorPart(2);
@@ -180,7 +181,7 @@ namespace BMS
 
 		private void treeData_FocusedNodeChanged(object sender, DevExpress.XtraTreeList.FocusedNodeChangedEventArgs e)
 		{
-			try
+			/*try
 			{
 				int id = TextUtils.ToInt(treeData.FocusedNode.GetValue(colIDTree));
 				if (id > 0)
@@ -192,7 +193,7 @@ namespace BMS
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.ToString());
-			}
+			}*/
 		}
 
 		private void btnRefresh_Click(object sender, EventArgs e)
@@ -212,6 +213,21 @@ namespace BMS
 			LoadPartList();
 		}
 
-	
+		private void btnExportPart_Click(object sender, EventArgs e)
+		{
+			int id = TextUtils.ToInt(gvMotor.GetFocusedRowCellValue(colID));
+			if (id == 0) return;
+			//  Lay so dong da chon
+			prevRow = gvMotor.GetSelectedRows()[0];
+			MotorPartListModel model = (MotorPartListModel)MotorPartListBO.Instance.FindByPK(id);
+
+			frmMotorImExPart frm = new frmMotorImExPart(1);
+			frm.motorPart = model;
+			if (frm.ShowDialog() == DialogResult.OK)
+			{
+				LoadPartList();
+				gvMotor.FocusedRowHandle = prevRow;
+			}
+		}
 	}
 }

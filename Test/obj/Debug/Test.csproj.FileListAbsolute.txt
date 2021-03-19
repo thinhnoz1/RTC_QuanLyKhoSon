@@ -44,3 +44,5 @@ D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Test\bin\Debug\ru\DevExpr
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Test\obj\Debug\Test.frmSonLoading.resources
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Test\obj\Debug\Test.csproj.CopyComplete
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Test\obj\Debug\Test.Form2.resources
+D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Test\obj\Debug\Test.frmBase.resources
+D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Test\obj\Debug\Test.frmTestBase.resources

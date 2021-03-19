@@ -12,6 +12,8 @@ namespace BMS.Model
 		private bool isExported;
 		private string positionCode;
 		private int positionID;
+		private int quantity;
+		private int remainQuantity;
 		public int ID
 		{
 			get { return iD; }
@@ -58,6 +60,18 @@ namespace BMS.Model
 		{
 			get { return positionID; }
 			set { positionID = value; }
+		}
+	
+		public int Quantity
+		{
+			get { return quantity; }
+			set { quantity = value; }
+		}
+	
+		public int RemainQuantity
+		{
+			get { return remainQuantity; }
+			set { remainQuantity = value; }
 		}
 	
 	}

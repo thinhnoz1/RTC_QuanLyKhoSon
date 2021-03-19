@@ -257,6 +257,7 @@ namespace BMS
 			this.Controls.Add(this.dtgvMotorDetails);
 			this.Name = "frmMotorPartDetails";
 			this.Text = "CHI TIẾT SỐ LƯỢNG LINH KIỆN";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMotorPartDetails_FormClosing);
 			this.Load += new System.EventHandler(this.frmMotorPartDetails_Load);
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();

@@ -50,6 +50,7 @@ namespace BMS
 			this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colPositionCode = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colPositionID = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvMotorHistory)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvMotor)).BeginInit();
@@ -210,6 +211,7 @@ namespace BMS
             this.colDateImEx,
             this.colWorkerCode,
             this.colStatus,
+            this.colQuantity,
             this.colPositionCode,
             this.colPositionID});
 			this.gvMotor.GridControl = this.dtgvMotorHistory;
@@ -242,7 +244,7 @@ namespace BMS
 			this.colSTT.AppearanceCell.Options.UseTextOptions = true;
 			this.colSTT.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colSTT.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-			this.colSTT.AppearanceHeader.BackColor = System.Drawing.Color.MediumPurple;
+			this.colSTT.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
 			this.colSTT.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
 			this.colSTT.AppearanceHeader.ForeColor = System.Drawing.Color.White;
 			this.colSTT.AppearanceHeader.Options.UseBackColor = true;
@@ -256,7 +258,7 @@ namespace BMS
 			this.colSTT.Name = "colSTT";
 			this.colSTT.Visible = true;
 			this.colSTT.VisibleIndex = 0;
-			this.colSTT.Width = 134;
+			this.colSTT.Width = 67;
 			// 
 			// colPartID
 			// 
@@ -272,7 +274,7 @@ namespace BMS
 			this.colPartCode.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colPartCode.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colPartCode.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-			this.colPartCode.AppearanceHeader.BackColor = System.Drawing.Color.MediumPurple;
+			this.colPartCode.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
 			this.colPartCode.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
 			this.colPartCode.AppearanceHeader.ForeColor = System.Drawing.Color.White;
 			this.colPartCode.AppearanceHeader.Options.UseBackColor = true;
@@ -288,7 +290,7 @@ namespace BMS
 			this.colPartCode.OptionsColumn.AllowEdit = false;
 			this.colPartCode.Visible = true;
 			this.colPartCode.VisibleIndex = 1;
-			this.colPartCode.Width = 274;
+			this.colPartCode.Width = 138;
 			// 
 			// colDateImEx
 			// 
@@ -297,7 +299,7 @@ namespace BMS
 			this.colDateImEx.AppearanceCell.Options.UseTextOptions = true;
 			this.colDateImEx.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colDateImEx.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-			this.colDateImEx.AppearanceHeader.BackColor = System.Drawing.Color.MediumPurple;
+			this.colDateImEx.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
 			this.colDateImEx.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
 			this.colDateImEx.AppearanceHeader.ForeColor = System.Drawing.Color.White;
 			this.colDateImEx.AppearanceHeader.Options.UseBackColor = true;
@@ -312,7 +314,7 @@ namespace BMS
 			this.colDateImEx.OptionsColumn.AllowEdit = false;
 			this.colDateImEx.Visible = true;
 			this.colDateImEx.VisibleIndex = 2;
-			this.colDateImEx.Width = 264;
+			this.colDateImEx.Width = 133;
 			// 
 			// colWorkerCode
 			// 
@@ -322,7 +324,7 @@ namespace BMS
 			this.colWorkerCode.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colWorkerCode.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colWorkerCode.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-			this.colWorkerCode.AppearanceHeader.BackColor = System.Drawing.Color.MediumPurple;
+			this.colWorkerCode.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
 			this.colWorkerCode.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
 			this.colWorkerCode.AppearanceHeader.ForeColor = System.Drawing.Color.White;
 			this.colWorkerCode.AppearanceHeader.Options.UseBackColor = true;
@@ -337,8 +339,8 @@ namespace BMS
 			this.colWorkerCode.Name = "colWorkerCode";
 			this.colWorkerCode.OptionsColumn.AllowEdit = false;
 			this.colWorkerCode.Visible = true;
-			this.colWorkerCode.VisibleIndex = 5;
-			this.colWorkerCode.Width = 197;
+			this.colWorkerCode.VisibleIndex = 6;
+			this.colWorkerCode.Width = 78;
 			// 
 			// colStatus
 			// 
@@ -348,7 +350,7 @@ namespace BMS
 			this.colStatus.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colStatus.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colStatus.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-			this.colStatus.AppearanceHeader.BackColor = System.Drawing.Color.MediumPurple;
+			this.colStatus.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
 			this.colStatus.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
 			this.colStatus.AppearanceHeader.ForeColor = System.Drawing.Color.White;
 			this.colStatus.AppearanceHeader.Options.UseBackColor = true;
@@ -363,8 +365,8 @@ namespace BMS
 			this.colStatus.Name = "colStatus";
 			this.colStatus.OptionsColumn.AllowEdit = false;
 			this.colStatus.Visible = true;
-			this.colStatus.VisibleIndex = 4;
-			this.colStatus.Width = 166;
+			this.colStatus.VisibleIndex = 5;
+			this.colStatus.Width = 83;
 			// 
 			// colPositionCode
 			// 
@@ -374,7 +376,7 @@ namespace BMS
 			this.colPositionCode.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colPositionCode.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colPositionCode.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-			this.colPositionCode.AppearanceHeader.BackColor = System.Drawing.Color.MediumPurple;
+			this.colPositionCode.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
 			this.colPositionCode.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
 			this.colPositionCode.AppearanceHeader.ForeColor = System.Drawing.Color.White;
 			this.colPositionCode.AppearanceHeader.Options.UseBackColor = true;
@@ -389,13 +391,36 @@ namespace BMS
 			this.colPositionCode.Name = "colPositionCode";
 			this.colPositionCode.Visible = true;
 			this.colPositionCode.VisibleIndex = 3;
-			this.colPositionCode.Width = 273;
+			this.colPositionCode.Width = 137;
 			// 
 			// colPositionID
 			// 
 			this.colPositionID.Caption = "gridColumn1";
 			this.colPositionID.FieldName = "PositionID";
 			this.colPositionID.Name = "colPositionID";
+			// 
+			// colQuantity
+			// 
+			this.colQuantity.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11F);
+			this.colQuantity.AppearanceCell.Options.UseFont = true;
+			this.colQuantity.AppearanceCell.Options.UseTextOptions = true;
+			this.colQuantity.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.colQuantity.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+			this.colQuantity.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
+			this.colQuantity.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+			this.colQuantity.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+			this.colQuantity.AppearanceHeader.Options.UseBackColor = true;
+			this.colQuantity.AppearanceHeader.Options.UseFont = true;
+			this.colQuantity.AppearanceHeader.Options.UseForeColor = true;
+			this.colQuantity.AppearanceHeader.Options.UseTextOptions = true;
+			this.colQuantity.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.colQuantity.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+			this.colQuantity.Caption = "Số lượng";
+			this.colQuantity.FieldName = "Quantity";
+			this.colQuantity.Name = "colQuantity";
+			this.colQuantity.Visible = true;
+			this.colQuantity.VisibleIndex = 4;
+			this.colQuantity.Width = 63;
 			// 
 			// frmMotorHistoryImEx
 			// 
@@ -439,5 +464,6 @@ namespace BMS
 		private DevExpress.XtraGrid.Columns.GridColumn colSTT;
 		private DevExpress.XtraGrid.Columns.GridColumn colPositionCode;
 		private DevExpress.XtraGrid.Columns.GridColumn colPositionID;
+		private DevExpress.XtraGrid.Columns.GridColumn colQuantity;
 	}
 }

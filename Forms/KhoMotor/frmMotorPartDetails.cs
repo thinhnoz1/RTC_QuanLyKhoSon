@@ -44,5 +44,10 @@ namespace BMS
 				GetPartDetails();
 			}
 		}
+
+		private void frmMotorPartDetails_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			this.DialogResult = DialogResult.OK;
+		}
 	}
 }

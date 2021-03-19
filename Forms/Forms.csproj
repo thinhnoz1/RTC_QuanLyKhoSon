@@ -223,6 +223,12 @@
     <Compile Include="frmAddEditProduct.Designer.cs">
       <DependentUpon>frmAddEditProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmImportExcelPart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,12 @@
     <Compile Include="frmSonPlan.Designer.cs">
       <DependentUpon>frmSonPlan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTestBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTestBase.Designer.cs">
+      <DependentUpon>frmTestBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="FxSerialDeamon.cs" />
     <Compile Include="frmPartImExHistory.cs">
       <SubType>Form</SubType>
@@ -271,6 +283,12 @@
     </Compile>
     <Compile Include="KhoMotor\frmAddEditMotorPart.Designer.cs">
       <DependentUpon>frmAddEditMotorPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhoMotor\frmAddEditPositionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhoMotor\frmAddEditPositionList.Designer.cs">
+      <DependentUpon>frmAddEditPositionList.cs</DependentUpon>
     </Compile>
     <Compile Include="KhoMotor\frmMotorHistoryImEx.cs">
       <SubType>Form</SubType>
@@ -330,6 +348,9 @@
     <EmbeddedResource Include="frmAddEditProduct.resx">
       <DependentUpon>frmAddEditProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmImportExcelPart.resx">
       <DependentUpon>frmImportExcelPart.cs</DependentUpon>
     </EmbeddedResource>
@@ -352,8 +373,14 @@
     <EmbeddedResource Include="frmSonPlan.resx">
       <DependentUpon>frmSonPlan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTestBase.resx">
+      <DependentUpon>frmTestBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KhoMotor\frmAddEditMotorPart.resx">
       <DependentUpon>frmAddEditMotorPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhoMotor\frmAddEditPositionList.resx">
+      <DependentUpon>frmAddEditPositionList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhoMotor\frmMotorHistoryImEx.resx">
       <DependentUpon>frmMotorHistoryImEx.cs</DependentUpon>
@@ -432,7 +459,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="KhoSon\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

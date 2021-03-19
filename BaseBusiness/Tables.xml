@@ -82,6 +82,26 @@
 			<alias>Position</alias>
 			<number>7</number>
 		</column>
+		<column>
+			<name>quantity</name>
+			<dataType>int</dataType>
+			<isPK>false</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias>Quantity</alias>
+			<number>8</number>
+		</column>
+		<column>
+			<name>remainQuantity</name>
+			<dataType>int</dataType>
+			<isPK>false</isPK>
+			<isFK>false</isFK>
+			<isUnique>false</isUnique>
+			<tableRelate></tableRelate>
+			<alias>Remain Quantity</alias>
+			<number>9</number>
+		</column>
 	</Table>
 
 	<Table>
