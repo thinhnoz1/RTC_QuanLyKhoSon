@@ -913,4 +913,6 @@ D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmMo
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmMotorPartDetails.resources
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmMotorImExPart.resources
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\Forms.frmBase.resources
-D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\Forms.KhoMotor.frmAddEditPositionList.resources
+D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\Forms.frmTestBase.resources
+D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmAddEditPositionList.resources
+D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Forms\obj\Debug\BMS.frmTest.resources

@@ -187,5 +187,15 @@ namespace BMS
 		{
 			this.DialogResult = DialogResult.OK;
 		}
+
+		private void cấtToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			btnSaveClose_Click(null, null);
+		}
+
+		private void catVaThemOiToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			btnSaveNew_Click(null, null);
+		}
 	}
 }

@@ -349,3 +349,5 @@ D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Utilities\obj\Debug\Utili
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Utilities\obj\Debug\Utilities.csproj.CopyComplete
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Utilities\obj\Debug\Utilities.dll
 D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Utilities\obj\Debug\Utilities.pdb
+D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Utilities\obj\Debug\Forms.frmBase.resources
+D:\THINH\PRXJEKT\1. SUMITOMO\QuanLyKhoSon\QuanlyKhoSon\Utilities\obj\Debug\Forms.frmTestBase.resources

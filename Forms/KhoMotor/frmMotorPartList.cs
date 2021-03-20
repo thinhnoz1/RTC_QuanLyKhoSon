@@ -145,7 +145,7 @@ namespace BMS
 			//  Lay so dong da chon
 			prevRow = gvMotor.GetSelectedRows()[0];
 			MotorPartListModel model = (MotorPartListModel)MotorPartListBO.Instance.FindByPK(id);
-			frmMotorPartDetails frm = new frmMotorPartDetails();
+			frmMotorPartDetails frm = new frmMotorPartDetails(1);
 			frm.motorPartList = model;
 			if (frm.ShowDialog() == DialogResult.OK)
 			{
@@ -227,6 +227,75 @@ namespace BMS
 			{
 				LoadPartList();
 				gvMotor.FocusedRowHandle = prevRow;
+			}
+		}
+
+		private void btnAddPos_Click(object sender, EventArgs e)
+		{
+			frmAddEditPositionList frm = new frmAddEditPositionList(1);
+			if (frm.ShowDialog() == DialogResult.OK)
+			{
+				LoadPositionList();
+			}
+		}
+
+		private void btnEditPos_Click(object sender, EventArgs e)
+		{
+			int id = TextUtils.ToInt(treeData.FocusedNode.GetValue(colIDTree));
+			if (id == 0) return;
+			//  Lay so dong da chon
+			MotorPositionListModel model = (MotorPositionListModel)MotorPositionListBO.Instance.FindByPK(id);
+
+			frmAddEditPositionList frm = new frmAddEditPositionList(2);
+			frm.positionListModel = model;
+			if (frm.ShowDialog() == DialogResult.OK)
+			{
+				LoadPositionList();
+			}
+		}
+
+		private void btnDelPos_Click(object sender, EventArgs e)
+		{
+			int strID = TextUtils.ToInt(treeData.FocusedNode.GetValue(colIDTree));
+			string str = TextUtils.ToString(treeData.FocusedNode.GetValue(colPositionCodeTree));
+
+			try
+			{
+				if (MessageBox.Show(String.Format("Bạn có chắc muốn xóa vị trí [{0}] không?", str), TextUtils.Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+				{
+					if (MotorHistoryImExBO.Instance.CheckExist("PositionID", strID))
+					{
+						MessageBox.Show("Vị trí này đã có lịch sử xuất/nhập nên không thể xóa được!", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+						return;
+					}
+					else
+					{
+						MotorPositionListBO.Instance.Delete(strID);
+						treeData.DeleteSelectedNodes();
+						MessageBox.Show("Xoá thành công", TextUtils.Caption);
+					}
+				}
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Lỗi hệ thống!", TextUtils.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+				return;
+			}
+		}
+
+		private void treeData_DoubleClick(object sender, EventArgs e)
+		{
+			int id = TextUtils.ToInt(treeData.FocusedNode.GetValue(colIDTree));
+			if (id == 0) return;
+			//  Lay so dong da chon
+			MotorPositionListModel model = (MotorPositionListModel)MotorPositionListBO.Instance.FindByPK(id);
+
+			frmMotorPartDetails frm = new frmMotorPartDetails(2);
+			frm.motorPositionList = model;
+			if (frm.ShowDialog() == DialogResult.OK)
+			{
+				LoadPositionList();
 			}
 		}
 	}

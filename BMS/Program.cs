@@ -37,7 +37,7 @@ namespace BMS
 
             //Application.Run(new frmImportExcelPart());
             //Application.Run(new frmImportExcel());
-            Application.Run(new frmMotorPartList());
+            Application.Run(new frmTest());
             //Application.Run(new frmProductListSON());
 
             //Application.Run(new ProductCheckHistory());

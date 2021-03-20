@@ -1,5 +1,5 @@
 ﻿
-namespace Forms.KhoMotor
+namespace BMS
 {
 	partial class frmAddEditPositionList
 	{
@@ -35,14 +35,18 @@ namespace Forms.KhoMotor
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnSaveNew = new System.Windows.Forms.ToolStripButton();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.txbPartCode = new System.Windows.Forms.TextBox();
+			this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
 			this.txbDescription = new System.Windows.Forms.TextBox();
+			this.txbPositionCode = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.cấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.catVaThemOiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuMenu.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.tableLayoutPanel3.SuspendLayout();
+			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// mnuMenu
@@ -75,6 +79,7 @@ namespace Forms.KhoMotor
 			this.btnSaveClose.Tag = "frmProduct_AddProductH";
 			this.btnSaveClose.Text = "Cất && Đóng";
 			this.btnSaveClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnSaveClose.Click += new System.EventHandler(this.btnSaveClose_Click);
 			// 
 			// toolStripSeparator2
 			// 
@@ -93,6 +98,7 @@ namespace Forms.KhoMotor
 			this.btnSaveNew.Tag = "frmProduct_AddProductH";
 			this.btnSaveNew.Text = "Cất && Thêm mới";
 			this.btnSaveNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnSaveNew.Click += new System.EventHandler(this.btnSaveNew_Click);
 			// 
 			// panel2
 			// 
@@ -107,17 +113,23 @@ namespace Forms.KhoMotor
 			this.panel2.Size = new System.Drawing.Size(836, 268);
 			this.panel2.TabIndex = 222;
 			// 
-			// txbPartCode
+			// tableLayoutPanel3
 			// 
-			this.txbPartCode.BackColor = System.Drawing.Color.White;
-			this.txbPartCode.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.txbPartCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txbPartCode.Location = new System.Drawing.Point(271, 3);
-			this.txbPartCode.Margin = new System.Windows.Forms.Padding(0);
-			this.txbPartCode.Name = "txbPartCode";
-			this.txbPartCode.Size = new System.Drawing.Size(562, 53);
-			this.txbPartCode.TabIndex = 217;
-			this.txbPartCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
+			this.tableLayoutPanel3.ColumnCount = 2;
+			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.09581F));
+			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.90419F));
+			this.tableLayoutPanel3.Controls.Add(this.txbDescription, 1, 1);
+			this.tableLayoutPanel3.Controls.Add(this.txbPositionCode, 1, 0);
+			this.tableLayoutPanel3.Controls.Add(this.label5, 0, 1);
+			this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
+			this.tableLayoutPanel3.Location = new System.Drawing.Point(-2, -3);
+			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+			this.tableLayoutPanel3.RowCount = 2;
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.13741F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.86259F));
+			this.tableLayoutPanel3.Size = new System.Drawing.Size(836, 265);
+			this.tableLayoutPanel3.TabIndex = 221;
 			// 
 			// txbDescription
 			// 
@@ -129,6 +141,18 @@ namespace Forms.KhoMotor
 			this.txbDescription.Name = "txbDescription";
 			this.txbDescription.Size = new System.Drawing.Size(562, 200);
 			this.txbDescription.TabIndex = 219;
+			// 
+			// txbPositionCode
+			// 
+			this.txbPositionCode.BackColor = System.Drawing.Color.White;
+			this.txbPositionCode.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.txbPositionCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txbPositionCode.Location = new System.Drawing.Point(271, 3);
+			this.txbPositionCode.Margin = new System.Windows.Forms.Padding(0);
+			this.txbPositionCode.Name = "txbPositionCode";
+			this.txbPositionCode.Size = new System.Drawing.Size(562, 53);
+			this.txbPositionCode.TabIndex = 217;
+			this.txbPositionCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// label5
 			// 
@@ -158,39 +182,57 @@ namespace Forms.KhoMotor
 			this.label2.Text = "Mã vị trí";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// tableLayoutPanel3
+			// menuStrip1
 			// 
-			this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
-			this.tableLayoutPanel3.ColumnCount = 2;
-			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.09581F));
-			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.90419F));
-			this.tableLayoutPanel3.Controls.Add(this.txbDescription, 1, 1);
-			this.tableLayoutPanel3.Controls.Add(this.txbPartCode, 1, 0);
-			this.tableLayoutPanel3.Controls.Add(this.label5, 0, 1);
-			this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
-			this.tableLayoutPanel3.Location = new System.Drawing.Point(-2, -3);
-			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-			this.tableLayoutPanel3.RowCount = 2;
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.13741F));
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.86259F));
-			this.tableLayoutPanel3.Size = new System.Drawing.Size(836, 265);
-			this.tableLayoutPanel3.TabIndex = 221;
+			this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+			this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cấtToolStripMenuItem,
+            this.catVaThemOiToolStripMenuItem});
+			this.menuStrip1.Location = new System.Drawing.Point(398, 22);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(322, 28);
+			this.menuStrip1.TabIndex = 223;
+			this.menuStrip1.Text = "menuStrip1";
+			this.menuStrip1.Visible = false;
+			// 
+			// cấtToolStripMenuItem
+			// 
+			this.cấtToolStripMenuItem.Name = "cấtToolStripMenuItem";
+			this.cấtToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+			this.cấtToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
+			this.cấtToolStripMenuItem.Text = "Cất";
+			this.cấtToolStripMenuItem.Click += new System.EventHandler(this.cấtToolStripMenuItem_Click);
+			// 
+			// catVaThemOiToolStripMenuItem
+			// 
+			this.catVaThemOiToolStripMenuItem.Name = "catVaThemOiToolStripMenuItem";
+			this.catVaThemOiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+			this.catVaThemOiToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
+			this.catVaThemOiToolStripMenuItem.Text = "Cat va them oi";
+			this.catVaThemOiToolStripMenuItem.Click += new System.EventHandler(this.catVaThemOiToolStripMenuItem_Click);
 			// 
 			// frmAddEditPositionList
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(836, 326);
+			this.Controls.Add(this.menuStrip1);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.mnuMenu);
 			this.Name = "frmAddEditPositionList";
 			this.Text = "frmAddEditPositionList";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAddEditPositionList_FormClosing);
+			this.Load += new System.EventHandler(this.frmAddEditPositionList_Load);
 			this.mnuMenu.ResumeLayout(false);
 			this.mnuMenu.PerformLayout();
 			this.panel2.ResumeLayout(false);
 			this.tableLayoutPanel3.ResumeLayout(false);
 			this.tableLayoutPanel3.PerformLayout();
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -203,8 +245,11 @@ namespace Forms.KhoMotor
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
 		private System.Windows.Forms.TextBox txbDescription;
-		private System.Windows.Forms.TextBox txbPartCode;
+		private System.Windows.Forms.TextBox txbPositionCode;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem cấtToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem catVaThemOiToolStripMenuItem;
 	}
 }

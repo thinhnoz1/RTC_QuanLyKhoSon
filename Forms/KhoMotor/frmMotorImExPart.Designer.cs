@@ -45,12 +45,16 @@ namespace BMS
 			this.btnSaveClose = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.btnSaveNew = new System.Windows.Forms.ToolStripButton();
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.cấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.catVaThemOiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.panel2.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txbQuantity)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cbPosition.Properties)).BeginInit();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.mnuMenu.SuspendLayout();
+			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel2
@@ -277,11 +281,42 @@ namespace BMS
 			this.btnSaveNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			this.btnSaveNew.Click += new System.EventHandler(this.btnSaveNew_Click);
 			// 
+			// menuStrip1
+			// 
+			this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+			this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cấtToolStripMenuItem,
+            this.catVaThemOiToolStripMenuItem});
+			this.menuStrip1.Location = new System.Drawing.Point(358, 9);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(322, 28);
+			this.menuStrip1.TabIndex = 224;
+			this.menuStrip1.Text = "menuStrip1";
+			this.menuStrip1.Visible = false;
+			// 
+			// cấtToolStripMenuItem
+			// 
+			this.cấtToolStripMenuItem.Name = "cấtToolStripMenuItem";
+			this.cấtToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+			this.cấtToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
+			this.cấtToolStripMenuItem.Text = "Cất";
+			this.cấtToolStripMenuItem.Click += new System.EventHandler(this.cấtToolStripMenuItem_Click);
+			// 
+			// catVaThemOiToolStripMenuItem
+			// 
+			this.catVaThemOiToolStripMenuItem.Name = "catVaThemOiToolStripMenuItem";
+			this.catVaThemOiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+			this.catVaThemOiToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
+			this.catVaThemOiToolStripMenuItem.Text = "Cat va them oi";
+			this.catVaThemOiToolStripMenuItem.Click += new System.EventHandler(this.catVaThemOiToolStripMenuItem_Click);
+			// 
 			// frmMotorImExPart
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(889, 337);
+			this.Controls.Add(this.menuStrip1);
 			this.Controls.Add(this.mnuMenu);
 			this.Controls.Add(this.panel2);
 			this.Name = "frmMotorImExPart";
@@ -296,7 +331,10 @@ namespace BMS
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.mnuMenu.ResumeLayout(false);
 			this.mnuMenu.PerformLayout();
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -317,5 +355,8 @@ namespace BMS
 		private DevExpress.XtraEditors.LookUpEdit cbPosition;
 		private System.Windows.Forms.TextBox txbWorkerCode;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem cấtToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem catVaThemOiToolStripMenuItem;
 	}
 }

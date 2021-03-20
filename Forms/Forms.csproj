@@ -198,6 +198,7 @@
     <Compile Include="Common\CraftworkItemInfo.cs" />
     <Compile Include="Common\CraftworkMaterialNoEnum.cs" />
     <Compile Include="Common\EnumForMixSystem.cs" />
+    <Compile Include="Common\Global\cGlobalVariables.cs" />
     <Compile Include="Common\IControllerAction.cs" />
     <Compile Include="Common\IControllerBase.cs" />
     <Compile Include="Common\IOServerStatus.cs" />
@@ -205,22 +206,22 @@
     <Compile Include="Common\WeightingStepEnum.cs" />
     <Compile Include="Common\WorkRegionEnum.cs" />
     <Compile Include="Common\WorkRegionStateItem.cs" />
-    <Compile Include="frmAddEditHistory.cs">
+    <Compile Include="KhoSon\frmAddEditHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddEditHistory.Designer.cs">
+    <Compile Include="KhoSon\frmAddEditHistory.Designer.cs">
       <DependentUpon>frmAddEditHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddEditPlan.cs">
+    <Compile Include="KhoSon\frmAddEditPlan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddEditPlan.Designer.cs">
+    <Compile Include="KhoSon\frmAddEditPlan.Designer.cs">
       <DependentUpon>frmAddEditPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddEditProduct.cs">
+    <Compile Include="KhoSon\frmAddEditProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddEditProduct.Designer.cs">
+    <Compile Include="KhoSon\frmAddEditProduct.Designer.cs">
       <DependentUpon>frmAddEditProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBase.cs">
@@ -229,40 +230,40 @@
     <Compile Include="frmBase.Designer.cs">
       <DependentUpon>frmBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmImportExcelPart.cs">
+    <Compile Include="KhoSon\frmImportExcelPart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmImportExcelPart.Designer.cs">
+    <Compile Include="KhoSon\frmImportExcelPart.Designer.cs">
       <DependentUpon>frmImportExcelPart.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSonLoading.cs">
+    <Compile Include="KhoSon\frmSonLoading.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSonLoading.designer.cs">
+    <Compile Include="KhoSon\frmSonLoading.designer.cs">
       <DependentUpon>frmSonLoading.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmImportExcel.cs">
+    <Compile Include="KhoSon\frmImportExcel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmImportExcel.Designer.cs">
+    <Compile Include="KhoSon\frmImportExcel.Designer.cs">
       <DependentUpon>frmImportExcel.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmImportPart.cs">
+    <Compile Include="KhoSon\frmImportPart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmImportPart.Designer.cs">
+    <Compile Include="KhoSon\frmImportPart.Designer.cs">
       <DependentUpon>frmImportPart.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProductListSON.cs">
+    <Compile Include="KhoSon\frmProductListSON.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductListSON.Designer.cs">
+    <Compile Include="KhoSon\frmProductListSON.Designer.cs">
       <DependentUpon>frmProductListSON.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSonPlan.cs">
+    <Compile Include="KhoSon\frmSonPlan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSonPlan.Designer.cs">
+    <Compile Include="KhoSon\frmSonPlan.Designer.cs">
       <DependentUpon>frmSonPlan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTestBase.cs">
@@ -272,10 +273,10 @@
       <DependentUpon>frmTestBase.cs</DependentUpon>
     </Compile>
     <Compile Include="FxSerialDeamon.cs" />
-    <Compile Include="frmPartImExHistory.cs">
+    <Compile Include="KhoSon\frmPartImExHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPartImExHistory.Designer.cs">
+    <Compile Include="KhoSon\frmPartImExHistory.Designer.cs">
       <DependentUpon>frmPartImExHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="KhoMotor\frmAddEditMotorPart.cs">
@@ -339,38 +340,44 @@
     <Compile Include="RefreshHelperClass.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAddEditHistory.resx">
+    <Compile Include="Test\frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="KhoSon\frmAddEditHistory.resx">
       <DependentUpon>frmAddEditHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddEditPlan.resx">
+    <EmbeddedResource Include="KhoSon\frmAddEditPlan.resx">
       <DependentUpon>frmAddEditPlan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddEditProduct.resx">
+    <EmbeddedResource Include="KhoSon\frmAddEditProduct.resx">
       <DependentUpon>frmAddEditProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmImportExcelPart.resx">
+    <EmbeddedResource Include="KhoSon\frmImportExcelPart.resx">
       <DependentUpon>frmImportExcelPart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSonLoading.resx">
+    <EmbeddedResource Include="KhoSon\frmSonLoading.resx">
       <DependentUpon>frmSonLoading.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmImportExcel.resx">
+    <EmbeddedResource Include="KhoSon\frmImportExcel.resx">
       <DependentUpon>frmImportExcel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmImportPart.resx">
+    <EmbeddedResource Include="KhoSon\frmImportPart.resx">
       <DependentUpon>frmImportPart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProductListSON.resx">
+    <EmbeddedResource Include="KhoSon\frmProductListSON.resx">
       <DependentUpon>frmProductListSON.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPartImExHistory.resx">
+    <EmbeddedResource Include="KhoSon\frmPartImExHistory.resx">
       <DependentUpon>frmPartImExHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSonPlan.resx">
+    <EmbeddedResource Include="KhoSon\frmSonPlan.resx">
       <DependentUpon>frmSonPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTestBase.resx">
@@ -399,6 +406,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
@@ -459,9 +469,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="KhoSon\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

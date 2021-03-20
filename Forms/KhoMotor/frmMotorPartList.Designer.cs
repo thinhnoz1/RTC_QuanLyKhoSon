@@ -65,11 +65,11 @@ namespace BMS
 			this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
 			this.colPositionCodeTree = new DevExpress.XtraTreeList.Columns.TreeListColumn();
 			this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+			this.btnAddPos = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+			this.btnEditPos = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+			this.btnDelPos = new System.Windows.Forms.ToolStripButton();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.btnCancelSearch = new DevExpress.XtraEditors.SimpleButton();
 			this.label1 = new System.Windows.Forms.Label();
@@ -341,7 +341,6 @@ namespace BMS
 			this.gvMotor.OptionsFind.AlwaysVisible = true;
 			this.gvMotor.OptionsFind.ShowCloseButton = false;
 			this.gvMotor.OptionsView.ShowGroupPanel = false;
-			this.gvMotor.PaintStyleName = "Web";
 			this.gvMotor.RowHeight = 25;
 			this.gvMotor.ScrollStyle = DevExpress.XtraGrid.Views.Grid.ScrollStyleFlags.LiveVertScroll;
 			this.gvMotor.DoubleClick += new System.EventHandler(this.gvMotor_DoubleClick);
@@ -361,10 +360,8 @@ namespace BMS
 			this.colPartCode.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colPartCode.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colPartCode.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-			this.colPartCode.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
 			this.colPartCode.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-			this.colPartCode.AppearanceHeader.ForeColor = System.Drawing.Color.White;
-			this.colPartCode.AppearanceHeader.Options.UseBackColor = true;
+			this.colPartCode.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
 			this.colPartCode.AppearanceHeader.Options.UseFont = true;
 			this.colPartCode.AppearanceHeader.Options.UseForeColor = true;
 			this.colPartCode.AppearanceHeader.Options.UseTextOptions = true;
@@ -386,10 +383,8 @@ namespace BMS
 			this.colDescription.AppearanceCell.Options.UseTextOptions = true;
 			this.colDescription.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colDescription.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-			this.colDescription.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
 			this.colDescription.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-			this.colDescription.AppearanceHeader.ForeColor = System.Drawing.Color.White;
-			this.colDescription.AppearanceHeader.Options.UseBackColor = true;
+			this.colDescription.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
 			this.colDescription.AppearanceHeader.Options.UseFont = true;
 			this.colDescription.AppearanceHeader.Options.UseForeColor = true;
 			this.colDescription.AppearanceHeader.Options.UseTextOptions = true;
@@ -412,10 +407,8 @@ namespace BMS
 			this.colQuantity.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colQuantity.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colQuantity.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-			this.colQuantity.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
 			this.colQuantity.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-			this.colQuantity.AppearanceHeader.ForeColor = System.Drawing.Color.White;
-			this.colQuantity.AppearanceHeader.Options.UseBackColor = true;
+			this.colQuantity.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
 			this.colQuantity.AppearanceHeader.Options.UseFont = true;
 			this.colQuantity.AppearanceHeader.Options.UseForeColor = true;
 			this.colQuantity.AppearanceHeader.Options.UseTextOptions = true;
@@ -437,10 +430,8 @@ namespace BMS
 			this.colSTT.AppearanceCell.Options.UseTextOptions = true;
 			this.colSTT.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colSTT.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-			this.colSTT.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
 			this.colSTT.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-			this.colSTT.AppearanceHeader.ForeColor = System.Drawing.Color.White;
-			this.colSTT.AppearanceHeader.Options.UseBackColor = true;
+			this.colSTT.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
 			this.colSTT.AppearanceHeader.Options.UseFont = true;
 			this.colSTT.AppearanceHeader.Options.UseForeColor = true;
 			this.colSTT.AppearanceHeader.Options.UseTextOptions = true;
@@ -461,9 +452,7 @@ namespace BMS
 			this.dtgvMotorList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
 			this.dtgvMotorList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dtgvMotorList.Location = new System.Drawing.Point(4, 55);
-			this.dtgvMotorList.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
-			this.dtgvMotorList.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Office2003;
-			this.dtgvMotorList.LookAndFeel.UseDefaultLookAndFeel = false;
+			this.dtgvMotorList.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
 			this.dtgvMotorList.MainView = this.gvMotor;
 			this.dtgvMotorList.Margin = new System.Windows.Forms.Padding(4);
 			this.dtgvMotorList.Name = "dtgvMotorList";
@@ -514,7 +503,6 @@ namespace BMS
             this.colDescriptionTree,
             this.colPositionCodeTree});
 			this.treeData.Location = new System.Drawing.Point(4, 55);
-			this.treeData.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
 			this.treeData.LookAndFeel.UseDefaultLookAndFeel = false;
 			this.treeData.Margin = new System.Windows.Forms.Padding(4);
 			this.treeData.Name = "treeData";
@@ -525,6 +513,7 @@ namespace BMS
 			this.treeData.Size = new System.Drawing.Size(293, 618);
 			this.treeData.TabIndex = 18;
 			this.treeData.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeData_FocusedNodeChanged);
+			this.treeData.DoubleClick += new System.EventHandler(this.treeData_DoubleClick);
 			// 
 			// colIDTree
 			// 
@@ -540,10 +529,10 @@ namespace BMS
 			this.colDescriptionTree.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colDescriptionTree.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 			this.colDescriptionTree.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-			this.colDescriptionTree.AppearanceHeader.BackColor = System.Drawing.Color.LightSalmon;
 			this.colDescriptionTree.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.colDescriptionTree.AppearanceHeader.Options.UseBackColor = true;
+			this.colDescriptionTree.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
 			this.colDescriptionTree.AppearanceHeader.Options.UseFont = true;
+			this.colDescriptionTree.AppearanceHeader.Options.UseForeColor = true;
 			this.colDescriptionTree.AppearanceHeader.Options.UseTextOptions = true;
 			this.colDescriptionTree.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colDescriptionTree.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
@@ -568,10 +557,10 @@ namespace BMS
 			this.colPositionCodeTree.AppearanceCell.Options.UseTextOptions = true;
 			this.colPositionCodeTree.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colPositionCodeTree.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-			this.colPositionCodeTree.AppearanceHeader.BackColor = System.Drawing.Color.LightSalmon;
 			this.colPositionCodeTree.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.colPositionCodeTree.AppearanceHeader.Options.UseBackColor = true;
+			this.colPositionCodeTree.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
 			this.colPositionCodeTree.AppearanceHeader.Options.UseFont = true;
+			this.colPositionCodeTree.AppearanceHeader.Options.UseForeColor = true;
 			this.colPositionCodeTree.AppearanceHeader.Options.UseTextOptions = true;
 			this.colPositionCodeTree.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.colPositionCodeTree.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
@@ -592,11 +581,11 @@ namespace BMS
 			this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
 			this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
 			this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.btnAddPos,
             this.toolStripSeparator3,
-            this.toolStripButton2,
+            this.btnEditPos,
             this.toolStripSeparator4,
-            this.toolStripButton3});
+            this.btnDelPos});
 			this.toolStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
 			this.toolStrip2.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip2.Name = "toolStrip2";
@@ -606,51 +595,54 @@ namespace BMS
 			this.toolStrip2.TabIndex = 28;
 			this.toolStrip2.Text = "toolStrip2";
 			// 
-			// toolStripButton1
+			// btnAddPos
 			// 
-			this.toolStripButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.toolStripButton1.ForeColor = System.Drawing.Color.Black;
-			this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton1.Name = "toolStripButton1";
-			this.toolStripButton1.Size = new System.Drawing.Size(88, 44);
-			this.toolStripButton1.Tag = "frmProduct_AddProductH";
-			this.toolStripButton1.Text = "Tạo vị trí";
-			this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnAddPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAddPos.ForeColor = System.Drawing.Color.Black;
+			this.btnAddPos.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPos.Image")));
+			this.btnAddPos.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnAddPos.Name = "btnAddPos";
+			this.btnAddPos.Size = new System.Drawing.Size(88, 44);
+			this.btnAddPos.Tag = "frmProduct_AddProductH";
+			this.btnAddPos.Text = "Tạo vị trí";
+			this.btnAddPos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnAddPos.Click += new System.EventHandler(this.btnAddPos_Click);
 			// 
 			// toolStripSeparator3
 			// 
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
 			this.toolStripSeparator3.Size = new System.Drawing.Size(6, 23);
 			// 
-			// toolStripButton2
+			// btnEditPos
 			// 
-			this.toolStripButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.toolStripButton2.ForeColor = System.Drawing.Color.Black;
-			this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-			this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton2.Name = "toolStripButton2";
-			this.toolStripButton2.Size = new System.Drawing.Size(89, 44);
-			this.toolStripButton2.Tag = "frmProduct_EditProductH";
-			this.toolStripButton2.Text = "Sửa vị trí";
-			this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnEditPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnEditPos.ForeColor = System.Drawing.Color.Black;
+			this.btnEditPos.Image = ((System.Drawing.Image)(resources.GetObject("btnEditPos.Image")));
+			this.btnEditPos.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnEditPos.Name = "btnEditPos";
+			this.btnEditPos.Size = new System.Drawing.Size(89, 44);
+			this.btnEditPos.Tag = "frmProduct_EditProductH";
+			this.btnEditPos.Text = "Sửa vị trí";
+			this.btnEditPos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnEditPos.Click += new System.EventHandler(this.btnEditPos_Click);
 			// 
 			// toolStripSeparator4
 			// 
 			this.toolStripSeparator4.Name = "toolStripSeparator4";
 			this.toolStripSeparator4.Size = new System.Drawing.Size(6, 23);
 			// 
-			// toolStripButton3
+			// btnDelPos
 			// 
-			this.toolStripButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.toolStripButton3.ForeColor = System.Drawing.Color.Black;
-			this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-			this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton3.Name = "toolStripButton3";
-			this.toolStripButton3.Size = new System.Drawing.Size(89, 44);
-			this.toolStripButton3.Tag = "frmProduct_DeleteProductH";
-			this.toolStripButton3.Text = "Xóa vị trí";
-			this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnDelPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDelPos.ForeColor = System.Drawing.Color.Black;
+			this.btnDelPos.Image = ((System.Drawing.Image)(resources.GetObject("btnDelPos.Image")));
+			this.btnDelPos.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnDelPos.Name = "btnDelPos";
+			this.btnDelPos.Size = new System.Drawing.Size(89, 44);
+			this.btnDelPos.Tag = "frmProduct_DeleteProductH";
+			this.btnDelPos.Text = "Xóa vị trí";
+			this.btnDelPos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnDelPos.Click += new System.EventHandler(this.btnDelPos_Click);
 			// 
 			// panel6
 			// 
@@ -774,11 +766,11 @@ namespace BMS
 		private DevExpress.XtraTreeList.Columns.TreeListColumn colPositionCodeTree;
 		private System.Windows.Forms.ToolStripButton btnRefresh;
 		private System.Windows.Forms.ToolStrip toolStrip2;
-		private System.Windows.Forms.ToolStripButton toolStripButton1;
+		private System.Windows.Forms.ToolStripButton btnAddPos;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-		private System.Windows.Forms.ToolStripButton toolStripButton2;
+		private System.Windows.Forms.ToolStripButton btnEditPos;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-		private System.Windows.Forms.ToolStripButton toolStripButton3;
+		private System.Windows.Forms.ToolStripButton btnDelPos;
 		private System.Windows.Forms.Panel panel6;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox txbSearch;

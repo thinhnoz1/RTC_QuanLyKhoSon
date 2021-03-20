@@ -250,7 +250,7 @@ namespace BMS
             this.catVaThemOiToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(438, 9);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(172, 28);
+			this.menuStrip1.Size = new System.Drawing.Size(322, 28);
 			this.menuStrip1.TabIndex = 222;
 			this.menuStrip1.Text = "menuStrip1";
 			this.menuStrip1.Visible = false;
