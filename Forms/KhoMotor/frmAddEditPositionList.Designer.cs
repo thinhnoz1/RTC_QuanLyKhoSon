@@ -64,7 +64,7 @@ namespace BMS
 			this.mnuMenu.Location = new System.Drawing.Point(0, 0);
 			this.mnuMenu.Name = "mnuMenu";
 			this.mnuMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-			this.mnuMenu.Size = new System.Drawing.Size(836, 50);
+			this.mnuMenu.Size = new System.Drawing.Size(627, 41);
 			this.mnuMenu.TabIndex = 3;
 			this.mnuMenu.Text = "toolStrip2";
 			// 
@@ -75,7 +75,7 @@ namespace BMS
 			this.btnSaveClose.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveClose.Image")));
 			this.btnSaveClose.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnSaveClose.Name = "btnSaveClose";
-			this.btnSaveClose.Size = new System.Drawing.Size(109, 44);
+			this.btnSaveClose.Size = new System.Drawing.Size(94, 41);
 			this.btnSaveClose.Tag = "frmProduct_AddProductH";
 			this.btnSaveClose.Text = "Cất && Đóng";
 			this.btnSaveClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -94,7 +94,7 @@ namespace BMS
 			this.btnSaveNew.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveNew.Image")));
 			this.btnSaveNew.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnSaveNew.Name = "btnSaveNew";
-			this.btnSaveNew.Size = new System.Drawing.Size(148, 44);
+			this.btnSaveNew.Size = new System.Drawing.Size(126, 41);
 			this.btnSaveNew.Tag = "frmProduct_AddProductH";
 			this.btnSaveNew.Text = "Cất && Thêm mới";
 			this.btnSaveNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -107,10 +107,9 @@ namespace BMS
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.panel2.Controls.Add(this.tableLayoutPanel3);
-			this.panel2.Location = new System.Drawing.Point(0, 54);
-			this.panel2.Margin = new System.Windows.Forms.Padding(4);
+			this.panel2.Location = new System.Drawing.Point(0, 44);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(836, 268);
+			this.panel2.Size = new System.Drawing.Size(628, 218);
 			this.panel2.TabIndex = 222;
 			// 
 			// tableLayoutPanel3
@@ -123,23 +122,24 @@ namespace BMS
 			this.tableLayoutPanel3.Controls.Add(this.txbPositionCode, 1, 0);
 			this.tableLayoutPanel3.Controls.Add(this.label5, 0, 1);
 			this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
-			this.tableLayoutPanel3.Location = new System.Drawing.Point(-2, -3);
+			this.tableLayoutPanel3.Location = new System.Drawing.Point(-2, -2);
+			this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
 			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
 			this.tableLayoutPanel3.RowCount = 2;
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.13741F));
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.86259F));
-			this.tableLayoutPanel3.Size = new System.Drawing.Size(836, 265);
+			this.tableLayoutPanel3.Size = new System.Drawing.Size(627, 215);
 			this.tableLayoutPanel3.TabIndex = 221;
 			// 
 			// txbDescription
 			// 
 			this.txbDescription.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.txbDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txbDescription.Location = new System.Drawing.Point(271, 62);
+			this.txbDescription.Location = new System.Drawing.Point(204, 51);
 			this.txbDescription.Margin = new System.Windows.Forms.Padding(0);
 			this.txbDescription.Multiline = true;
 			this.txbDescription.Name = "txbDescription";
-			this.txbDescription.Size = new System.Drawing.Size(562, 200);
+			this.txbDescription.Size = new System.Drawing.Size(420, 161);
 			this.txbDescription.TabIndex = 219;
 			// 
 			// txbPositionCode
@@ -147,10 +147,10 @@ namespace BMS
 			this.txbPositionCode.BackColor = System.Drawing.Color.White;
 			this.txbPositionCode.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.txbPositionCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txbPositionCode.Location = new System.Drawing.Point(271, 3);
+			this.txbPositionCode.Location = new System.Drawing.Point(204, 3);
 			this.txbPositionCode.Margin = new System.Windows.Forms.Padding(0);
 			this.txbPositionCode.Name = "txbPositionCode";
-			this.txbPositionCode.Size = new System.Drawing.Size(562, 53);
+			this.txbPositionCode.Size = new System.Drawing.Size(420, 44);
 			this.txbPositionCode.TabIndex = 217;
 			this.txbPositionCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
@@ -160,10 +160,10 @@ namespace BMS
 			this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
 			this.label5.ForeColor = System.Drawing.Color.Navy;
-			this.label5.Location = new System.Drawing.Point(3, 62);
+			this.label5.Location = new System.Drawing.Point(3, 51);
 			this.label5.Margin = new System.Windows.Forms.Padding(0);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(265, 200);
+			this.label5.Size = new System.Drawing.Size(198, 161);
 			this.label5.TabIndex = 221;
 			this.label5.Text = "Mô tả";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,7 +177,7 @@ namespace BMS
 			this.label2.Location = new System.Drawing.Point(3, 3);
 			this.label2.Margin = new System.Windows.Forms.Padding(0);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(265, 56);
+			this.label2.Size = new System.Drawing.Size(198, 45);
 			this.label2.TabIndex = 218;
 			this.label2.Text = "Mã vị trí";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,9 +189,10 @@ namespace BMS
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cấtToolStripMenuItem,
             this.catVaThemOiToolStripMenuItem});
-			this.menuStrip1.Location = new System.Drawing.Point(398, 22);
+			this.menuStrip1.Location = new System.Drawing.Point(298, 18);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(322, 28);
+			this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+			this.menuStrip1.Size = new System.Drawing.Size(139, 24);
 			this.menuStrip1.TabIndex = 223;
 			this.menuStrip1.Text = "menuStrip1";
 			this.menuStrip1.Visible = false;
@@ -200,7 +201,7 @@ namespace BMS
 			// 
 			this.cấtToolStripMenuItem.Name = "cấtToolStripMenuItem";
 			this.cấtToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-			this.cấtToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
+			this.cấtToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
 			this.cấtToolStripMenuItem.Text = "Cất";
 			this.cấtToolStripMenuItem.Click += new System.EventHandler(this.cấtToolStripMenuItem_Click);
 			// 
@@ -208,18 +209,19 @@ namespace BMS
 			// 
 			this.catVaThemOiToolStripMenuItem.Name = "catVaThemOiToolStripMenuItem";
 			this.catVaThemOiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-			this.catVaThemOiToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
+			this.catVaThemOiToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
 			this.catVaThemOiToolStripMenuItem.Text = "Cat va them oi";
 			this.catVaThemOiToolStripMenuItem.Click += new System.EventHandler(this.catVaThemOiToolStripMenuItem_Click);
 			// 
 			// frmAddEditPositionList
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(836, 326);
+			this.ClientSize = new System.Drawing.Size(627, 265);
 			this.Controls.Add(this.menuStrip1);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.mnuMenu);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "frmAddEditPositionList";
 			this.Text = "frmAddEditPositionList";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAddEditPositionList_FormClosing);

@@ -11,7 +11,7 @@ using BMS.Business;
 using BMS.Model;
 namespace BMS
 {
-	public partial class frmAddEditPositionList : Form
+	public partial class frmAddEditPositionList : _Forms
 	{
 		public MotorPositionListModel positionListModel = new MotorPositionListModel();
 		/// <summary>

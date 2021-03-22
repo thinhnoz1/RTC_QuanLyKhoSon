@@ -40,12 +40,12 @@ namespace BMS
 			Type = type;
 			if (Type == 1)
 			{
-				this.Text = "Xuất linh kiện";
+				this.Text = "XUẤT LINH KIỆN";
 				cbPosition.Enabled = false;
 			}
 			if (Type == 2)
 			{
-				this.Text = "Nhập linh kiện";
+				this.Text = "NHẬP LINH KIỆN";
 			}
 		}
 

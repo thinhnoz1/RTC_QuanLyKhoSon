@@ -19,6 +19,8 @@ namespace BMS
 		int _catID = 0;
 		int _rowHandle = 0;
 		int prevRow;
+		bool showAll = false;
+
 
 		public frmMotorPartList()
 		{
@@ -27,14 +29,17 @@ namespace BMS
 
 		void LoadPartList()
 		{
-
+			if (cbShowAll.Checked)
+				showAll = true;
+			else
+				showAll = false;
 			int id = TextUtils.ToInt(treeData.FocusedNode.GetValue(colIDTree));
 			if (id > 0)
 			{
 				DataTable arr = TextUtils.LoadDataFromSP("spGetMotorPartListWithFilter"
 									  , "A"
-									  , new string[] { "@keyword", "@positionID" }
-									   , new object[] { txbSearch.Text.Trim(), id }
+									  , new string[] { "@keyword", "@positionID", "@showAll" }
+									   , new object[] { txbSearch.Text.Trim(), id, showAll }
 						);
 				dtgvMotorList.DataSource = arr;
 			}
@@ -181,7 +186,7 @@ namespace BMS
 
 		private void treeData_FocusedNodeChanged(object sender, DevExpress.XtraTreeList.FocusedNodeChangedEventArgs e)
 		{
-			/*try
+			try
 			{
 				int id = TextUtils.ToInt(treeData.FocusedNode.GetValue(colIDTree));
 				if (id > 0)
@@ -193,12 +198,12 @@ namespace BMS
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.ToString());
-			}*/
+			}
 		}
 
 		private void btnRefresh_Click(object sender, EventArgs e)
 		{
-			LoadPartList();
+			//LoadPartList();
 			LoadPositionList();
 		}
 
@@ -297,6 +302,21 @@ namespace BMS
 			{
 				LoadPositionList();
 			}
+		}
+
+		private void btnImportEx_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnSonPlan_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void cbShowAll_CheckedChanged(object sender, EventArgs e)
+		{
+			LoadPartList();
 		}
 	}
 }

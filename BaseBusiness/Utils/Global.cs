@@ -18,6 +18,7 @@ namespace BMS
         static int _AppRegionID;
         static bool _IsRoot = false;
 
+        //static string _ConnectionString = @"Data Source=DESKTOP-G8A1CQA\SQLEXPRESS;Initial Catalog=ShiStock;Integrated Security=True";
         static string _ConnectionString = @"Data Source=DESKTOP-G8A1CQA\SQLEXPRESS;Initial Catalog=ShiStock;Integrated Security=True";
         // static string _ConnectionString = "";
 

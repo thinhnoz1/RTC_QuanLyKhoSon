@@ -111,14 +111,7 @@ namespace BMS
 					case 1:
 						if (PartSonBO.Instance.CheckExist("PartCode", sonPlanModel.PartCode) == true)
 						{
-							if (SonPlanBO.Instance.CheckExist("OrderCode", sonPlanModel.OrderCode) == false) { 
-								int result = (int)SonPlanBO.Instance.Insert(sonPlanModel);
-							}
-							else
-							{
-								MessageBox.Show("Mã order đã tồn tại !!");
-								return false;
-							}
+							int result = (int)SonPlanBO.Instance.Insert(sonPlanModel);
 						}
 						else
 						{
@@ -127,15 +120,7 @@ namespace BMS
 						}
 						break;
 					case 2:
-						if (SonPlanBO.Instance.CheckExist("OrderCode", sonPlanModel.OrderCode) == false)
-						{
-							SonPlanBO.Instance.Update(sonPlanModel);
-						}
-						else
-						{
-							MessageBox.Show("Mã order đã tồn tại !!");
-							return false;
-						}
+						SonPlanBO.Instance.Update(sonPlanModel);
 						break;
 				}
 			}

@@ -40,8 +40,8 @@ namespace BMS
                     txtPartCode.ReadOnly = false;
                     txtPartDescription.ReadOnly = false;
                     txtPartName.ReadOnly = false;
-                    txtExQuantity.ReadOnly = false;
-                    txtAsQuantity.ReadOnly = false;
+                    txtExQuantity.Enabled = false;
+                    txtAsQuantity.Enabled = false;
                     this.Text = "Thêm danh mục linh kiện";
 
                     break;

@@ -11,29 +11,29 @@ using System.Windows.Forms;
 
 namespace BMS
 {
-	public partial class frmTest : Form
+	public partial class frmTest : _Forms
 	{
 		public frmTest()
 		{
 			InitializeComponent();
 		}
 
-		private void btnRun_Click(object sender, EventArgs e)
+		private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
 		{
-			if (cbOptions.SelectedIndex == 0) {
-				BMS.frmProductListSON frm = new BMS.frmProductListSON();
-				frm.Show();
-			}
-			if (cbOptions.SelectedIndex == 1)
-			{
-				BMS.frmMotorPartList frm = new BMS.frmMotorPartList();
-				frm.Show();
-			}
+			TextUtils.OpenChildForm(new frmProductListSON(), this);
+		
 		}
 
-		private void frmTest_FormClosing(object sender, FormClosingEventArgs e)
+		private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
 		{
+			frmMotorPartList frm = new frmMotorPartList();
+			TextUtils.OpenChildForm(frm, this);
+		
+		}
 
+		private void frmTest_Load(object sender, EventArgs e)
+		{
+			ribbonControl1.SelectedPage = ribbonPageHyp;
 		}
 	}
 }

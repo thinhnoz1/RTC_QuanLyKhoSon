@@ -75,6 +75,7 @@ namespace BMS
 			this.label1 = new System.Windows.Forms.Label();
 			this.txbSearch = new System.Windows.Forms.TextBox();
 			this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+			this.cbShowAll = new System.Windows.Forms.CheckBox();
 			this.toolStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gvMotor)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvMotorList)).BeginInit();
@@ -208,6 +209,7 @@ namespace BMS
 			this.btnImportEx.Tag = "";
 			this.btnImportEx.Text = "Nhập Excel";
 			this.btnImportEx.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnImportEx.Click += new System.EventHandler(this.btnImportEx_Click);
 			// 
 			// toolStripSeparator12
 			// 
@@ -246,6 +248,7 @@ namespace BMS
 			this.btnSonPlan.Tag = "frmProduct_UpdateCDH";
 			this.btnSonPlan.Text = "Xem kế hoạch";
 			this.btnSonPlan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+			this.btnSonPlan.Click += new System.EventHandler(this.btnSonPlan_Click);
 			// 
 			// toolStrip1
 			// 
@@ -277,7 +280,7 @@ namespace BMS
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+			this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
 			this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
 			this.toolStrip1.Size = new System.Drawing.Size(1293, 52);
 			this.toolStrip1.TabIndex = 27;
@@ -449,14 +452,14 @@ namespace BMS
 			this.dtgvMotorList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.dtgvMotorList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+			this.dtgvMotorList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.dtgvMotorList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dtgvMotorList.Location = new System.Drawing.Point(4, 55);
 			this.dtgvMotorList.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
 			this.dtgvMotorList.MainView = this.gvMotor;
-			this.dtgvMotorList.Margin = new System.Windows.Forms.Padding(4);
+			this.dtgvMotorList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.dtgvMotorList.Name = "dtgvMotorList";
-			this.dtgvMotorList.Size = new System.Drawing.Size(976, 618);
+			this.dtgvMotorList.Size = new System.Drawing.Size(980, 618);
 			this.dtgvMotorList.TabIndex = 34;
 			this.dtgvMotorList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMotor});
@@ -468,6 +471,7 @@ namespace BMS
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.splitContainer1.Location = new System.Drawing.Point(0, 55);
+			this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.splitContainer1.Name = "splitContainer1";
 			// 
 			// splitContainer1.Panel1
@@ -479,10 +483,11 @@ namespace BMS
 			// 
 			// splitContainer1.Panel2
 			// 
+			this.splitContainer1.Panel2.Controls.Add(this.cbShowAll);
 			this.splitContainer1.Panel2.Controls.Add(this.panel6);
 			this.splitContainer1.Panel2.Controls.Add(this.dtgvMotorList);
 			this.splitContainer1.Size = new System.Drawing.Size(1293, 684);
-			this.splitContainer1.SplitterDistance = 303;
+			this.splitContainer1.SplitterDistance = 302;
 			this.splitContainer1.TabIndex = 35;
 			// 
 			// treeData
@@ -504,13 +509,13 @@ namespace BMS
             this.colPositionCodeTree});
 			this.treeData.Location = new System.Drawing.Point(4, 55);
 			this.treeData.LookAndFeel.UseDefaultLookAndFeel = false;
-			this.treeData.Margin = new System.Windows.Forms.Padding(4);
+			this.treeData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.treeData.Name = "treeData";
 			this.treeData.OptionsBehavior.AllowExpandOnDblClick = false;
 			this.treeData.OptionsBehavior.Editable = false;
 			this.treeData.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemMemoEdit2});
-			this.treeData.Size = new System.Drawing.Size(293, 618);
+			this.treeData.Size = new System.Drawing.Size(292, 618);
 			this.treeData.TabIndex = 18;
 			this.treeData.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeData_FocusedNodeChanged);
 			this.treeData.DoubleClick += new System.EventHandler(this.treeData_DoubleClick);
@@ -589,9 +594,9 @@ namespace BMS
 			this.toolStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
 			this.toolStrip2.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip2.Name = "toolStrip2";
-			this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+			this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
 			this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-			this.toolStrip2.Size = new System.Drawing.Size(301, 51);
+			this.toolStrip2.Size = new System.Drawing.Size(300, 50);
 			this.toolStrip2.TabIndex = 28;
 			this.toolStrip2.Text = "toolStrip2";
 			// 
@@ -653,17 +658,17 @@ namespace BMS
 			this.panel6.Controls.Add(this.txbSearch);
 			this.panel6.Controls.Add(this.btnSearch);
 			this.panel6.Location = new System.Drawing.Point(4, 7);
-			this.panel6.Margin = new System.Windows.Forms.Padding(4);
+			this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.panel6.Name = "panel6";
-			this.panel6.Size = new System.Drawing.Size(822, 44);
+			this.panel6.Size = new System.Drawing.Size(825, 44);
 			this.panel6.TabIndex = 35;
 			// 
 			// btnCancelSearch
 			// 
 			this.btnCancelSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnCancelSearch.Location = new System.Drawing.Point(604, 8);
-			this.btnCancelSearch.Margin = new System.Windows.Forms.Padding(4);
+			this.btnCancelSearch.Location = new System.Drawing.Point(604, 7);
+			this.btnCancelSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnCancelSearch.Name = "btnCancelSearch";
 			this.btnCancelSearch.Size = new System.Drawing.Size(84, 25);
 			this.btnCancelSearch.TabIndex = 28;
@@ -684,23 +689,38 @@ namespace BMS
 			// txbSearch
 			// 
 			this.txbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txbSearch.Location = new System.Drawing.Point(88, 6);
-			this.txbSearch.Margin = new System.Windows.Forms.Padding(4);
+			this.txbSearch.Location = new System.Drawing.Point(97, 6);
+			this.txbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.txbSearch.Name = "txbSearch";
-			this.txbSearch.Size = new System.Drawing.Size(416, 29);
+			this.txbSearch.Size = new System.Drawing.Size(407, 29);
 			this.txbSearch.TabIndex = 26;
 			// 
 			// btnSearch
 			// 
 			this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnSearch.Location = new System.Drawing.Point(512, 8);
-			this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+			this.btnSearch.Location = new System.Drawing.Point(512, 7);
+			this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnSearch.Name = "btnSearch";
 			this.btnSearch.Size = new System.Drawing.Size(84, 25);
 			this.btnSearch.TabIndex = 25;
 			this.btnSearch.Text = "Tìm kiếm";
 			this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+			// 
+			// cbShowAll
+			// 
+			this.cbShowAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.cbShowAll.AutoSize = true;
+			this.cbShowAll.Checked = true;
+			this.cbShowAll.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.cbShowAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbShowAll.Location = new System.Drawing.Point(855, 17);
+			this.cbShowAll.Name = "cbShowAll";
+			this.cbShowAll.Size = new System.Drawing.Size(119, 22);
+			this.cbShowAll.TabIndex = 36;
+			this.cbShowAll.Text = "Hiển thị tất cả";
+			this.cbShowAll.UseVisualStyleBackColor = true;
+			this.cbShowAll.CheckedChanged += new System.EventHandler(this.cbShowAll_CheckedChanged);
 			// 
 			// frmMotorPartList
 			// 
@@ -710,6 +730,7 @@ namespace BMS
 			this.ClientSize = new System.Drawing.Size(1293, 741);
 			this.Controls.Add(this.splitContainer1);
 			this.Controls.Add(this.toolStrip1);
+			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "frmMotorPartList";
 			this.Text = "DANH SÁCH LINH KIỆN MOTOR";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -720,6 +741,7 @@ namespace BMS
 			((System.ComponentModel.ISupportInitialize)(this.dtgvMotorList)).EndInit();
 			this.splitContainer1.Panel1.ResumeLayout(false);
 			this.splitContainer1.Panel2.ResumeLayout(false);
+			this.splitContainer1.Panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 			this.splitContainer1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.treeData)).EndInit();
@@ -778,5 +800,6 @@ namespace BMS
 		private DevExpress.XtraEditors.SimpleButton btnCancelSearch;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
 		private System.Windows.Forms.ToolStripButton btnExportPart;
+		private System.Windows.Forms.CheckBox cbShowAll;
 	}
 }
