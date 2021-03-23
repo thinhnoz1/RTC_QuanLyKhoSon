@@ -36,8 +36,8 @@ namespace BMS
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Application.Run(new frmImportExcelPart());
-            //Application.Run(new frmImportExcel());
-            Application.Run(new frmTest());
+            Application.Run(new frmImportExcel());
+            //Application.Run(new frmTest());
             //Application.Run(new frmProductListSON());
 
             //Application.Run(new ProductCheckHistory());

@@ -41,7 +41,8 @@ namespace BMS
 			return tableList;
 		}
 
-		private DataSet ReadData() {
+		private DataSet ReadData()
+		{
 			var stream = new FileStream(btnBrowse.Text, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 
 			var sw = new Stopwatch();
@@ -58,14 +59,15 @@ namespace BMS
 				{
 					UseHeaderRow = false
 				}
-			});	// ton nhieu thoi gian
-			//toolStripStatusLabel1.Text = "Elapsed: " + sw.ElapsedMilliseconds.ToString() + " ms (" + openTiming.ToString() + " ms to open)";
+			}); // ton nhieu thoi gian
+				//toolStripStatusLabel1.Text = "Elapsed: " + sw.ElapsedMilliseconds.ToString() + " ms (" + openTiming.ToString() + " ms to open)";
 
-			
+
 			return ds;
 		}
 
-		void enableControl(bool enable) {
+		void enableControl(bool enable)
+		{
 			btnSave.Enabled = enable;
 			grdData.Enabled = enable;
 			cboSheet.Enabled = enable;
@@ -93,7 +95,8 @@ namespace BMS
 			}
 		}
 
-		void NormalExecute(int rowCount) {
+		void NormalExecute(int rowCount)
+		{
 			for (int i = 0; i < rowCount; i++)
 			{
 				try
@@ -155,7 +158,9 @@ namespace BMS
 			}
 		}
 
-		void AdvanceExecute(int rowCount) {
+		int progValue = 0;
+		void AdvanceExecute(int rowCount)
+		{
 			// Xu ly song song
 			// Chia nhỏ công việc ra thành nhiều phần và chạy cùng 1 lúc tưng ấy phần
 			int markResult = -1;
@@ -170,15 +175,93 @@ namespace BMS
 				marks.Add(markResult);
 			}
 
+			progressBar1.Invoke((Action)(() => { progressBar1.Minimum = 0; }));
+			progressBar1.Invoke((Action)(() => { progressBar1.Maximum = rowCount; }));
+
+
+			/*for (int x = 0; x < marks.Count -1; x++)
+			{
+				Thread t = new Thread(() =>
+				{
+					for (int i = marks[x] + 1; i <= marks[x + 1]; i++)
+					{
+						try
+						{
+							progValue = progValue + 1;
+							if (i < 6) continue;
+							progressBar1.Invoke((Action)(() => { progressBar1.Value = progValue; }));
+							txtRate.Invoke((Action)(() => { txtRate.Text = string.Format("{0}/{1}", progValue, rowCount - 6); }));
+							string _partCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F2"));
+							string _orderCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F8"));
+
+							// Kiem tra xem dong do' co du? thong tin hop le hay khong
+							if (string.IsNullOrEmpty(_partCode) || string.IsNullOrEmpty(_orderCode))
+							{
+								continue;
+							}
+
+							SonPlanModel sonPlanModel = new SonPlanModel();
+
+							#region Set value
+							sonPlanModel.DateExported = TextUtils.ToDate(grvData.GetRowCellValue(i, "F0").ToString());
+							sonPlanModel.PartCode = _partCode;
+							sonPlanModel.LotSize = TextUtils.ToInt(grvData.GetRowCellValue(i, "F3"));
+							sonPlanModel.QtyPlan = TextUtils.ToInt(grvData.GetRowCellValue(i, "F4"));
+							sonPlanModel.ProdDate = TextUtils.ToDate2(grvData.GetRowCellValue(i, "F5"));
+							sonPlanModel.RealProdQty = TextUtils.ToInt(grvData.GetRowCellValue(i, "F6"));
+							sonPlanModel.NG = TextUtils.ToInt(grvData.GetRowCellValue(i, "F7"));
+							sonPlanModel.OrderCode = _orderCode;
+							sonPlanModel.SaleCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F9"));
+							sonPlanModel.OP = TextUtils.ToInt(grvData.GetRowCellValue(i, "F10"));
+							sonPlanModel.ShipTo = TextUtils.ToString(grvData.GetRowCellValue(i, "F11"));
+							sonPlanModel.ShipVia = TextUtils.ToString(grvData.GetRowCellValue(i, "F12"));
+							sonPlanModel.ConfirmCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F13"));
+							sonPlanModel.Note = TextUtils.ToString(grvData.GetRowCellValue(i, "F14"));
+							sonPlanModel.WorkerCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F15"));
+							sonPlanModel.PrintedDate = TextUtils.ToDate2(grvData.GetRowCellValue(i, "F16"));
+							#endregion
+
+							// Kiem tra xem ma san pham/ma order da ton tai chua
+							Expression exp1 = new Expression("PartCode", _partCode);
+							Expression exp2 = new Expression("OrderCode", _orderCode);
+							ArrayList arr = SonPlanBO.Instance.FindByExpression(exp1.And(exp2));
+							if (arr.Count > 0)
+							{
+								for (int j = 0; j < arr.Count; j++)
+								{
+									sonPlanModel.ID = (arr[j] as SonPlanModel).ID;
+									SonPlanBO.Instance.Update(sonPlanModel);
+								}
+							}
+							else
+							{
+								sonPlanModel.ID = (int)SonPlanBO.Instance.Insert(sonPlanModel);
+							}
+						}
+						catch (Exception er)
+						{
+							MessageBox.Show("Lỗi lưu dữ liệu tại dòng " + i + Environment.NewLine + er.ToString());
+						}
+					}
+
+				});
+				t.Start();
+			}*/
+
 			//	Bat dau xu ly
-			Parallel.For(0, marks.Count - 1, x => {
+			Parallel.For(0, marks.Count - 1, x =>
+			{
+				if (x == 16) {
+					int dmm = 6;
+				}
 				for (int i = marks[x] + 1; i <= marks[x + 1]; i++)
 				{
 					try
 					{
+						progValue = progValue + 1;
 						if (i < 6) continue;
-						progressBar1.Invoke((Action)(() => { progressBar1.Value = i - 2; }));
-						txtRate.Invoke((Action)(() => { txtRate.Text = string.Format("{0}/{1}", i - 2, rowCount - 6); }));
+						progressBar1.Invoke((Action)(() => { progressBar1.Value = progValue; }));
+						txtRate.Invoke((Action)(() => { txtRate.Text = string.Format("{0}/{1}", progValue, rowCount - 6); }));
 						string _partCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F2"));
 						string _orderCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F8"));
 
@@ -238,7 +321,7 @@ namespace BMS
 
 		#region Event
 		private async void btnBrowse_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
+		{
 			grvData.Columns.Clear();
 			txtRate.Text = "";
 			cboSheet.DataSource = null;
@@ -258,12 +341,13 @@ namespace BMS
 
 				try
 				{
-					using (WaitDialogForm wait = new WaitDialogForm("","")) { 
-						Task<DataSet> tasks = new Task<DataSet>(ReadData);	// Load method vao Task
-						tasks.Start();										// Cho Task chay
-						//frmSonLoading.ShowSplashScreen();
+					using (WaitDialogForm wait = new WaitDialogForm("", ""))
+					{
+						Task<DataSet> tasks = new Task<DataSet>(ReadData);  // Load method vao Task
+						tasks.Start();                                      // Cho Task chay
+																			//frmSonLoading.ShowSplashScreen();
 						txtRate.Text = "Dang xu ly...";
-						DataSet ds = await tasks;							// Lay data tra ve tu task
+						DataSet ds = await tasks;                           // Lay data tra ve tu task
 						var tablenames = GetTablenames(ds.Tables);
 
 						cboSheet.DataSource = tablenames;
@@ -297,18 +381,20 @@ namespace BMS
 		private void cboSheet_SelectionChangeCommitted(object sender, EventArgs e)
 		{
 			grvData.Columns.Clear();
-			if (chkAutoCheck.Checked) {
+			if (chkAutoCheck.Checked)
+			{
 				try
 				{
 					DataTable dtt = ds.Tables[cboSheet.SelectedIndex];
 
-					for (int i = 0; i < dtt.Columns.Count; i++) {
+					for (int i = 0; i < dtt.Columns.Count; i++)
+					{
 						dtt.Columns[i].ColumnName = "F" + i.ToString();
 					}
-					
+
 					grdData.DataSource = dtt;
 					grvData.PopulateColumns();  // Tao cot cho cac truong trong datatable
-					//grvData.BestFitColumns();   // Tu dong dieu chinh kich thuoc cot  -- Ton nhieu tg
+												//grvData.BestFitColumns();   // Tu dong dieu chinh kich thuoc cot  -- Ton nhieu tg
 					grvData.Focus();
 					for (int i = 0; i < dtt.Columns.Count; i++)
 					{
@@ -317,18 +403,20 @@ namespace BMS
 					}
 					var test = grvData.Columns;
 				}
-				catch (Exception er) {
+				catch (Exception er)
+				{
 					TextUtils.ShowError(er);
 					grdData.DataSource = null;
 				}
 			}
 			else
-            {
-				try {
+			{
+				try
+				{
 					DataTable dt = TextUtils.ExcelToDatatableNoHeader(btnBrowse.Text, cboSheet.SelectedValue.ToString());
 					grdData.DataSource = dt;
 					grvData.PopulateColumns();  // Tao cot cho cac truong trong datatable
-					//grvData.BestFitColumns();   // Tu dong dieu chinh kich thuoc cot  -- Ton nhieu tg
+												//grvData.BestFitColumns();   // Tu dong dieu chinh kich thuoc cot  -- Ton nhieu tg
 					grvData.Focus();
 				}
 				catch (Exception er)
@@ -338,13 +426,13 @@ namespace BMS
 				}
 			}
 		}
-        private void frmImportExcel_Load(object sender, EventArgs e)
-        {
+		private void frmImportExcel_Load(object sender, EventArgs e)
+		{
 			btnSave.Enabled = false;
 		}
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
+		private void btnSave_Click(object sender, EventArgs e)
+		{
 			if (backgroundWorker1.IsBusy)
 			{
 				backgroundWorker1.CancelAsync();
@@ -360,7 +448,7 @@ namespace BMS
 			}
 		}
 		private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
+		{
 			txtRate.Text = "";
 			int rowCount = grvData.RowCount;
 			Stopwatch stopwatch = new Stopwatch();
@@ -381,7 +469,8 @@ namespace BMS
 					AdvanceExecute(rowCount);
 				}
 			}
-			else {
+			else
+			{
 				stopwatch.Start();
 				// Bat dau duyet theo tung dong Excel
 				NormalExecute(rowCount);
@@ -392,8 +481,8 @@ namespace BMS
 			time = stopwatch.Elapsed.TotalSeconds;
 		}
 
-        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
+		private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+		{
 			//MessageBox.Show(start.ToString() + " - " + DateTime.Now.ToString());
 			MessageBox.Show("Đã xong! Chạy hết " + time.ToString() + " giây");
 			enableControl(true);
