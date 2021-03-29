@@ -8,6 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -193,15 +194,12 @@ namespace BMS
 							txtRate.Invoke((Action)(() => { txtRate.Text = string.Format("{0}/{1}", progValue, rowCount - 6); }));
 							string _partCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F2"));
 							string _orderCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F8"));
-
 							// Kiem tra xem dong do' co du? thong tin hop le hay khong
 							if (string.IsNullOrEmpty(_partCode) || string.IsNullOrEmpty(_orderCode))
 							{
 								continue;
 							}
-
 							SonPlanModel sonPlanModel = new SonPlanModel();
-
 							#region Set value
 							sonPlanModel.DateExported = TextUtils.ToDate(grvData.GetRowCellValue(i, "F0").ToString());
 							sonPlanModel.PartCode = _partCode;
@@ -220,7 +218,6 @@ namespace BMS
 							sonPlanModel.WorkerCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F15"));
 							sonPlanModel.PrintedDate = TextUtils.ToDate2(grvData.GetRowCellValue(i, "F16"));
 							#endregion
-
 							// Kiem tra xem ma san pham/ma order da ton tai chua
 							Expression exp1 = new Expression("PartCode", _partCode);
 							Expression exp2 = new Expression("OrderCode", _orderCode);
@@ -243,7 +240,6 @@ namespace BMS
 							MessageBox.Show("Lỗi lưu dữ liệu tại dòng " + i + Environment.NewLine + er.ToString());
 						}
 					}
-
 				});
 				t.Start();
 			}*/
@@ -251,9 +247,6 @@ namespace BMS
 			//	Bat dau xu ly
 			Parallel.For(0, marks.Count - 1, x =>
 			{
-				if (x == 16) {
-					int dmm = 6;
-				}
 				for (int i = marks[x] + 1; i <= marks[x + 1]; i++)
 				{
 					try
@@ -315,6 +308,108 @@ namespace BMS
 					}
 				}
 			});
+		}
+
+		void AdvanceExecute(int rowCount, int dummy = 1) {
+			// Xu ly song song
+			// Chia nhỏ công việc ra thành nhiều phần và chạy cùng 1 lúc tưng ấy phần
+			int markResult = -1;
+			List<int> parts = DistributeInteger(rowCount, 16).ToList(); // Chia thành 16 phần bằng nhau
+			List<int> marks = new List<int>();
+			marks.Add(markResult);
+
+			//	Lấy danh sách mốc của các phần
+			foreach (int j in parts)
+			{
+				markResult = markResult + j;
+				marks.Add(markResult);
+			}
+
+			progressBar1.Invoke((Action)(() => { progressBar1.Minimum = 0; }));
+			progressBar1.Invoke((Action)(() => { progressBar1.Maximum = rowCount; }));
+
+			SqlTransaction trans = null;
+			StringBuilder stringBuilder = new StringBuilder();
+			stringBuilder.Append("BEGIN \n ");
+			string insertSQL = "INSERT [dbo].[SonPlan] ([DateExported], [PartCode], [LotSize], [QtyPlan], [ProdDate], [RealProdQty], [NG], [OrderCode], [SaleCode], [OP], [ShipTo], [ShipVia], [ConfirmCode], [Note], [WorkerCode], [PrintedDate]) VALUES({ 0}, N'{1}', {2}, {3}, {4}, {5}, {6}, N'{7}', N'{8}', {9}, N'{10}', N'{11}', N'{12}', N'{13}', N'{14}', {15})\n";
+			
+			for (int i = 0; i < rowCount; i++)
+				{
+					try
+					{
+						progValue = progValue + 1;
+						if (i < 6) continue;
+						progressBar1.Invoke((Action)(() => { progressBar1.Value = progValue; }));
+						txtRate.Invoke((Action)(() => { txtRate.Text = string.Format("{0}/{1}", progValue, rowCount - 6); }));
+						string _partCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F2"));
+						string _orderCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F8"));
+
+						// Kiem tra xem dong do' co du? thong tin hop le hay khong
+						if (string.IsNullOrEmpty(_partCode) || string.IsNullOrEmpty(_orderCode))
+						{
+							continue;
+						}
+
+						SonPlanModel sonPlanModel = new SonPlanModel();
+
+						#region Set value
+						sonPlanModel.DateExported = TextUtils.ToDate(grvData.GetRowCellValue(i, "F0").ToString());
+						sonPlanModel.PartCode = _partCode;
+						sonPlanModel.LotSize = TextUtils.ToInt(grvData.GetRowCellValue(i, "F3"));
+						sonPlanModel.QtyPlan = TextUtils.ToInt(grvData.GetRowCellValue(i, "F4"));
+						sonPlanModel.ProdDate = TextUtils.ToDate2(grvData.GetRowCellValue(i, "F5"));
+						sonPlanModel.RealProdQty = TextUtils.ToInt(grvData.GetRowCellValue(i, "F6"));
+						sonPlanModel.NG = TextUtils.ToInt(grvData.GetRowCellValue(i, "F7"));
+						sonPlanModel.OrderCode = _orderCode;
+						sonPlanModel.SaleCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F9"));
+						sonPlanModel.OP = TextUtils.ToInt(grvData.GetRowCellValue(i, "F10"));
+						sonPlanModel.ShipTo = TextUtils.ToString(grvData.GetRowCellValue(i, "F11"));
+						sonPlanModel.ShipVia = TextUtils.ToString(grvData.GetRowCellValue(i, "F12"));
+						sonPlanModel.ConfirmCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F13"));
+						sonPlanModel.Note = TextUtils.ToString(grvData.GetRowCellValue(i, "F14"));
+						sonPlanModel.WorkerCode = TextUtils.ToString(grvData.GetRowCellValue(i, "F15"));
+						sonPlanModel.PrintedDate = TextUtils.ToDate2(grvData.GetRowCellValue(i, "F16"));
+						#endregion
+
+						// Kiem tra xem ma san pham/ma order da ton tai chua
+						Expression exp1 = new Expression("PartCode", _partCode);
+						Expression exp2 = new Expression("OrderCode", _orderCode);
+						ArrayList arr = SonPlanBO.Instance.FindByExpression(exp1.And(exp2));
+						if (arr.Count > 0)
+						{
+							for (int j = 0; j < arr.Count; j++)
+							{
+								sonPlanModel.ID = (arr[j] as SonPlanModel).ID;
+								string sql = DBUtils.SQLUpdate((BaseModel)sonPlanModel);
+							}
+						}
+						else
+						{
+							stringBuilder.Append(string.Format(insertSQL, 
+											sonPlanModel.DateExported, 
+											sonPlanModel.PartCode, 
+											sonPlanModel.LotSize, 
+											sonPlanModel.QtyPlan, 
+											sonPlanModel.ProdDate, 
+											sonPlanModel.RealProdQty, 
+											sonPlanModel.NG, 
+											sonPlanModel.OrderCode, 
+											sonPlanModel.SaleCode, 
+											sonPlanModel.OP, 
+											sonPlanModel.ShipTo, 
+											sonPlanModel.ShipVia, 
+											sonPlanModel.ConfirmCode, 
+											sonPlanModel.PrintedDate 
+								));
+
+						string sql = DBUtils.SQLInsert((BaseModel)sonPlanModel);
+					}
+				}
+					catch (Exception er)
+					{
+						MessageBox.Show("Lỗi lưu dữ liệu tại dòng " + i + Environment.NewLine + er.ToString());
+					}
+				}
 		}
 		#endregion
 
@@ -484,6 +579,7 @@ namespace BMS
 		private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
 			//MessageBox.Show(start.ToString() + " - " + DateTime.Now.ToString());
+			progressBar1.Invoke((Action)(() => { progressBar1.Value = progressBar1.Maximum; }));
 			MessageBox.Show("Đã xong! Chạy hết " + time.ToString() + " giây");
 			enableControl(true);
 		}
